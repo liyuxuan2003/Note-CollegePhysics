@@ -1,0 +1,141 @@
+\newpage
+
+\subsection{经典力学的时空观}
+    \setcounter{equation}{0}
+    \textbf{空间绝对性：}空间距离与参照系无关。\\[3mm]
+    \textbf{时间绝对性：}时间流逝与参照系无关。\\[5mm]
+    设原参照系为$K$，设新参照系为$K^{'}$，后者相对于前者以速度$\veb{u}$移动。\\[3mm]
+    对于一质点$P$，其相对于$K^{\hphantom{'}}$系原点$O^{\hphantom{'}}$的位移为$\veb{s_p}$。\\[3mm]
+    对于一质点$P$，其相对于$K^{'}$系原点$O^{'}$的位移为$\veb{s_p^{'}}$。\\[3mm]
+    参照系$K^{'}$的原点$O^{'}$相对于参照系$K$的原点$O$的位移为$\veb{s}$。\\[5mm]
+    考虑以下示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzDefPoint(0,0){O1}
+                \tkzDefShiftPoint[O1](5,0){X1}
+                \tkzDefShiftPoint[O1](0,5){Y1}
+
+                \tkzDefPoint(2,2){O2}
+                \tkzDefShiftPoint[O2](5,0){X2}
+                \tkzDefShiftPoint[O2](0,5){Y2}
+
+                \tkzDefPoint(3,5){P}
+
+                \tkzDrawSegment[->](O1,X1)
+                \tkzDrawSegment[->](O1,Y1)
+
+                \tkzDrawSegment[->](O2,X2)
+                \tkzDrawSegment[->](O2,Y2)
+
+                \tkzDrawSegment[-latex](O1,O2)
+                \tkzDrawSegment[-latex](O1,P)
+                \tkzDrawSegment[-latex](O2,P)
+
+                \tkzDefShiftPoint[Y2](1,0){u1}
+                \tkzDefShiftPoint[Y2](2,0){u2}
+
+                \tkzDrawSegment[-latex](u1,u2)
+
+                \tkzLabelPoint[below](O1){$O$}
+                \tkzLabelPoint[below](O2){$O^{'}$}
+
+                \tkzLabelPoint[below](X1){$X$}
+                \tkzLabelPoint[below](X2){$X^{'}$}
+
+                \tkzLabelPoint[left](Y1){$Y$}
+                \tkzLabelPoint[left](Y2){$Y^{'}$}
+
+                \tkzLabelPoint[right](P){$P$}
+
+                \tkzLabelSegment[left](O1,P){$\veb{s_p}$}
+                \tkzLabelSegment[right](O2,P){$\veb{s_p^{'}}$}
+
+                \tkzLabelSegment[below right](O1,O2){$\veb{s}$}
+
+                \tkzLabelPoint[above](u2){$u$}
+            \end{tikzpicture}
+            \caption{经典力学的时空观示意图}
+        \end{center}
+    \end{figure}\\
+    计算新参照系的位移（由原参照系）：
+    \begin{align}
+        \veb{s_p^{'}}=\veb{s_p}-\veb{s}
+    \end{align}\\
+    计算原参照系的位移（由新参照系）：
+    \begin{align}
+        \veb{s_p}=\veb{s_p^{'}}+\veb{s}
+    \end{align}\\
+    然而上述结论看似显然，但其成立却是需要条件的。
+
+\newpage
+
+    \textbf{1.空间绝对性的推导}\\[3mm]
+    在$K^{'}$系中观察，位移$O^{'}P$的长度为：
+    \begin{align}
+        \overrightarrow{O^{'}P}=\veb{s_p^{'}}
+    \end{align}\\
+    在$K^{\hphantom{'}}$系中观察，位移$O^{'}P$的长度为：
+    \begin{align}
+        \overrightarrow{O^{'}P}=\veb{s_p}-\veb{s}
+    \end{align}\\
+    只有当空间距离与参照系无关，即满足空间绝对性时，两段距离才可以相等，以契合上述结论。\\[12mm]
+    \textbf{2.时间绝对性的推导}\\[3mm]
+    在$K^{'}$系中观察，位移$OO^{'}$的长度为：
+    \begin{align}
+        \overrightarrow{O^{'}O}=\veb{u}\cdot t
+    \end{align}\\
+    在$K^{\hphantom{'}}$系中观察，位移$OO^{'}$的长度为：
+    \begin{align}
+        \overrightarrow{O^{'}O}=\veb{u}\cdot t^{'}
+    \end{align}\\
+    只有当时间流逝与参照系无关，即满足时间绝对性时，两段时间才可以相等，以契合上述结论。\\
+
+\newpage
+
+\subsubsection{伽利略变换}
+    伽利略变换描述了经典力学的时空观下，两个惯性系之间的坐标变换原则。\\[3mm]
+    伽利略变换：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~x^{'}=x-u\cdot t\\[1mm]
+                ~t^{'}=t\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    伽利略逆变换：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~x=x^{'}+u\cdot t\\[1mm]
+                ~t=t^{'}\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    此处的背景为，新坐标系$K^{'}$相对于原坐标系$K$，沿$x$轴方向以速度$u$做匀速直线运动。\\
+
+\subsubsection{伽利略相对性原理}
+    \setcounter{equation}{0}
+    伽利略相对性原理：任意两个惯性系，对于描述机械运动的力学规律是完全等价的。\\[3mm]
+    根据伽利变换的结论：
+    \begin{align}
+        \veb{s^{'}}=\veb{s}-\veb{u}\cdot t
+    \end{align}\\
+    对上式求导求解速度：
+    \begin{align}
+        \veb{v^{'}}=\veb{v}-\veb{u}
+    \end{align}\\
+    对上式求导求解加速度：
+    \begin{align}
+        \veb{a^{'}}=\veb{a}
+    \end{align}\\
+    因此坐标系$K^{\hphantom{'}}$中测得的力$F^{\hphantom{'}}$为：
+    \begin{align}
+        \veb{F}=m\cdot\veb{a}
+    \end{align}\\
+    因此坐标系$K^{'}$中测得的力$F^{'}$为：
+    \begin{align}
+        \veb{F^{'}}=m\cdot\veb{a^{'}}
+    \end{align}\\
+    由上述推导可以得到$\veb{F}=\veb{F^{'}}$，因此惯性系对于描述机械运动的力学规律是完全等价的。    
