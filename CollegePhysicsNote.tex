@@ -3636,18 +3636,24 @@
 
 \subsection{热力学第一定律}
     热力学第一定律：外界对系统传递的热量，等于系统的内能增量与对外做功的总和。\\[3mm]
-    热力学第一定理的数学表达：
+    热力学第一定理的数学表达（宏观过程）：
     \begin{large}
         \begin{equation*}
             Q=(E_2-E_1)+W
         \end{equation*}
     \end{large}\\
-    系统从外界吸热时，我们规定$Q$为正值。\\[3mm]
-    系统向外界放热时，我们规定$Q$为负值。\\[3mm]
-    系统对外界做功时，我们规定$W$为正值。\\[3mm]
-    系统受外界做功时，我们规定$W$为负值。\\[3mm]
-    系统的内能增加时，我们规定$(E_2-E_1)$为正值。\\[3mm]
-    系统的内能减小时，我们规定$(E_2-E_1)$为负值。
+    热力学第一定律的数学表达（微观过程）：
+    \begin{large}
+        \begin{equation*}
+            \dif Q=\dif E+\dif W
+        \end{equation*}
+    \end{large}\\
+    系统从外界吸热时，我们规定$\dif Q\;$为正值。\\[3mm]
+    系统向外界放热时，我们规定$\dif Q\;$为负值。\\[3mm]
+    系统对外界做功时，我们规定$\dif W$为正值。\\[3mm]
+    系统受外界做功时，我们规定$\dif W$为负值。\\[3mm]
+    系统的内能增加时，我们规定$\dif E\;$为正值。\\[3mm]
+    系统的内能减小时，我们规定$\dif E\;$为负值。
 
 \subsubsection{第一类永动机}
     第一类永动机指的是不消耗任何能量却可以不断对外做功的机器。\\[3mm]
@@ -3657,14 +3663,19 @@
 
 \subsection{气体平衡过程中的功}
     \setcounter{equation}{0}
-    气体平衡过程中的功的计算公式：
+    气体平衡过程中的功的计算公式（宏观过程）：
     \begin{large}
         \begin{equation*}
-            W=\int_{v_1}^{v_2}P\cdot\dif V
+            W=\int_{V_1}^{V_2}P\cdot\dif V
         \end{equation*}
     \end{large}\\
-    假设有一气缸，面积为$S$，压强为$P$，压力为$F$。\\[3mm]
-    现研究气缸在活塞由$l_1$移动至$l_2$时的做功情况。\\[3mm]
+    气体平衡过程中的功的计算公式（微观过程）：
+    \begin{large}
+        \begin{equation*}
+            \dif W=P\cdot\dif V
+        \end{equation*}
+    \end{large}\\
+    假设有一气缸，面积为$S$，压强为$P$，压力为$F$，研究气缸在活塞由$l_1$移动至$l_2$时的做功情况。\\[3mm]
     气体平衡过程中的功的推导：
     \begin{align}
         W
@@ -3706,9 +3717,6 @@
 
                 \tkzLabelPoint[above right](A){$A_1(P_1,V_1,T_1)$}
                 \tkzLabelPoint[right](B){$A_2(P_2,V_2,T_2)$}
-
-                \tkzDrawPoint[fill=white](A1)
-                \tkzDrawPoint[fill=white](A2)
             \end{tikzpicture}
             \caption{气体在平衡过程中所做的功}
         \end{center}
@@ -3724,7 +3732,7 @@
     气体的等体过程在$P-V$图上表现为平行于$P$轴的直线，称为等体线：\vspace{5pt}
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[scale=1.2]
+            \begin{tikzpicture}[scale=1.0]
                 \tkzDefPoint(0,0){O}
                 \tkzDefPoint(8,0){X}
                 \tkzDefPoint(0,6){Y}
@@ -3763,35 +3771,45 @@
             \caption{气体的等体过程}
         \end{center}
     \end{figure}\\
-    气体的等体过程的规律：
+    气体的等体过程中的热量吸收：
     \begin{large}
-        \begin{align*}
-            &Q_V=E_2-E_1\\[3mm]
-            &Q_V=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)
-        \end{align*}
+        \begin{equation*}
+            Q_V=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)
+        \end{equation*}
     \end{large}\\
-    气体的等体过程中，系统吸收的全部热量用于内能增加，其中$\Delta E=\dfrac{i}{2}\cdot\dfrac{m}{M}\cdot R\cdot(T_2-T_1)$。
+    气体的等体过程中的内能增加：
+    \begin{large}
+        \begin{equation*}
+            \Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)
+        \end{equation*}
+    \end{large}\\
+    气体的等体过程中的对外做功：
+    \begin{large}
+        \begin{equation*}
+            W=0\vphantom{\frac{a}{b}}
+        \end{equation*}
+    \end{large}\\
+    在等体升温的过程中，理想气体吸收的热量，全部转化为其内能的增加，不向外界做功。\\[3mm]
+    在等体降温的过程中，理想气体放出的热量，全部来自于其内能的减少，不受外界做功。\\[3mm]
 
 \newpage
 
-    根据热力学第一定律：
+    由于等体过程的体积为定值：
     \begin{align}
-        &Q_V=(E_2-E_1)+W
-    \end{align}\\
-    计算等体过程的对外做功：
-    \begin{align}
-        &W=\int_{V_1}^{V_2} P\cdot\dif V\\[4mm]
+        &W=\int_{V_1}^{V_2} P\cdot\dif V~~~~\\[4mm]
         &W=0
     \end{align}\\
-    计算等体过程的内能增加：
+    根据理想气体的内能的公式：
     \begin{align}
-        &\Delta E=E_2-E_1\\[4mm]
-        &\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_2-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_1\\[4mm]
-        &\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)
+        &~~~~~~~~~~\Delta E=E_2-E_1\\[4mm]
+        &~~~~~~~~~~\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_2-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_1\\[4mm]
+        &~~~~~~~~~~\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)
     \end{align}\\
-    将两者代入可得：
+    由热力学第一定律可以得到：
     \begin{align}
-        Q_V=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)
+        &Q_V=(E_2-E_1)+W\\[4mm]
+        &Q_V=\Delta E+W\\[4mm]
+        &Q_V=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)~~~~~~
     \end{align}\\
     由此证明了气体的等体过程的相关规律。
 
@@ -3803,7 +3821,7 @@
     气体的等压过程在$P-V$图上表现为平行于$V$轴的直线，称为等压线：\vspace{5pt}
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[scale=1.2]
+            \begin{tikzpicture}[scale=1.0]
                 \tkzDefPoint(0,0){O}
                 \tkzDefPoint(8,0){X}
                 \tkzDefPoint(0,6){Y}
@@ -3814,10 +3832,10 @@
                 \tkzLabelPoint[above](X){$V$}
                 \tkzLabelPoint[right](Y){$P$}
 
-                \tkzDefPoint(4,4){A1}
+                \tkzDefPoint(3,4){A1}
                 \tkzDefPoint(6,4){A2}
 
-                \tkzDefPoint(4,0){V1}
+                \tkzDefPoint(3,0){V1}
                 \tkzDefPoint(6,0){V2}
 
                 \tkzDefPoint(0,4){P}
@@ -3842,41 +3860,216 @@
             \caption{气体的等压过程}
         \end{center}
     \end{figure}\\
-    气体的等压过程的规律：
+    气体的等压过程中的热量吸收：
     \begin{large}
         \begin{align*}
-            &Q_P=(E_2-E_1)+W\\[3mm]
-            &Q_P=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)+\frac{m}{M}\cdot R\cdot(T_2-T_1)
+            &Q_P=\frac{i+2}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)
         \end{align*}
     \end{large}\\
-    气体的等压过程中，系统吸收的部分热量用于内能增加，其中$\Delta E=\dfrac{i}{2}\cdot\dfrac{m}{M}\cdot R\cdot(T_2-T_1)$。\\[3mm]
-    气体的等压过程中，系统吸收的部分热量用于对外做功，其中$W=\dfrac{m}{M}\cdot R\cdot(T_2-T_1)$。
+    气体的等压过程中的内能增加：
+    \begin{large}
+        \begin{align*}
+            &\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)
+        \end{align*}
+    \end{large}\\
+    气体的等压过程中的对外做功：
+    \begin{large}
+        \begin{align*}
+            &W=\frac{m}{M}\cdot R\cdot(T_2-T_1)
+        \end{align*}
+    \end{large}\\
+    在等压升温的过程中，理想气体吸收的热量，部分转化为其内能的增加，部分用于向外界做功。\\[3mm]
+    在等压降温的过程中，理想气体放出的热量，部分来自于其内能的减少，部分源于受外界做功。
 
 \newpage
 
-    根据热力学第一定律：
+    由于等压过程的压强为定值：
     \begin{align}
-        &Q_P=(E_2-E_1)+W
+        &W=\int_{V_1}^{V_2} P\cdot\dif V~~~~~~~~\\[4mm]
+        &W=P\cdot(V_2-V_1)
     \end{align}\\
-    计算等压过程的对外做功：
+    根据克拉伯龙方程可以得到：
     \begin{align}
-        &~~~~~~~~~~W=\int_{V_1}^{V_2} P\cdot\dif V\\[4mm]
-        &~~~~~~~~~~W=P\cdot(V_2-V_1)\\[4mm]
-        &~~~~~~~~~~W=P\cdot\left(\frac{m}{M\cdot P}\cdot R\cdot T_2-\frac{m}{M\cdot P}\cdot R\cdot T_1\right)\\[4mm]
-        &~~~~~~~~~~W=\frac{m}{M}\cdot R\cdot T_2-\frac{m}{M}\cdot R\cdot T_1\\[4mm]
-        &~~~~~~~~~~W=\frac{m}{M}\cdot R\cdot (T_2-T_1)
+        &~~W=P\cdot\left(\frac{m}{M\cdot P}\cdot R\cdot T_2-\frac{m}{M\cdot P}\cdot R\cdot T_1\right)\\[4mm]
+        &~~W=\frac{m}{M}\cdot R\cdot T_2-\frac{m}{M}\cdot R\cdot T_1\\[4mm]
+        &~~W=\frac{m}{M}\cdot R\cdot (T_2-T_1)
     \end{align}\\
-    计算等压过程的内能增加：
+    根据理想气体的内能的公式：
     \begin{align}
         &\Delta E=E_2-E_1\\[4mm]
-        &\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_2-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_1\\[4mm]
+        &\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_2-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_1~~~~~~~~\\[4mm]
         &\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)
     \end{align}\\
-    将两者代入可得：
+    由热力学第一定律可以得到：
     \begin{align}
-        Q_P=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)+\frac{m}{M}\cdot R\cdot(T_2-T_1)
+        &~~~~~~~~Q_P=(E_2-E_1)+W\\[4mm]
+        &~~~~~~~~Q_P=\Delta E+W\\[4mm]
+        &~~~~~~~~Q_P=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)+\frac{m}{M}\cdot R\cdot(T_2-T_1)\\[4mm]
+        &~~~~~~~~Q_P=\frac{i+2}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)
     \end{align}\\
     由此证明了气体的等压过程的相关规律。
+
+\newpage
+
+\subsection{气体的热容量}
+    热容量衡量了一定量的物质上升单位温度所需吸收的热量。\\[3mm]
+    热容量是一个标量，通常用符号$C$表示，单位是\si{J/K}。\\[3mm]
+    热容量的定义式：
+    \begin{large}
+        \begin{equation*}
+            Q=\int_{T_1}^{T_2}C\cdot\dif T
+        \end{equation*}
+    \end{large}\\
+    摩尔热容量衡量了单位物质的量的物质上升单位温度所吸收的热量。\\[3mm]
+    摩尔热容量是一个标量，通常用符号$C_m$表示，单位是\si{J/(K\cdot mol)}。\\[3mm]
+    摩尔热容量的定义式：
+    \begin{large}
+        \begin{equation*}
+            Q=\frac{m}{M}\cdot\int_{T_1}^{T_2}C_m\cdot\dif T\\[3mm]
+        \end{equation*}
+    \end{large}\\
+    对摩尔热容量的定义式两侧取微分：
+    \setcounter{equation}{0}
+    \begin{align}
+        &Q=\frac{m}{M}\cdot\int C_m\cdot\dif T\\[4mm]
+        &\dif Q=\frac{m}{M}\cdot C_m\cdot\dif T\\[4mm]
+        &\dif Q\cdot\frac{M}{m}=C_m\cdot\dif T\\[4mm]
+        &C_m=\frac{M}{m}\cdot\frac{\dif Q}{\dif T}
+    \end{align}\\
+    摩尔热容量的计算公式：
+    \begin{large}
+        \begin{equation*}
+            C_m=\frac{M}{m}\cdot\frac{\dif Q}{\dif T}    
+        \end{equation*}
+    \end{large}\\
+    摩尔热容量正比于热容对温度的导数。
+
+\newpage
+
+\subsubsection{等体摩尔热容量}
+    等体摩尔热容量指的是气体在等体过程中的摩尔热容量，通常用符号$C_{V_m}$表示。\\[3mm]
+    等体摩尔热容量的计算公式：
+    \begin{large}
+        \begin{equation*}
+            C_{V_m}=\frac{i}{2}\cdot R
+        \end{equation*}
+    \end{large}\\
+    等体摩尔热容量的推导过程：
+    \setcounter{equation}{0}
+    \begin{align}
+        C_{V_m}
+        &=\frac{M}{m}\cdot\frac{\dif Q_V}{\dif T}\\[4mm]
+        &=\frac{M}{m}\cdot\frac{\dif}{\dif T}\cdot\left(\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T\right)\\[4mm]
+        &=\frac{i}{2}\cdot\frac{M}{m}\cdot\frac{m}{M}\cdot R\cdot\frac{\dif T}{\dif T}\\[4mm]
+        &=\frac{i}{2}\cdot R\cdot\frac{\dif T}{\dif T}\\[4mm]
+        &=\frac{i}{2}\cdot R
+    \end{align}\\
+    等体摩尔热容量只和气体自由度有关，等体摩尔热容量与温度无关。\\[3mm]
+    等体过程的热量还可以表示为：
+    \begin{large}
+        \begin{equation*}
+            Q_V=\frac{m}{M}\cdot C_{V_m}\cdot(T_2-T_1)
+        \end{equation*}
+    \end{large}\\
+    理想气体的等体摩尔容量分别为：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{p{80pt}|p{60pt}|p{130pt}}
+                \hline
+                气体类型&自由度&等体摩尔容量\\ \hline
+                单原子气体&$i=3$&$C_{V_m}=12.5$~\si{J/(K\cdot mol)}\\ \hline
+                双原子气体&$i=5$&$C_{V_m}=20.8$~\si{J/(K\cdot mol)}\\ \hline
+                多原子气体&$i=6$&$C_{V_m}=24.9$~\si{J/(K\cdot mol)}\\ \hline
+            \end{tabular}
+            \caption{理想气体的等体摩尔容量}
+        \end{center}
+    \end{table}\\
+    实际气体的等体摩尔容量，单原子和双原子气体与理论值相近，多原子气体与理论值相差较大。
+
+\newpage
+
+\subsubsection{等压摩尔热容量}
+    等压摩尔热容量指的是气体在等压过程中的摩尔热容量，通常用符号$C_{P_m}$表示。\\[3mm]
+    等压摩尔热容量的计算公式：
+    \begin{large}
+        \begin{equation*}
+            C_{P_m}=\frac{i+2}{2}\cdot R
+        \end{equation*}
+    \end{large}\\
+    等压摩尔热容量的推导过程：
+    \setcounter{equation}{0}
+    \begin{align}
+        C_{P_m}
+        &=\frac{M}{m}\cdot\frac{\dif Q_V}{\dif T}\\[4mm]
+        &=\frac{M}{m}\cdot\frac{\dif}{\dif T}\cdot\left(\frac{i+2}{2}\cdot\frac{m}{M}\cdot R\cdot T\right)\\[4mm]
+        &=\frac{i+2}{2}\cdot\frac{M}{m}\cdot\frac{m}{M}\cdot R\cdot\frac{\dif T}{\dif T}\\[4mm]
+        &=\frac{i+2}{2}\cdot R\cdot\frac{\dif T}{\dif T}\\[4mm]
+        &=\frac{i+2}{2}\cdot R
+    \end{align}\\
+    等压摩尔热容量只和气体自由度有关，等压摩尔热容量与温度无关。\\[3mm]
+    等压过程的热量还可以表示为：
+    \begin{large}
+        \begin{equation*}
+            Q_P=\frac{m}{M}\cdot C_{P_m}\cdot(T_2-T_1)
+        \end{equation*}
+    \end{large}\\
+    理想气体的等压摩尔容量分别为：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{p{80pt}|p{60pt}|p{130pt}}
+                \hline
+                气体类型&自由度&等体摩尔容量\\ \hline
+                单原子气体&$i=3$&$C_{P_m}=20.8$~\si{J/(K\cdot mol)}\\ \hline
+                双原子气体&$i=5$&$C_{P_m}=29.1$~\si{J/(K\cdot mol)}\\ \hline
+                多原子气体&$i=6$&$C_{P_m}=33.2$~\si{J/(K\cdot mol)}\\ \hline
+            \end{tabular}
+            \caption{理想气体的等压摩尔容量}
+        \end{center}
+    \end{table}\\
+    实际气体的等压摩尔容量，单原子和双原子气体与理论值相近，多原子气体与理论值相差较大。
+
+\newpage
+
+\subsubsection{热容比}
+    热容比定义为等压摩尔热容与等体摩尔热容的比值，通常用符号$\gamma$表示。\\[3mm]
+    热容比定义的数学表达：
+    \begin{large}
+        \begin{equation*}
+            \gamma=\frac{C_{P_m}}{C_{V_m}}=\frac{i+2}{i}
+        \end{equation*}
+    \end{large}\\
+    理想气体的热容比分别为：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{p{80pt}|p{60pt}|p{80pt}}
+                \hline
+                气体类型&自由度&热容比\\ \hline
+                单原子气体&$i=3$&$\gamma=1.67$\\ \hline
+                双原子气体&$i=5$&$\gamma=1.40$\\ \hline
+                多原子气体&$i=6$&$\gamma=1.33$\\ \hline
+            \end{tabular}
+            \caption{理想气体的热容比}
+        \end{center}
+    \end{table}
+
+\subsubsection{迈耶公式}
+    迈耶公式指出了等压摩尔热容量和等体摩尔热容量的差恒普适气体常量常量$R$。\\[3mm]
+    迈耶公式的数学表达：
+    \begin{large}
+        \begin{equation*}
+            C_{P_m}-C_{V_m}=R
+        \end{equation*}
+    \end{large}\\
+    迈耶公式的推导过程：
+    \setcounter{equation}{0}
+    \begin{align}
+        &C_{P_m}-C_{V_m}=\frac{i+2}{2}\cdot R-\frac{i}{2}\cdot R\\[3mm]
+        &C_{P_m}-C_{V_m}=R
+    \end{align}\\
+    对于实际气体的摩尔热容，单原子和双原子气体与理论值相近，多原子气体与理论值有所偏离，
+    然而无论哪种气体，均基本遵循迈耶公式，即两种摩尔热容的差为普适气体常量。\\[3mm]
+    由此可见，迈耶公式有超越等体摩尔热容和等压摩尔热容的普适意义。\\[3mm]
+    除此之外，迈耶公式说明了升高相同温度，等压过程相比等体过程需要吸收更多能量。
 
 \newpage
 
@@ -3886,7 +4079,7 @@
     气体的等温过程在$P-V$图上表现为等轴双曲线，称为等温线：\vspace{5pt}
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[scale=1.2]
+            \begin{tikzpicture}[scale=1.0]
                 \tkzDefPoint(0,0){O}
                 \tkzDefPoint(8,0){X}
                 \tkzDefPoint(0,6){Y}
@@ -3928,45 +4121,341 @@
             \caption{气体的等温过程}
         \end{center}
     \end{figure}\\
-    气体的等温过程的规律：
+    气体的等温过程中的热量吸收：
     \begin{large}
         \begin{align*}
-            &Q_T=W\\[3mm]
-            &Q_T=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{V_2}{V_1}}\\[3mm]
+            &Q_T=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{V_2}{V_1}}\\[2mm]
             &Q_T=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{P_1}{P_2}}
         \end{align*}
     \end{large}\\
-    气体的等温过程中，系统吸收的全部热量用于对外做功，其中$W=\dfrac{m}{M}\cdot R\cdot T\cdot\ln{\dfrac{V_2}{V_1}}$。\\[4mm]
-    气体的等温过程中，系统吸收的全部热量用于对外做功，其中$W=\dfrac{m}{M}\cdot R\cdot T\cdot\ln{\dfrac{P_1}{P_2}}$。
+    气体的等温过程中的对外做功：
+    \begin{large}
+        \begin{align*}
+            &W=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{V_2}{V_1}}\\[2mm]
+            &W=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{P_1}{P_2}}
+        \end{align*}
+    \end{large}\\
+    气体的等温过程中的内能增加：
+    \begin{large}
+        \begin{equation*}
+            \Delta E=0
+        \end{equation*}
+    \end{large}\\
+    在等温膨胀中，理想气体向外界所作的功，全部来自于其吸收的热量，内能不变。\\[3mm]
+    在等温压缩中，理想气体受外界所作的功，全部转化为其放出的热量，内能不变。
 
 \newpage
 
-    根据热力学第一定律：
-    \begin{align}
-        &Q_T=(E_2-E_1)+W
-    \end{align}\\
-    计算等压过程的对外做功：
-    \begin{align}
-        &W=\int_{V_1}^{V_2} P\cdot\dif V\\[3mm]
-        &W=\int_{V_1}^{V_2} \frac{m}{M\cdot V}\cdot R\cdot T\cdot\dif V\\[3mm]
-        &W=\frac{m}{M}\cdot R\cdot T\cdot\int_{V_1}^{V_2} \frac{1}{V}\cdot\dif V\\[3mm]
-        &W=\frac{m}{M}\cdot R\cdot T\cdot\left(\ln{V_2}-\ln{V_1}\right)\\[3mm]
-        &W=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{V_2}{V_1}}\\[3mm]
-        &W=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{P_1}{P_2}}
-    \end{align}\\
-    计算等压过程的内能增加：
+    由于等压过程的温度为定值：
     \begin{align}
         &\Delta E=E_2-E_1\\[4mm]
-        &\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_2-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_1\\[4mm]
-        &\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)\\[4mm]
         &\Delta E=0
     \end{align}\\
-    将两者代入可得：
+    根据克拉伯龙方程可以得到：
     \begin{align}
+        &~~~~W=\int_{V_1}^{V_2} P\cdot\dif V\\[4mm]
+        &~~~~W=\int_{V_1}^{V_2} \frac{m}{M\cdot V}\cdot R\cdot T\cdot\dif V\\[4mm]
+        &~~~~W=\frac{m}{M}\cdot R\cdot T\cdot\int_{V_1}^{V_2} \frac{1}{V}\cdot\dif V\\[4mm]
+        &~~~~W=\frac{m}{M}\cdot R\cdot T\cdot\left(\ln{V_2}-\ln{V_1}\right)\\[4mm]
+        &~~~~W=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{V_2}{V_1}}
+    \end{align}\\
+    由热力学第一定律可以得到：
+    \begin{align}
+        &Q_T=(E_2-E_1)+W\\[4mm]
+        &Q_T=\Delta E+W\\[4mm]
         &Q_T=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{V_2}{V_1}}\\[4mm]
-        &Q_T=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{P_1}{P_2}}
+        &Q_T=\frac{m}{M}\cdot R\cdot T\cdot\ln{\frac{P_1}{P_2}}~~~~~~~~~~
+    \end{align}\\
+    其中最后一步运用了玻意耳定律：
+    \begin{align}
+        P_1\cdot V_1=P_2\cdot V_2~~\Rightarrow~~\frac{P_1}{P_2}=\frac{V_2}{V_1}
     \end{align}\\
     由此证明了气体的等温过程的相关规律。
+
+\newpage
+
+\subsection{气体的绝热过程}
+    \setcounter{equation}{0}
+    气体的绝热过程的特指是对外绝热，即$Q=0$。\\[3mm]
+    气体的绝热过程在$P-V$图上表现为一根曲线，称为绝热线：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(8,0){X}
+                \tkzDefPoint(0,6){Y}
+
+                \tkzDrawSegment[->](O,X)
+                \tkzDrawSegment[->](O,Y)
+
+                \tkzLabelPoint[above](X){$V$}
+                \tkzLabelPoint[right](Y){$P$}
+
+                \tkzDefPoint(1,5){A1}
+                \tkzDefPoint(5,0.53){A2}
+
+                \tkzDefPoint(1,0){V1}
+                \tkzDefPoint(5,0){V2}
+
+                \tkzDefPoint(0,5){P1}
+                \tkzDefPoint(0,0.53){P2}
+
+                \tkzDrawSegment[dashed](V1,A1);
+                \tkzDrawSegment[dashed](V2,A2);
+                \tkzDrawSegment[dashed](P1,A1);
+                \tkzDrawSegment[dashed](P2,A2);
+
+                \draw[smooth,thick,samples=100,domain=1:5,->] plot(\x,5/\x^1.4);
+
+                \tkzLabelPoint[right](A1){$A_1(P_1,V_1,T_2)$}
+                \tkzLabelPoint[right](A2){$A_2(P_2,V_2,T_2)$}
+
+                \tkzLabelPoint[left](P1){$P_1$}
+                \tkzLabelPoint[left](P2){$P_2$}
+
+                \tkzLabelPoint[below](V1){$V_1$}
+                \tkzLabelPoint[below](V2){$V_2$}
+
+                \tkzDrawPoint[fill=white](A1)
+                \tkzDrawPoint[fill=white](A2)
+            \end{tikzpicture}
+            \caption{气体的绝热过程}
+        \end{center}
+    \end{figure}\\
+    气体的绝热过程中的内能增加：
+    \begin{large}
+        \begin{align*}
+            &\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)\\[3mm]
+            &\Delta E=\frac{m}{M}\cdot C_{V_m}\cdot(T_2-T_1)
+        \end{align*}
+    \end{large}\\
+    气体的绝热过程中的对外做功：
+    \begin{large}
+        \begin{align*}
+            &W=-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot(T_2-T_1)\\[3mm]
+            &W=-\frac{m}{M}\cdot C_{V_m}\cdot(T_2-T_1)
+        \end{align*}
+    \end{large}\\
+    气体的绝热过程中的热量吸收：
+    \begin{large}
+        \begin{equation*}
+            Q=0
+        \end{equation*}
+    \end{large}\\
+    在绝热膨胀中，理想气体向外界所作的功，全部来自于其内能的减少，不吸收热量。\\[3mm]
+    在绝热压缩中，理想气体受外界所作的功，全部转化为其内能的增加，不放出热量。\\[3mm]
+
+\newpage
+
+    根据理想气体的内能的公式：
+    \begin{align}
+        &~~~~~~~~~~\Delta E=E_2-E_1\\[3mm]
+        &~~~~~~~~~~\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_2-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_1\\[3mm]
+        &~~~~~~~~~~\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)\\[3mm]
+        &~~~~~~~~~~\Delta E=\frac{m}{M}\cdot C_{V_m}\cdot(T_2-T_1)
+    \end{align}\\
+    由热力学第一定律可以得到：
+    \begin{align}
+        &Q=(E_2-E_1)+W\\[3mm]
+        &0=\Delta E+W\\[3mm]
+        &W=-\Delta E\\[3mm]
+        &W=-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)~~~~\\[3mm]
+        &W=-\frac{m}{M}\cdot C_{V_m}\cdot(T_2-T_1)
+    \end{align}
+
+\subsubsection{绝热过程中气体状态参量间的关系}
+    \setcounter{equation}{0}
+    绝热过程中，气体的压强体积温度均在变化，但是三者间实际上仍然存在一组额外关系。\\[3mm]
+    绝热过程中的对外绝热：
+    \begin{align}
+        &\dif E+\dif W=0\\[3mm]
+        &\dif E+P\cdot \dif V=0\\[3mm]
+        &P\cdot \dif V=-\dif E\\[3mm]
+        &P\cdot \dif V=-\frac{m}{M}\cdot C_{V_m}\cdot\dif T
+    \end{align}\\
+    对克拉伯龙方程取微分：
+    \begin{align}
+        &P\cdot V=\frac{m}{M}\cdot R\cdot T\\[3mm]
+        &P\cdot\dif V+V\cdot\dif P=\frac{m}{M}\cdot R\cdot \dif T
+    \end{align}\\
+    由此得到了两组绝热过程中关于$\dif P$、$\dif V$、$\dif T$的关系式。
+
+\newpage
+
+    由此得到了一个方程组：
+    \begin{align}
+        \begin{cases}
+            ~P\cdot\dif V=-\dfrac{m}{M}\cdot C_{V_m}\cdot\dif T\\[2mm]
+            ~P\cdot\dif V+V\cdot\dif P=\dfrac{m}{M}\cdot R\cdot \dif T\\[2mm]
+        \end{cases}
+    \end{align}\\
+    由第一个方程反解$\dif T$：
+    \begin{align}
+        &\dif T\cdot C_{V_m}=-\frac{m}{M}\cdot P\cdot\dif V~~~~\\[3mm]
+        &\dif T=-\frac{M}{m}\cdot\frac{1}{C_{V_m}}\cdot P\cdot\dif V
+    \end{align}\\
+    在第二个方程代入$\dif T$：
+    \begin{align}
+        &~~~~P\cdot\dif V+V\cdot\dif P=\dfrac{m}{M}\cdot R\cdot \dif T\\[3mm]
+        &~~~~P\cdot\dif V+V\cdot\dif P=-\frac{m}{M}\cdot R\cdot\left(\frac{M}{m}\cdot\frac{1}{C_{V_m}}\cdot P\cdot\dif V\right)\\[3mm]
+        &~~~~P\cdot\dif V+V\cdot\dif P=-\frac{1}{C_{V_m}}\cdot P\cdot\dif V
+    \end{align}\\
+    对其变形代入迈耶公式：
+    \begin{align}
+        &~~C_{V_m}\cdot(P\cdot\dif V+V\cdot\dif P)=-R\cdot P\cdot\dif V\\[3mm]
+        &~~C_{V_m}\cdot(P\cdot\dif V+V\cdot\dif P)=-(C_{P_m}-C_{V_m})\cdot R\cdot P\cdot\dif V\\[3mm]
+        &~~C_{V_m}\cdot(P\cdot\dif V+V\cdot\dif P)=(C_{V_m}-C_{P_m})\cdot R\cdot P\cdot\dif V\\[3mm]
+        &~~C_{V_m}\cdot P\cdot\dif V+C_{V_m}\cdot V\cdot\dif P=C_{V_m}\cdot P\cdot\dif V-C_{P_m}\cdot P\cdot\dif V\\[3mm]
+        &~~C_{V_m}\cdot V\cdot\dif P+C_{P_m}\cdot P\cdot\dif V=0
+    \end{align}\\
+    将两侧同除$P\cdot V$：
+    \begin{align}
+        &\frac{\dif P}{P}\cdot C_{V_m}+\frac{\dif V}{V}\cdot C_{P_m}=0
+    \end{align}\\
+    将两侧同除$C_{V_m}$：
+    \begin{align}
+        &\frac{\dif P}{P}\cdot\frac{C_{V_m}}{C_{V_m}}+\frac{\dif V}{V}\cdot\frac{C_{P_m}}{C_{V_m}}=0\\[3mm]
+        &\frac{\dif P}{P}+\frac{\dif V}{V}\cdot\gamma=0
+    \end{align}\\
+    由此我们将$P,\dif P$与$V,\dif V$分离。
+
+\newpage
+
+    对以上得到的结论积分可得：
+    \begin{align}
+        &\int\frac{1}{P}\cdot\dif P+\gamma\cdot\int\frac{1}{V}\cdot\dif V=C\\[3mm]
+        &\ln{P}+\gamma\cdot\ln{V}=C\\[3mm]
+        &e^{\ln{P}+\gamma\cdot\ln{V}}=C\\[3mm]
+        &e^{\ln{P}}+e^{\gamma\cdot\ln{V}}=C\\[3mm]
+        &P\cdot V^{\gamma}=C
+    \end{align}\\
+    绝热过程压强和体积的关系（第一种表达）：
+    \begin{large}
+        \begin{equation*}
+            P_1\cdot V_1^{\gamma}=P_2\cdot V_2^{\gamma}
+        \end{equation*}
+    \end{large}\\
+    绝热过程压强和体积的关系（第二种表达）：
+    \begin{large}
+        \begin{equation*}
+            P\cdot V^{\gamma}=C
+        \end{equation*}
+    \end{large}\\
+    由克拉伯龙方程代换压强：
+    \begin{align}
+        &P\cdot V^{\gamma}=C\\[3mm]
+        &V^{\gamma}\cdot\left(\frac{m}{M}\cdot\frac{1}{V}\cdot R\cdot T\right)=C\\[3mm]
+        &V^{\gamma-1}\cdot T\cdot\left(\frac{m}{M}\cdot R\right)=C\\[3mm]
+        &V^{\gamma-1}\cdot T=C
+    \end{align}\\
+    由克拉伯龙方程代换体积：
+    \begin{align}
+        &P\cdot V^{\gamma}=C\\[3mm]
+        &P\cdot\left(\frac{m}{M}\cdot\frac{1}{P}\cdot R\cdot T\right)^{\gamma}=C\\[3mm]
+        &P^{1-\gamma}\cdot T^{\gamma}\cdot\left(\frac{m}{M}\cdot R\right)^{\gamma}=C\\[3mm]
+        &P^{1-\gamma}\cdot T^{\gamma}=C
+    \end{align}\\
+    由此得到了另外两组关系。
+
+\newpage
+
+    绝热过程体积和温度的关系（第一种表达）：
+    \begin{large}
+        \begin{equation*}
+            V_1^{\gamma-1}\cdot T_1=V_2^{\gamma-1}\cdot T_2
+        \end{equation*}
+    \end{large}\\
+    绝热过程体积和温度的关系（第二种表达）：
+    \begin{large}
+        \begin{equation*}
+            V^{\gamma-1}\cdot T=C
+        \end{equation*}
+    \end{large}\\
+    绝热过程压强和温度的关系（第一种表达）：
+    \begin{large}
+        \begin{equation*}
+            P_1^{1-\gamma}\cdot T_1^{\gamma}=P_2^{1-\gamma}\cdot T_2^{\gamma}
+        \end{equation*}
+    \end{large}\\
+    绝热过程压强和温度的关系（第二种表达）：
+    \begin{large}
+        \begin{equation*}
+            P^{1-\gamma}\cdot T^{\gamma}=C
+        \end{equation*}
+    \end{large}\vspace{-5pt}
+
+\subsubsection{绝热过程和等温过程的关系}
+    \setcounter{equation}{0}
+    根据之前的推导，绝热过程满足的方程为$P\cdot V^{\gamma}=C$。\\[3mm]
+    根据之前的推导，等温过程满足的方程为$P\cdot V=C$。\\[3mm]
+    因此绝热线和等温线实际上非常相似：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(8,0){X}
+                \tkzDefPoint(0,6.3){Y}
+
+                \tkzDrawSegment[->](O,X)
+                \tkzDrawSegment[->](O,Y)
+
+                \tkzLabelPoint[above](X){$V$}
+                \tkzLabelPoint[right](Y){$P$}
+
+                \draw[smooth,thick,samples=100,domain=1.12:5.8] plot(\x,6.9644/\x^1.8);
+                \draw[smooth,dashed,thick,samples=100,domain=0.8:5.3] plot(\x,4.0000/\x);
+
+                \tkzDefPoint(2,2){A}
+                \tkzDrawPoint[fill=white](A)
+                \tkzLabelPoint[right](A){$A$}
+
+                \tkzDefPoint(5,5){Q1}
+                \tkzDefPoint(6,5){Q2}
+                \tkzDefPoint(5,4){T1}
+                \tkzDefPoint(6,4){T2}
+
+                \tkzDrawSegment(Q1,Q2)
+                \tkzDrawSegment[dashed](T1,T2)
+
+                \tkzLabelPoint[right](Q2){绝热线}
+                \tkzLabelPoint[right](T2){等温线}
+            \end{tikzpicture}
+            \caption{绝热过程和等温过程}
+        \end{center}
+    \end{figure}\\[3mm]
+    由图可见，绝热线的切线斜率的绝对值总是大于等温线，绝热线比等温线更陡峭。
+
+\newpage
+
+    由于等温过程的方程为：
+    \begin{align}
+        &P\cdot V=C~~\rightarrow~~P=\frac{C}{V}
+    \end{align}\\
+    故等温过程中的导数为：
+    \begin{align}
+        \frac{\dif P}{\dif V}&=\frac{\dif}{\dif V}\cdot\frac{C}{V}\\[3mm]
+        \frac{\dif P}{\dif V}&=-\frac{C}{V^2}\\[3mm]
+        \frac{\dif P}{\dif V}&=-\frac{P\cdot V}{V^2}\\[3mm]
+        \frac{\dif P}{\dif V}&=-\frac{P}{V}
+    \end{align}\\
+    由于绝热过程的方程为：
+    \begin{align}
+        &P\cdot V^{\gamma}=C~~\rightarrow~~P=\frac{C}{V^{\gamma}}
+    \end{align}\\
+    故绝热过程中的导数为：
+    \begin{align}
+        \frac{\dif P}{\dif V}&=\frac{\dif}{\dif V}\cdot\frac{C}{V^{\gamma}}\\[3mm]
+        \frac{\dif P}{\dif V}&=-\gamma\cdot\frac{C}{V^{^{\gamma}+1}}\\[3mm]
+        \frac{\dif P}{\dif V}&=-\gamma\cdot\frac{P\cdot V}{V^{\gamma+1}}\\[3mm]
+        \frac{\dif P}{\dif V}&=-\gamma\cdot\frac{P}{V}
+    \end{align}\\
+    根据热容比的定义可知其满足$\gamma>1$：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            \left|-\gamma\cdot\frac{P}{V}\right|>\left|-\frac{P}{V}\right|
+        \end{equation*}
+    \end{large}\\
+    由此证明了绝热线的切线斜率的绝对值始终大于等温线，即绝热线比等温线更陡。
 
 
 \end{document}
