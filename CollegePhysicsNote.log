@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  31 JUL 2020 08:23
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  1 AUG 2020 20:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1316,12 +1316,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 3790--3794
-
- []
-
-[89] [90]
+ [89] [90]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1337,23 +1332,23 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 4243--4247
+Underfull \hbox (badness 10000) in paragraph at lines 4255--4259
 
  []
 
 [99] [100] [101] [102] [103] [104]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4461.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4461.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4474.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4474.
  (./CollegePhysicsNote.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4461.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4461.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4474.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4474.
 Package rerunfilecheck Info: File `CollegePhysicsNote.out' has not changed.
 (rerunfilecheck)             Checksum: 3180A06D0F319EEE5159513ABCAAD37D.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4461.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4474.
  ) 
 Here is how much of TeX's memory you used:
  51719 strings out of 492922

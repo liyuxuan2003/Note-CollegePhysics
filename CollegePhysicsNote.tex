@@ -3791,6 +3791,8 @@
     \end{large}\\
     在等体升温的过程中，理想气体吸收的热量，全部转化为其内能的增加，不向外界做功。\\[3mm]
     在等体降温的过程中，理想气体放出的热量，全部来自于其内能的减少，不受外界做功。\\[3mm]
+    由于压强和温度成正比，故向上的等体线压强增大温度升高，是等体升温过程。\\[3mm]
+    由于压强和温度成正比，故向下的等体线压强减小温度下降，是等体降温过程。
 
 \newpage
 
@@ -3879,7 +3881,9 @@
         \end{align*}
     \end{large}\\
     在等压升温的过程中，理想气体吸收的热量，部分转化为其内能的增加，部分用于向外界做功。\\[3mm]
-    在等压降温的过程中，理想气体放出的热量，部分来自于其内能的减少，部分源于受外界做功。
+    在等压降温的过程中，理想气体放出的热量，部分来自于其内能的减少，部分源于受外界做功。\\[3mm]
+    由于体积和温度成正比，故向右的等体线体积增大温度升高，是等压升温过程。\\[3mm]
+    由于体积和温度成正比，故向左的等体线体积减小温度下降，是等压降温过程。
 
 \newpage
 
@@ -3918,6 +3922,14 @@
     \begin{large}
         \begin{equation*}
             Q=\int_{T_1}^{T_2}C\cdot\dif T
+        \end{equation*}
+    \end{large}\\
+    比热容量衡量了一定质量的物质上升单位温度所需吸收的热量。\\[3mm]
+    比热容量是一个标量，通常用符号$c$表示，单位是\si{J/(K\cdot kg)}。\\[3mm]
+    比热容量的定义式：
+    \begin{large}
+        \begin{equation*}
+            Q=m\cdot\int_{T_1}^{T_2}c\cdot\dif T
         \end{equation*}
     \end{large}\\
     摩尔热容量衡量了单位物质的量的物质上升单位温度所吸收的热量。\\[3mm]
@@ -3964,7 +3976,7 @@
         &=\frac{i}{2}\cdot R\cdot\frac{\dif T}{\dif T}\\[4mm]
         &=\frac{i}{2}\cdot R
     \end{align}\\
-    等体摩尔热容量只和气体自由度有关，等体摩尔热容量与温度无关。\\[3mm]
+    等体摩尔热容量只和气体自由度有关，等体摩尔热容量是一个无关温度的定值。\\[3mm]
     等体过程的热量还可以表示为：
     \begin{large}
         \begin{equation*}
@@ -4006,7 +4018,7 @@
         &=\frac{i+2}{2}\cdot R\cdot\frac{\dif T}{\dif T}\\[4mm]
         &=\frac{i+2}{2}\cdot R
     \end{align}\\
-    等压摩尔热容量只和气体自由度有关，等压摩尔热容量与温度无关。\\[3mm]
+    等压摩尔热容量只和气体自由度有关，等压摩尔热容量是一个无关温度的定值。\\[3mm]
     等压过程的热量还可以表示为：
     \begin{large}
         \begin{equation*}
@@ -4249,19 +4261,19 @@
 
     根据理想气体的内能的公式：
     \begin{align}
-        &~~~~~~~~~~\Delta E=E_2-E_1\\[3mm]
-        &~~~~~~~~~~\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_2-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot T_1\\[3mm]
-        &~~~~~~~~~~\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)\\[3mm]
-        &~~~~~~~~~~\Delta E=\frac{m}{M}\cdot C_{V_m}\cdot(T_2-T_1)
+        &\Delta E=E_2-E_1\\[3mm]
+        &\Delta E=\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)\\[3mm]
+        &\Delta E=\frac{m}{M}\cdot C_{V_m}\cdot(T_2-T_1)
     \end{align}\\
     由热力学第一定律可以得到：
     \begin{align}
         &Q=(E_2-E_1)+W\\[3mm]
         &0=\Delta E+W\\[3mm]
         &W=-\Delta E\\[3mm]
-        &W=-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)~~~~\\[3mm]
+        &W=-\frac{i}{2}\cdot\frac{m}{M}\cdot R\cdot (T_2-T_1)~~\\[3mm]
         &W=-\frac{m}{M}\cdot C_{V_m}\cdot(T_2-T_1)
-    \end{align}
+    \end{align}\\
+    由此证明了绝热过程的相关规律。
 
 \subsubsection{绝热过程中气体状态参量间的关系}
     \setcounter{equation}{0}
@@ -4269,7 +4281,6 @@
     绝热过程中的对外绝热：
     \begin{align}
         &\dif E+\dif W=0\\[3mm]
-        &\dif E+P\cdot \dif V=0\\[3mm]
         &P\cdot \dif V=-\dif E\\[3mm]
         &P\cdot \dif V=-\frac{m}{M}\cdot C_{V_m}\cdot\dif T
     \end{align}\\
@@ -4382,7 +4393,9 @@
         \begin{equation*}
             P^{1-\gamma}\cdot T^{\gamma}=C
         \end{equation*}
-    \end{large}\vspace{-5pt}
+    \end{large}\\
+    由此证明了绝热过程中各个状态参量间存在的一组额外关系。\\[3mm]
+    因此绝热过程中只要知道一个参量的数值，就一定可以求出另外两个参量。
 
 \subsubsection{绝热过程和等温过程的关系}
     \setcounter{equation}{0}
@@ -4391,7 +4404,7 @@
     因此绝热线和等温线实际上非常相似：
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[scale=1.0]
+            \begin{tikzpicture}[scale=0.8]
                 \tkzDefPoint(0,0){O}
                 \tkzDefPoint(8,0){X}
                 \tkzDefPoint(0,6.3){Y}
