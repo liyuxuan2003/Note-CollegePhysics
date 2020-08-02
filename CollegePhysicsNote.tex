@@ -24,6 +24,7 @@
 \usetkzobj{all}
 \usetikzlibrary{angles}
 \usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta}
 
 %排版
 \RequirePackage[hidelinks]{hyperref}    %添加目录超链接
@@ -73,6 +74,9 @@
 \date{2020.07.01}
 
 \begin{document}
+
+\definecolor{LightGray}{rgb}{0.95,0.95,0.95}
+\definecolor{MediumGray}{rgb}{0.7,0.7,0.7}
 
 %绘制标题
 \maketitle
@@ -4470,5 +4474,198 @@
     \end{large}\\
     由此证明了绝热线的切线斜率的绝对值始终大于等温线，即绝热线比等温线更陡。
 
+\newpage
+
+\subsection{循环过程}
+    循环过程指的是热力学系统的一种过程：系统经过一系列变化后，最终又回到原来的状态。\\[3mm]
+    循环过程中的热力学系统通常也称为工作物质或工质，该过程常用于生产中功和能的持续转化。\\[3mm]
+    循环过程可以用$P-V$图上的封闭曲线表示：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[正循环过程]
+            {
+                \begin{tikzpicture}[scale=0.8]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(6.5,0){X}
+                    \tkzDefPoint(0,6.5){Y}
+    
+                    \tkzDrawSegment[->](O,X)
+                    \tkzDrawSegment[->](O,Y)
+    
+                    \tkzLabelPoint[above](X){$V$}
+                    \tkzLabelPoint[right](Y){$P$}
+
+                    \fill[LightGray,rotate around={-45:(3,3)}] (3,3) ellipse (2 and 1);
+                    \draw[smooth,thick,samples=100,domain=90:-90,->,rotate around={-45:(3,3)}] plot({2*cos(\x)+3},{1*sin(\x)+3});
+                    \draw[smooth,thick,samples=100,domain=270:90,->,rotate around={-45:(3,3)}] plot({2*cos(\x)+3},{1*sin(\x)+3});
+
+                    \tkzDefPoint(1.42,4.0){A}
+                    \tkzDefPoint(3.6,3.6){B}
+                    \tkzDefPoint(4.58,2.0){C}
+                    \tkzDefPoint(2.4,2.4){D}
+
+                    \tkzLabelPoint[left](A){$A$}
+                    \tkzLabelPoint[above right=1pt](B){$B$}
+                    \tkzLabelPoint[right](C){$C$}
+                    \tkzLabelPoint[below left=1pt](D){$D$}
+
+                    \tkzDrawPoint[fill=white](A)
+                    \tkzDrawPoint[fill=white](C)
+
+                    \tkzDefPoint(2.6,3){W}
+                    \tkzLabelPoint[right](W){$W$}
+                \end{tikzpicture}
+            }\qquad\qquad
+            \subfigure[逆循环过程]
+            {
+                \begin{tikzpicture}[scale=0.8]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(6.5,0){X}
+                    \tkzDefPoint(0,6.5){Y}
+    
+                    \tkzDrawSegment[->](O,X)
+                    \tkzDrawSegment[->](O,Y)
+    
+                    \tkzLabelPoint[above](X){$V$}
+                    \tkzLabelPoint[right](Y){$P$}
+
+                    \fill[LightGray,rotate around={-45:(3,3)}] (3,3) ellipse (2 and 1);
+                    \draw[smooth,thick,samples=100,domain=90:-90,<-,rotate around={-45:(3,3)}] plot({2*cos(\x)+3},{1*sin(\x)+3});
+                    \draw[smooth,thick,samples=100,domain=270:90,<-,rotate around={-45:(3,3)}] plot({2*cos(\x)+3},{1*sin(\x)+3});
+
+                    \tkzDefPoint(1.42,4.0){A}
+                    \tkzDefPoint(3.6,3.6){B}
+                    \tkzDefPoint(4.58,2.0){C}
+                    \tkzDefPoint(2.4,2.4){D}
+
+                    \tkzLabelPoint[left](A){$A$}
+                    \tkzLabelPoint[above right=1pt](B){$B$}
+                    \tkzLabelPoint[right](C){$C$}
+                    \tkzLabelPoint[below left=1pt](D){$D$}
+
+                    \tkzDrawPoint[fill=white](A)
+                    \tkzDrawPoint[fill=white](C)
+
+                    \tkzDefPoint(2.6,3){W}
+                    \tkzLabelPoint[right](W){$W$}
+                \end{tikzpicture}
+            }
+            \caption{循环过程}
+        \end{center}
+    \end{figure}\\
+    循环过程中所做的功为曲线所包围的面积，经过一个循环内能不变。\\[3mm]
+    循环过程为顺时针方向的称为正循环，工作物质作正循环的称为热机。\\[3mm]
+    循环过程为逆时针方向的称为逆循环，工作物质作逆循环的称为热泵。\\[6mm]
+    热机的工质在$A\rightarrow B\rightarrow C$的过程中吸收热量，体积膨胀，对外界做功。\\[3mm]
+    热机的工质在$C\rightarrow D\rightarrow A$的过程中放出热量，体积压缩，受外界做功。\\[3mm]
+    热机工质的膨胀中对外界做的功大于热机在压缩中受外界做的功，因此热机可以向外界做功。\\[3mm]
+    热机中较为典型的包括蒸汽机和内燃机。\\[6mm]
+    热泵的工质在$A\rightarrow D\rightarrow C$的过程中吸收热量，体积膨胀，对外界做功。\\[3mm]
+    热泵的工质在$C\rightarrow B\rightarrow A$的过程中放出热量，体积压缩，受外界做功。\\[3mm]
+    热泵工质的膨胀中对外界做的功小于热机在压缩中受外界做的功，因此热泵需要受外界做功。\\[3mm]
+    热泵中较为典型的包括冷空调和暖空调。\\[6mm]
+
+\newpage
+
+\subsubsection{热机}
+    热机可以向外界做功，从高温热源吸收热量，向低温热源放出热量，使得热源间的温度差减少。\\[3mm]
+    热机是一种通过消耗高温热源和低温热源的温差，从而向外界做功的机械。\\[3mm]
+    热机的工作原理可以用下图表示：\vspace{5pt}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \draw[very thick] (-5,+3.5) rectangle (5,+2.5);
+                \node at(0,+3.0) {高温热源$T_h$};
+
+                \draw[very thick] (-5,-3.5) rectangle (5,-2.5);
+                \node at(0,-3.0) {低温热源$T_c$};
+
+                \draw[very thick] (0,0) ellipse (1.3 and 1.0);
+                \node at(0,0){工作物质};
+
+                \tkzDefPoint(0,+2.5){Qh1}
+                \tkzDefPoint(0,+1.0){Qh2}
+                \tkzDefPoint(0,-2.5){Qc1}
+                \tkzDefPoint(0,-1.0){Qc2}
+                \tkzDefPoint(1.3,0){W1}
+                \tkzDefPoint(2.0,0){W2}
+
+                \tkzDrawSegment[-{>[scale=2]}](Qh1,Qh2)
+                \tkzDrawSegment[-{>[scale=2]}](Qc2,Qc1)
+                \tkzDrawSegment[-{>[scale=2]}](W1,W2)
+
+                \tkzLabelSegment[right](Qh1,Qh2){$Q_h$}
+                \tkzLabelSegment[right](Qc1,Qc2){$Q_c$}
+                \tkzLabelPoint[right](W2){$W=Q_h-Q_c$}
+            \end{tikzpicture}
+            \caption{热机的工作原理}
+        \end{center}
+    \end{figure}\\
+    热机可以用于对外做功，例如蒸汽机用于做功驱动机械。\\[3mm]
+    热机做功时，将蒸汽作为高温热源，将空气作为低温热源，通过热机工作从而做功驱动机械。\\[6mm]
+    热机的一个重要指标是热机效率$\eta$：
+    \begin{large}
+        \begin{align*}
+            &\eta=\frac{W}{Q_h}=\frac{Q_h-Q_c}{Q_h}\\[6mm]
+            &\eta=\frac{W}{Q_h}=1-\frac{Q_c}{Q_h}
+        \end{align*}
+    \end{large}\\
+    热机效率$\eta$定义为工质输出的功$W$与高温热源吸收热量$Q_h$的比值。\\[3mm]
+    热机效率$\eta<1$，这意味着输出的功总是比从高温热源吸收的热量少。
+
+\newpage
+
+\subsubsection{热泵}
+    热泵需要受外界做功，从低温热源吸收热量，向高温热源放出热量，使得热源间的温度差增加。\\[3mm]
+    热泵是一种通过受外界做功，从而增大高温热源和低温热源的温差的机械。\\[3mm]
+    热泵的工作原理可以用下图表示：\vspace{5pt}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \draw[very thick] (-5,+3.5) rectangle (5,+2.5);
+                \node at(0,+3.0) {高温热源$T_h$};
+
+                \draw[very thick] (-5,-3.5) rectangle (5,-2.5);
+                \node at(0,-3.0) {低温热源$T_c$};
+
+                \draw[very thick] (0,0) ellipse (1.3 and 1.0);
+                \node at(0,0){工作物质};
+
+                \tkzDefPoint(0,+2.5){Qh1}
+                \tkzDefPoint(0,+1.0){Qh2}
+                \tkzDefPoint(0,-2.5){Qc1}
+                \tkzDefPoint(0,-1.0){Qc2}
+                \tkzDefPoint(1.3,0){W1}
+                \tkzDefPoint(2.0,0){W2}
+
+                \tkzDrawSegment[-{>[scale=2]}](Qh2,Qh1)
+                \tkzDrawSegment[-{>[scale=2]}](Qc1,Qc2)
+                \tkzDrawSegment[-{>[scale=2]}](W2,W1)
+
+                \tkzLabelSegment[right](Qh1,Qh2){$Q_h$}
+                \tkzLabelSegment[right](Qc1,Qc2){$Q_c$}
+                \tkzLabelPoint[right](W2){$W=Q_h-Q_c$}
+            \end{tikzpicture}
+            \caption{热泵的工作原理}
+        \end{center}
+    \end{figure}\\
+    热泵可以用于供热或制冷，例如热空调用于供热，例如冷空调用于制冷。\\[3mm]
+    热泵供热时，将室内作为高温热源，将室外作为低温热源，通过热泵的工作使得室内温度更高。\\[3mm]
+    热泵制冷时，将室内作为低温热源，将室外作为高温热源，通过热泵的工作使得室内温度更低。\\[6mm]
+    热泵制冷时的一个重要指标是热泵制冷效能$w_c$：
+    \begin{large}
+        \begin{equation*}
+            w_c=\frac{Q_h}{W}=\frac{Q_c}{Q_h-Q_c}
+        \end{equation*}
+    \end{large}\\
+    热泵供暖时的一个重要指标是热泵供暖效能$w_h$：
+    \begin{large}
+        \begin{equation*}
+            w_h=\frac{Q_h}{W}=\frac{Q_h}{Q_h-Q_c}
+        \end{equation*}
+    \end{large}\\
+    热泵制冷效能$w_c\,$定义为从低温热源吸收的热量$Q_c$和工质输入的功$W$的比值。\\[3mm]
+    热泵供暖效能$w_h$定义为向高温热源放出的热量$Q_h$和工质输入的功$W$的比值。\\[3mm]    
+    热泵供暖效能$w_h>1$，这意味着向高温热源放出的热量总是比输入的功多。
 
 \end{document}

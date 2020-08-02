@@ -114,3 +114,6 @@
 \contentsline {subsection}{\numberline {8.8}气体的绝热过程}{99}{subsection.8.8}% 
 \contentsline {subsubsection}{\numberline {8.8.1}绝热过程中气体状态参量间的关系}{100}{subsubsection.8.8.1}% 
 \contentsline {subsubsection}{\numberline {8.8.2}绝热过程和等温过程的关系}{103}{subsubsection.8.8.2}% 
+\contentsline {subsection}{\numberline {8.9}循环过程}{105}{subsection.8.9}% 
+\contentsline {subsubsection}{\numberline {8.9.1}热机}{106}{subsubsection.8.9.1}% 
+\contentsline {subsubsection}{\numberline {8.9.2}热泵}{107}{subsubsection.8.9.2}% 
