@@ -2065,7 +2065,7 @@
 
     考虑所有质点则有：
     \begin{align}
-        \sum F_i\cdot r_i\cdot\sin\varphi_i+\sum f_i\cdot r_i\cdot\sin\beta_i=\left(\sum m_i\cdot r_i\right)\cdot\alpha
+        \sum F_i\cdot r_i\cdot\sin\varphi_i+\sum f_i\cdot r_i\cdot\sin\beta_i=\left(\sum m_i\cdot r_i^2\right)\cdot\alpha
     \end{align}\\
     其中第一项表示合外力的力矩：
     \begin{align}
@@ -2078,7 +2078,7 @@
     根据牛顿第三定律，合内力中的作用力和反作用力相互抵消，故内力的合力矩为零。\\[16mm]
     因此可以得到：
     \begin{align}
-        \sum F_i\cdot r_i\cdot\sin\varphi_i=\left(\sum m_i\cdot r_i\right)\cdot\alpha
+        \sum F_i\cdot r_i\cdot\sin\varphi_i=\left(\sum m_i\cdot r_i^2\right)\cdot\alpha
     \end{align}\\
     定义力矩$M$为：
     \begin{align}
@@ -2086,7 +2086,7 @@
     \end{align}\\
     定义转动惯量$J$为：
     \begin{align}
-        J=\sum m_i\cdot r_i
+        J=\sum m_i\cdot r_i^2
     \end{align}\\
     将其代入可得：
     \begin{align}
@@ -4910,6 +4910,352 @@
     第二类永动机指的是可以从单一热源吸收热量并完全转变为功而不产生其他影响的机器。\\[3mm]
     第二类永动机违背了热力学第二定律的开尔文表述，因此不可能实现。
 
+\newpage
+
+\part{电}
+
+\newpage
+
+\section{真空中静电场}
+
+\subsection{电荷}
+    电荷只有两种类型：负电荷，正电荷。\\[3mm]
+    1.负电荷，用$-$表示，例如电子所带的电荷就为负电荷。\\[3mm]
+    2.正电荷，用$+$表示，例如质子所带的电荷就为正电荷。\\[3mm]
+    例如丝绸和玻璃棒摩擦会发生电荷的转移，丝绸带负电荷，玻璃棒带正电荷。\\[3mm]
+    例如毛皮和橡胶棒摩擦会发生电荷的转移，毛皮带正电荷，橡胶棒带负电荷。\\[6mm]
+    电荷量衡量了物体所带电荷数量的多少，通常用字母$Q$表示，是一个标量，单位是\si{C}。\\[3mm]
+    电荷量的单位库伦定义如下：
+    \begin{large}
+        \begin{equation*}
+            C=A\cdot s
+        \end{equation*}
+    \end{large}\\
+    电荷量在不引起误解的情况下，也可以简称为电荷或电量。\\[3mm]
+    点电荷是一种理想模型，只具有质量和电荷量，没有大小，没有形状。\\[3mm]
+    点电荷通常在带电体的大小远远小于带电体的距离时使用，此时大小形状相较于距离可以忽略。\\[6mm]
+    \textbf{电荷守恒定律：}在一个孤立系统中，电荷既不能被创造，电荷也不能被消灭，只能从一个物体转移到另一个物体，
+    或者从物体的一个部分转移到另一个部分。\\[3mm]
+    电荷守恒定律描述了电荷在一切宏观过程和微观过程中所遵循的基本规律。\vspace{5pt}
+
+\subsubsection{元电荷}
+    实验表明，物体所带电荷量的值是不连续的，物体所带电荷量总是某一值的整数倍。\\[3mm]
+    研究表明，这一数值为质子或电子所带电荷量的大小，称之为元电荷或基本电荷。\\[3mm]
+    元电荷的数值为：
+    \begin{large}
+        \begin{equation*}
+            e=1.602\times 10^{-19}\si{C}
+        \end{equation*}
+    \end{large}\\
+    元电荷的数值由密立根通过密立根油滴实验测定。\\[3mm]
+    如果用元电荷$e$表示质子的电荷量，那么质子的电荷量可以写作$+e$。\\[3mm]
+    如果用元电荷$e$表示电子的电荷量，那么电子的电荷量可以写作$-e$。
+
+\newpage
+
+\subsection{电场}
+    电荷间有相互作用力，同性电荷相互排斥，异性电荷相互吸引。\\[3mm]
+    电荷不需要相互接触就可以有作用力，但是这种作用实际并不是超距的。\\[3mm]
+    电荷间的相互作用是通过电场实现的：\vspace{5pt}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.1]
+                \tkzDefPoint(0,+5.0){Q1}
+                \tkzDefPoint(0,-5.0){Q2}
+
+                \tkzDefShiftPoint[Q1](0,-0.9){Q1d}
+                \tkzDefShiftPoint[Q2](0,+0.9){Q2u}
+
+                \tkzDefPoint(0,0){E}
+
+                \tkzDefShiftPoint[E](0,-0.5){Ed}
+                \tkzDefShiftPoint[E](0,+0.5){Eu}
+
+                \tkzDrawCircle[R](Q1,0.9cm)
+                \tkzDrawCircle[R](Q2,0.9cm)
+
+                \draw (-1.0,+0.5) rectangle (+1.0,-0.5);
+
+                \node at (Q1) {电荷$Q_1$};
+                \node at (Q2) {电荷$Q_2$};
+
+                \node at (E) {电场};
+
+                \tkzDrawSegment[thick,<->](Q1d,Eu)
+                \tkzDrawSegment[thick,<->](Q2u,Ed)
+            \end{tikzpicture}
+            \caption{电荷通过电场传递相互作用力}
+        \end{center}
+    \end{figure}\\
+    电荷在其周围会激发电场，由静止电荷激发的电场称为静电场。\\[3mm]
+    电场是一种特殊但客观存在的物质，因此电场也具有能量和动量。\\[3mm]
+
+\newpage
+
+\subsection{电场力}
+    电场力衡量了电荷在电场中受到的力，通常用符号$\veb{F}$表示，是一个矢量，单位是\si{N}。\\[3mm]
+    电场力的计算公式（矢量形式）：
+    \begin{large}
+        \begin{equation*}
+            \veb{F}=\frac{1}{4\pi\cdot\varepsilon_0}\cdot\frac{Q_1\cdot Q_2}{r^2}\cdot\veb{r_0}
+        \end{equation*}
+    \end{large}\\
+    电场力的计算公式（标量形式）：
+    \begin{large}
+        \begin{equation*}
+            F=\frac{1}{4\pi\cdot\varepsilon_0}\cdot\frac{Q_1\cdot Q_2}{r^2}
+        \end{equation*}
+    \end{large}\\
+    该结论也被称为库伦定律。\\[3mm]
+    其中$\varepsilon_0$为真空电容率，其取值为$\varepsilon_0=8.85\times 10^{-12}$~\si{C^2/(N\cdot m^2)}。\\[3mm]
+    其中$Q_1,Q_2$代表了施力电荷和受力电荷，而$\veb{r_0}$代表施力电荷和受力电荷的位矢的单位矢量。\\[6mm]
+    当两个电荷同号时的电场力：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(-3,0){Q1}
+                \tkzDefPoint(+3,0){Q2}
+
+                \tkzDefShiftPoint[Q1](-2.0,0){L1}
+                \tkzDefShiftPoint[Q2](+2.0,0){L2}
+
+                \tkzDefShiftPoint[Q1](+0.3,0){RS}
+                \tkzDefShiftPoint[Q1](+1.3,0){RE}
+
+                \tkzDefShiftPoint[Q2](+0.3,0){FS}
+                \tkzDefShiftPoint[Q2](+1.3,0){FE}
+
+                \tkzDefShiftPoint[Q1](0,-0.3){R1A}
+                \tkzDefShiftPoint[Q1](0,-0.5){R1B}
+                \tkzDefShiftPoint[Q1](0,-0.7){R1C}
+
+                \tkzDefShiftPoint[Q2](0,-0.3){R2A}
+                \tkzDefShiftPoint[Q2](0,-0.5){R2B}
+                \tkzDefShiftPoint[Q2](0,-0.7){R2C}
+
+                \tkzDrawSegment[dashed](L1,L2)
+                \tkzDrawSegment(R1A,R1C)
+                \tkzDrawSegment(R2A,R2C)
+
+                \tkzDrawSegment[<->](R1B,R2B)
+
+                \tkzDrawSegment[-latex](RS,RE)
+                \tkzDrawSegment[-latex](FS,FE)
+
+                \tkzDrawCircle[fill=white](Q1,RS)
+                \tkzDrawCircle[fill=white](Q2,FS)
+
+                \tkzLabelSegment[below](R1B,R2B){$r$}
+                \tkzLabelPoint[above=8pt](Q1){$Q_1$}
+                \tkzLabelPoint[above=8pt](Q2){$Q_2$}
+
+                \tkzLabelPoint[above](RE){$\veb{r_0}$}
+                \tkzLabelPoint[above](FE){$\veb{F}$}
+
+                \node at (Q1) {$+$};
+                \node at (Q2) {$+$};
+            \end{tikzpicture}
+            \caption{两个电荷同号时的受力情况}
+        \end{center}
+    \end{figure}\\
+    当两个电荷异号时的电场力：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(-3,0){Q1}
+                \tkzDefPoint(+3,0){Q2}
+
+                \tkzDefShiftPoint[Q1](-2.0,0){L1}
+                \tkzDefShiftPoint[Q2](+2.0,0){L2}
+
+                \tkzDefShiftPoint[Q1](+0.3,0){RS}
+                \tkzDefShiftPoint[Q1](+1.3,0){RE}
+
+                \tkzDefShiftPoint[Q2](-0.3,0){FS}
+                \tkzDefShiftPoint[Q2](-1.3,0){FE}
+
+                \tkzDefShiftPoint[Q1](0,-0.3){R1A}
+                \tkzDefShiftPoint[Q1](0,-0.5){R1B}
+                \tkzDefShiftPoint[Q1](0,-0.7){R1C}
+
+                \tkzDefShiftPoint[Q2](0,-0.3){R2A}
+                \tkzDefShiftPoint[Q2](0,-0.5){R2B}
+                \tkzDefShiftPoint[Q2](0,-0.7){R2C}
+
+                \tkzDrawSegment[dashed](L1,L2)
+                \tkzDrawSegment(R1A,R1C)
+                \tkzDrawSegment(R2A,R2C)
+
+                \tkzDrawSegment[<->](R1B,R2B)
+
+                \tkzDrawSegment[-latex](RS,RE)
+                \tkzDrawSegment[-latex](FS,FE)
+
+                \tkzDrawCircle[fill=white](Q1,RS)
+                \tkzDrawCircle[fill=white](Q2,FS)
+
+                \tkzLabelSegment[below](R1B,R2B){$r$}
+                \tkzLabelPoint[above=8pt](Q1){$Q_1$}
+                \tkzLabelPoint[above=8pt](Q2){$Q_2$}
+
+                \tkzLabelPoint[above](RE){$\veb{r_0}$}
+                \tkzLabelPoint[above](FE){$\veb{F}$}
+
+                \node at (Q1) {$-$};
+                \node at (Q2) {$+$};
+            \end{tikzpicture}
+            \caption{两个电荷同号时的受力情况}
+        \end{center}
+    \end{figure}\\
+    第一种情况中，电荷量的乘积$Q_1\cdot Q_2$为正值，故电场力$\veb{F}$的方向和$r_0$方向相同。\\[3mm]
+    第二种情况中，电荷量的乘积$Q_1\cdot Q_2$为负值，故电场力$\veb{F}$的方向和$r_0$方向相反。\\[6mm]
+    库伦定律中也可以引入一比例系数$k=\dfrac{1}{4\pi\cdot\varepsilon_0}=8.98\times 10^9~\si{(N\cdot m^2)/C^2}$。\\[3mm]
+    库伦定律会因此变得更为简单，但这会使更为常用的导出公式变得复杂，故通常不使用该系数。
+
+\subsection{电场强度}
+    \setcounter{equation}{0}
+    电场强度衡量了电场的强弱，通常用符号$\veb{E}$表示，是一个矢量，单位是\si{N/C}。\\[3mm]
+    电场强度的计算公式（矢量形式）：
+    \begin{large}
+        \begin{equation*}
+            \veb{E}=\frac{1}{4\pi\cdot\varepsilon_0}\cdot\frac{Q_1}{r^2}\cdot\veb{r_0}
+        \end{equation*}
+    \end{large}\\
+    电场强度的计算公式（标量形式）：
+    \begin{large}
+        \begin{equation*}
+            E=\frac{1}{4\pi\cdot\varepsilon_0}\cdot\frac{Q_1}{r^2}
+        \end{equation*}
+    \end{large}\\
+    其中$Q_1$代表场源电荷，而$\veb{r_0}$代表场源指向场点的位矢的单位矢量。\\[3mm]
+    其中$Q_2$代表试验电荷，而$\veb{F}$为试验电荷在场源电荷中某一处受到的电场力。\\[3mm]
+    试验电荷的电荷量十分的小，以至于其自身产生的电场相较于场源电荷的电场可以忽略。\\[6mm]
+    电场强度定义为单位电荷量的试验电荷在电场中所受到的电场力。\\[3mm]
+    电场强度的计算公式的推导如下：
+    \begin{align}
+        &\veb{E}=\frac{\veb{F}}{Q_2}=\frac{1}{4\pi\cdot\varepsilon_0}\cdot\frac{Q_1}{r^2}\cdot\veb{r_0}
+    \end{align}\\
+    当场源电荷为正电荷时的电场强度：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(-3,0){Q1}
+                \tkzDefPoint(+3,0){Q2}
+
+                \tkzDefShiftPoint[Q1](-2.0,0){L1}
+                \tkzDefShiftPoint[Q2](+2.0,0){L2}
+
+                \tkzDefShiftPoint[Q1](+0.3,0){RS}
+                \tkzDefShiftPoint[Q1](+1.3,0){RE}
+
+                \tkzDefShiftPoint[Q2](+0.0,0){FS}
+                \tkzDefShiftPoint[Q2](+1.3,0){FE}
+
+                \tkzDefShiftPoint[Q1](0,-0.3){R1A}
+                \tkzDefShiftPoint[Q1](0,-0.5){R1B}
+                \tkzDefShiftPoint[Q1](0,-0.7){R1C}
+
+                \tkzDefShiftPoint[Q2](0,-0.3){R2A}
+                \tkzDefShiftPoint[Q2](0,-0.5){R2B}
+                \tkzDefShiftPoint[Q2](0,-0.7){R2C}
+
+                \tkzDrawSegment[dashed](L1,L2)
+                \tkzDrawSegment(R1A,R1C)
+                \tkzDrawSegment(Q2,R2C)
+
+                \tkzDrawSegment[<->](R1B,R2B)
+
+                \tkzDrawSegment[-latex](RS,RE)
+                \tkzDrawSegment[-latex](FS,FE)
+
+                \tkzDrawCircle[fill=white](Q1,RS)
+                \tkzDrawPoint[fill=white](Q2)
+
+                \tkzLabelSegment[below](R1B,R2B){$r$}
+                \tkzLabelPoint[above=8pt](Q1){$Q_1$}
+
+                \tkzLabelPoint[above](RE){$\veb{r_0}$}
+                \tkzLabelPoint[above](FE){$\veb{E}$}
+
+                \node at (Q1) {$+$};
+            \end{tikzpicture}
+            \caption{场源电荷为正电荷时的电场强度}
+        \end{center}
+    \end{figure}\\
+    当场源电荷为正电荷时的电场强度：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(-3,0){Q1}
+                \tkzDefPoint(+3,0){Q2}
+
+                \tkzDefShiftPoint[Q1](-2.0,0){L1}
+                \tkzDefShiftPoint[Q2](+2.0,0){L2}
+
+                \tkzDefShiftPoint[Q1](+0.3,0){RS}
+                \tkzDefShiftPoint[Q1](+1.3,0){RE}
+
+                \tkzDefShiftPoint[Q2](+0.0,0){FS}
+                \tkzDefShiftPoint[Q2](-1.3,0){FE}
+
+                \tkzDefShiftPoint[Q1](0,-0.3){R1A}
+                \tkzDefShiftPoint[Q1](0,-0.5){R1B}
+                \tkzDefShiftPoint[Q1](0,-0.7){R1C}
+
+                \tkzDefShiftPoint[Q2](0,-0.3){R2A}
+                \tkzDefShiftPoint[Q2](0,-0.5){R2B}
+                \tkzDefShiftPoint[Q2](0,-0.7){R2C}
+
+                \tkzDrawSegment[dashed](L1,L2)
+                \tkzDrawSegment(R1A,R1C)
+                \tkzDrawSegment(Q2,R2C)
+
+                \tkzDrawSegment[<->](R1B,R2B)
+
+                \tkzDrawSegment[-latex](RS,RE)
+                \tkzDrawSegment[-latex](FS,FE)
+
+                \tkzDrawCircle[fill=white](Q1,RS)
+                \tkzDrawPoint[fill=white](Q2)
+
+                \tkzLabelSegment[below](R1B,R2B){$r$}
+                \tkzLabelPoint[above=8pt](Q1){$Q_1$}
+
+                \tkzLabelPoint[above](RE){$\veb{r_0}$}
+                \tkzLabelPoint[above](FE){$\veb{E}$}
+
+                \node at (Q1) {$-$};
+            \end{tikzpicture}
+            \caption{场源电荷为正电荷时的电场强度}
+        \end{center}
+    \end{figure}\\
+    第一种情况中，场源电荷的电荷量的乘积$Q_1$为正值，故电场强度$\veb{E}$的方向和$r_0$方向相同。\\[3mm]
+    第二种情况中，场源电荷的电荷量的乘积$Q_1$为负值，故电场强度$\veb{E}$的方向和$r_0$方向相反。
+
+\newpage
+
+\subsubsection{电场强度的迭加原理}
+    \setcounter{equation}{0}
+    \textbf{电场强度的迭加原理：}点电荷系在某一场点产生的电场强度，等于该点电荷系中的每一个电荷，
+    在其单独存在时，分别在该场点产生的电场强度的矢量和。\\[3mm]
+    电场强度的迭加原理的数学表达：
+    \begin{large}
+        \begin{equation*}
+            \veb{E}=\sum_{i=1}^{n}\veb{E_i}=\sum_{i=1}^{n}\frac{1}{4\pi\cdot\varepsilon_0}\cdot\frac{Q_i}{r_i^2}\cdot\veb{r_{0_i}}
+        \end{equation*}
+    \end{large}\\
+    设点电荷系由$n$个点电荷$Q_1\sim Q_n$组成，使用的试验电荷为$Q_0$。\\[3mm]
+    设点电荷系中的$n$个点电荷在场点处所施加的电场力为$\veb{F_1}\sim \veb{F_n}$。\\[3mm]
+    设点电荷系中的$n$个点电荷在场点处产生的电场强度为$\veb{E_1}\sim \veb{E_n}$。\\[3mm]
+    设场点处试验电荷所受电场力的合力为$\veb{F}$，设场电处的电场强度为$\veb{E}$。\\[6mm]
+    根据电场强度的定义：
+    \begin{align}
+        &\veb{E}=\frac{F}{Q_0}\\[3mm]
+        &\veb{E}=\frac{1}{Q_0}\cdot\sum_{i=1}^{n}\frac{1}{4\pi\cdot\varepsilon_0}\cdot\frac{Q_i\cdot Q_0}{r^2}\cdot\veb{r_{0_i}}\\[3mm]
+        &\veb{E}=\sum_{i=1}^{n}\frac{1}{4\pi\cdot\varepsilon_0}\cdot\frac{Q_i}{r^2}\cdot\veb{r_{0_i}}\\[3mm]
+        &\veb{E}=\sum_{i=1}^{n}\veb{E_i}
+    \end{align}\\
+    由此运用了电场力的迭加原理推导出了电场强度的迭加原理。
 
 
 
