@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  7 AUG 2020 09:38
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  7 AUG 2020 10:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1358,24 +1358,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 4958--4993
  []
 
 [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5797.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5797.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5695.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5695.
  (./CollegePhysicsNote.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5797.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5797.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5695.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5695.
 Package rerunfilecheck Info: File `CollegePhysicsNote.out' has not changed.
-(rerunfilecheck)             Checksum: 5F3867F324B2A577CE3A06C51FF4B558.
+(rerunfilecheck)             Checksum: 97B23D53C6245106EBFE3F3D3FF8F1B9.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5797.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5695.
  ) 
 Here is how much of TeX's memory you used:
- 55729 strings out of 492922
- 1229798 string characters out of 6136751
- 1367568 words of memory out of 5000000
- 59035 multiletter control sequences out of 15000+600000
+ 55742 strings out of 492922
+ 1229970 string characters out of 6136751
+ 1367571 words of memory out of 5000000
+ 59048 multiletter control sequences out of 15000+600000
  546353 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  75i,21n,154p,481b,1098s stack positions out of 5000i,500n,10000p,200000b,80000s

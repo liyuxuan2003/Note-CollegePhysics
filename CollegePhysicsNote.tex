@@ -5260,7 +5260,7 @@
 
 \newpage
 
-\subsubsection{电偶极子的电场强度}
+\subsection{电偶极子的电场强度}
     电偶极子由两个点电荷构成，电量相对，符号相反。\\[3mm]
     电偶极子的示意图：
     \begin{figure}[h]
@@ -5271,8 +5271,8 @@
                 \tkzDefPoint(-3,0){Q1}
                 \tkzDefPoint(+3,0){Q2}
 
-                \tkzDefShiftPoint[Q1](-3.0,0){A1}
-                \tkzDefShiftPoint[Q2](+3.0,0){A2}
+                \tkzDefPoint(-6.5,0){A1}
+                \tkzDefPoint(+6.5,0){A2}
 
                 \tkzDefPoint(0,-5){B1}
                 \tkzDefPoint(0,+5){B2}
@@ -5318,25 +5318,29 @@
 
 \newpage
 
-\textbf{1.电偶极子轴线的延长线上的电场强度}\\[3mm]
+\subsubsection{电偶极子轴线的延长线上的电场强度}
     \setcounter{equation}{0}
     假设在$A$轴上有一点$A$，其至中点的距离的大小为$r$。\\[3mm]
-    当场点$A$在中心点右侧且在电偶极子外时：
+    场点$A$在中心点右侧时的电场强度情况：
     \begin{figure}[h!]
         \begin{center}
             \begin{tikzpicture}[scale=1.0]
                 \tkzDefPoint(0,0){O}
 
-                \tkzDefPoint(-1,0){Q1}
-                \tkzDefPoint(+1,0){Q2}
+                \tkzDefPoint(-3,0){Q1}
+                \tkzDefPoint(+3,0){Q2}
 
-                \tkzDefShiftPoint[Q1](-5.0,0){A1}
-                \tkzDefShiftPoint[Q2](+5.0,0){A2}
+                \tkzDefPoint(-6.5,0){A1}
+                \tkzDefPoint(+6.5,0){A2}
+
+                \tkzDefPoint(0,-2.7){B1}
+                \tkzDefPoint(0,+2.7){B2}
 
                 \tkzDefShiftPoint[Q1](+0.3,0){Q1A}
                 \tkzDefShiftPoint[Q2](-0.3,0){Q2A}
 
                 \tkzDrawSegment[dashed](A1,A2)
+                \tkzDrawSegment[dashed](B1,B2)
 
                 \tkzDrawCircle[fill=white](Q1,Q1A)
                 \tkzDrawCircle[fill=white](Q2,Q2A)
@@ -5349,47 +5353,51 @@
                 \node at (Q1) {$-$};
                 \node at (Q2) {$+$};
 
-                \tkzDefShiftPoint[Q2](+2.0,0){A}
+                \tkzDefShiftPoint[Q2](+1.5,0){A}
                 \tkzDefShiftPoint[A](+1.5,0){E+}
                 \tkzDefShiftPoint[A](-0.5,0){E-}
 
-                \tkzDefShiftPoint[A](0,-0.6){A1}
-                \tkzDefShiftPoint[A1](+1.0,0){A2}
+                \tkzDefShiftPoint[A](0,-0.6){AE1}
+                \tkzDefShiftPoint[AE1](+1.0,0){AE2}
 
                 \tkzDrawSegment[-latex](A,E+)
                 \tkzDrawSegment[-latex](A,E-)
 
-                \tkzDrawSegment[dashed](A,A1)
-                \tkzDrawSegment[-latex](A1,A2)
+                \tkzDrawSegment[dashed](A,AE1)
+                \tkzDrawSegment[-latex](AE1,AE2)
 
                 \tkzLabelPoint[above](E+){$\veb{E^{+}}$}
                 \tkzLabelPoint[above](E-){$\veb{E^{-}}$}
 
-                \tkzLabelPoint[right](A2){$\veb{E_A}$}
-                \tkzLabelPoint[below](O){$O$}
+                \tkzLabelPoint[right](AE2){$\veb{E_A}$}
+                \tkzLabelPoint[below left](O){$O$}
 
                 \tkzDrawPoint[fill=white](A)
-                \tkzDrawPoint[fill=white](A1)
+                \tkzDrawPoint[fill=white](AE1)
             \end{tikzpicture}
             \caption{场点$A$在中心点右侧且在电偶极子外的情况}
         \end{center}
     \end{figure}\\
-    当场点$A$在中心点左侧且在电偶极子外时：
+    场点$A$在中心点左侧时的电场强度情况：
     \begin{figure}[h!]
         \begin{center}
             \begin{tikzpicture}[scale=1.0]
                 \tkzDefPoint(0,0){O}
 
-                \tkzDefPoint(-1,0){Q1}
-                \tkzDefPoint(+1,0){Q2}
+                \tkzDefPoint(-3,0){Q1}
+                \tkzDefPoint(+3,0){Q2}
 
-                \tkzDefShiftPoint[Q1](-5.0,0){A1}
-                \tkzDefShiftPoint[Q2](+5.0,0){A2}
+                \tkzDefPoint(-6.5,0){A1}
+                \tkzDefPoint(+6.5,0){A2}
 
-                \tkzDrawSegment[dashed](A1,A2)
+                \tkzDefPoint(0,-2.7){B1}
+                \tkzDefPoint(0,+2.7){B2}
 
                 \tkzDefShiftPoint[Q1](+0.3,0){Q1A}
                 \tkzDefShiftPoint[Q2](-0.3,0){Q2A}
+
+                \tkzDrawSegment[dashed](A1,A2)
+                \tkzDrawSegment[dashed](B1,B2)
 
                 \tkzDrawCircle[fill=white](Q1,Q1A)
                 \tkzDrawCircle[fill=white](Q2,Q2A)
@@ -5402,135 +5410,29 @@
                 \node at (Q1) {$-$};
                 \node at (Q2) {$+$};
 
-                \tkzDefShiftPoint[Q1](-3.0,0){A}
-                \tkzDefShiftPoint[A](-0.5,0){E+}
+                \tkzDefShiftPoint[Q1](-2.5,0){A}
                 \tkzDefShiftPoint[A](+1.5,0){E-}
-
-                \tkzDefShiftPoint[A](0,-0.6){A1}
-                \tkzDefShiftPoint[A1](+1.0,0){A2}
-
-                \tkzDrawSegment[-latex](A,E+)
-                \tkzDrawSegment[-latex](A,E-)
-
-                \tkzDrawSegment[dashed](A,A1)
-                \tkzDrawSegment[-latex](A1,A2)
-
-                \tkzLabelPoint[above](E+){$\veb{E^{+}}$}
-                \tkzLabelPoint[above](E-){$\veb{E^{-}}$}
-
-                \tkzLabelPoint[right](A2){$\veb{E_A}$}
-                \tkzLabelPoint[below](O){$O$}
-
-                \tkzDrawPoint[fill=white](A)
-                \tkzDrawPoint[fill=white](A1)
-            \end{tikzpicture}
-            \caption{场点$A$在中心点左侧且在电偶极子外的情况}
-        \end{center}
-    \end{figure}\\
-    当场点$A$在中心点右侧且在电偶极子间时：
-    \begin{figure}[h!]
-        \begin{center}
-            \begin{tikzpicture}[scale=1.0]
-                \tkzDefPoint(0,0){O}
-
-                \tkzDefPoint(-5.0,0){Q1}
-                \tkzDefPoint(+5.0,0){Q2}
-
-                \tkzDefShiftPoint[Q1](-1.0,0){A1}
-                \tkzDefShiftPoint[Q2](+1.0,0){A2}
-
-                \tkzDefShiftPoint[Q1](+0.3,0){Q1A}
-                \tkzDefShiftPoint[Q2](-0.3,0){Q2A}
-
-                \tkzDrawSegment[dashed](A1,A2)
-
-                \tkzDrawCircle[fill=white](Q1,Q1A)
-                \tkzDrawCircle[fill=white](Q2,Q2A)
-
-                \tkzLabelPoint[above=8pt](Q1){$-q$}
-                \tkzLabelPoint[above=8pt](Q2){$+q$}
-
-                \tkzDrawPoint[fill=white](O)
-
-                \node at (Q1) {$-$};
-                \node at (Q2) {$+$};
-
-                \tkzDefShiftPoint[Q2](-1.0,0){A}
-                \tkzDefShiftPoint[A](-1.5,0){E+}
-                \tkzDefShiftPoint[A](-0.5,0){E-}
-
-                \tkzDefShiftPoint[A](0,-0.6){A1}
-                \tkzDefShiftPoint[A1](-2.0,0){A2}
-
-                \tkzDrawSegment[-latex](A,E+)
-                \tkzDrawSegment[-latex](A,E-)
-
-                \tkzDrawSegment[dashed](A,A1)
-                \tkzDrawSegment[-latex](A1,A2)
-
-                \tkzLabelPoint[above](E+){$\veb{E^{+}}$}
-                \tkzLabelPoint[above](E-){$\veb{E^{-}}$}
-
-                \tkzLabelPoint[left](A2){$\veb{E_A}$}
-                \tkzLabelPoint[below](O){$O$}
-
-                \tkzDrawPoint[fill=white](A)
-                \tkzDrawPoint[fill=white](A1)
-            \end{tikzpicture}
-            \caption{场点$A$在中心点右侧且在电偶极子间的情况}
-        \end{center}
-    \end{figure}\\
-    当场点$A$在中心点左侧且在电偶极子间时：
-    \begin{figure}[h!]
-        \begin{center}
-            \begin{tikzpicture}[scale=1.0]
-                \tkzDefPoint(0,0){O}
-
-                \tkzDefPoint(-5.0,0){Q1}
-                \tkzDefPoint(+5.0,0){Q2}
-
-                \tkzDefShiftPoint[Q1](-1.0,0){A1}
-                \tkzDefShiftPoint[Q2](+1.0,0){A2}
-
-                \tkzDrawSegment[dashed](A1,A2)
-
-                \tkzDefShiftPoint[Q1](+0.3,0){Q1A}
-                \tkzDefShiftPoint[Q2](-0.3,0){Q2A}
-
-                \tkzDrawCircle[fill=white](Q1,Q1A)
-                \tkzDrawCircle[fill=white](Q2,Q2A)
-
-                \tkzLabelPoint[above=8pt](Q1){$-q$}
-                \tkzLabelPoint[above=8pt](Q2){$+q$}
-
-                \tkzDrawPoint[fill=white](O)
-
-                \node at (Q1) {$-$};
-                \node at (Q2) {$+$};
-
-                \tkzDefShiftPoint[Q1](+3.5,0){A}
                 \tkzDefShiftPoint[A](-0.5,0){E+}
-                \tkzDefShiftPoint[A](-1.5,0){E-}
 
-                \tkzDefShiftPoint[A](0,-0.6){A1}
-                \tkzDefShiftPoint[A1](-2.0,0){A2}
+                \tkzDefShiftPoint[A](0,-0.6){AE1}
+                \tkzDefShiftPoint[AE1](+1.0,0){AE2}
 
                 \tkzDrawSegment[-latex](A,E+)
                 \tkzDrawSegment[-latex](A,E-)
 
-                \tkzDrawSegment[dashed](A,A1)
-                \tkzDrawSegment[-latex](A1,A2)
+                \tkzDrawSegment[dashed](A,AE1)
+                \tkzDrawSegment[-latex](AE1,AE2)
 
                 \tkzLabelPoint[above](E+){$\veb{E^{+}}$}
                 \tkzLabelPoint[above](E-){$\veb{E^{-}}$}
 
-                \tkzLabelPoint[left](A2){$\veb{E_A}$}
-                \tkzLabelPoint[below](O){$O$}
+                \tkzLabelPoint[right](AE2){$\veb{E_A}$}
+                \tkzLabelPoint[below left](O){$O$}
 
                 \tkzDrawPoint[fill=white](A)
-                \tkzDrawPoint[fill=white](A1)
+                \tkzDrawPoint[fill=white](AE1)
             \end{tikzpicture}
-            \caption{场点$A$在中心点左侧且在电偶极子间的情况}
+            \caption{场点$A$在中心点右侧且在电偶极子外的情况}
         \end{center}
     \end{figure}\\
     由于通常我们不关心电偶极子间的情况，因此我们此处只研究电偶极子外的情况。\\[3mm]
@@ -5630,15 +5532,14 @@
         \end{center}
     \end{figure}\\
     该图像中，黑色实线代表电场强度精确值的函数曲线。\\[3mm]
-    该图像中，灰色实线代表电场强度近似值的函数曲线。\\[3mm]
-    此处为了完整另行计算绘制了两个电偶极子间的电场强度的函数曲线。
+    该图像中，灰色实线代表电场强度近似值的函数曲线。
 
 \newpage
 
-\textbf{2.电偶极子轴线的中垂线上的电场强度}\\[3mm]
+\subsubsection{电偶极子轴线的中垂线上的电场强度}
     \setcounter{equation}{0}
     假设在$B$轴上有一点$B$，其至中点的距离的大小为$r$。\\[3mm]
-    而场点$B$在电场各处的情况是一致的：
+    场点$B$的电场强度情况：
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[scale=1.0]
@@ -5647,11 +5548,11 @@
                 \tkzDefPoint(-3,0){Q1}
                 \tkzDefPoint(+3,0){Q2}
 
-                \tkzDefShiftPoint[Q1](-3.0,0){A1}
-                \tkzDefShiftPoint[Q2](+3.0,0){A2}
+                \tkzDefPoint(-6.5,0){A1}
+                \tkzDefPoint(+6.5,0){A2}
 
-                \tkzDefPoint(0,-7){B1}
-                \tkzDefPoint(0,+7){B2}
+                \tkzDefPoint(0,-6){B1}
+                \tkzDefPoint(0,+6){B2}
 
                 \tkzDefPoint(0,3){B}
                 \tkzDefShiftPoint[B](+135:1){E+}
@@ -5661,8 +5562,8 @@
                 \tkzDefShiftPoint[Q1](+0.3,0){Q1A}
                 \tkzDefShiftPoint[Q2](-0.3,0){Q2A}
 
-                \tkzDrawSegment[dashed,->](A1,A2)
-                \tkzDrawSegment[dashed,->](B1,B2)
+                \tkzDrawSegment[dashed](A1,A2)
+                \tkzDrawSegment[dashed](B1,B2)
 
                 \tkzDrawSegment[dashed](Q1,B)
                 \tkzDrawSegment[dashed](Q2,B)
@@ -5679,9 +5580,6 @@
 
                 \tkzLabelPoint[above=8pt](Q1){$-q$}
                 \tkzLabelPoint[above=8pt](Q2){$+q$}
-
-                \tkzLabelPoint[above](A2){$A$}
-                \tkzLabelPoint[right](B2){$B$}
 
                 \tkzLabelPoint[below left](O){$O$}
                 \tkzDrawPoint[fill=white](O)
@@ -5701,12 +5599,12 @@
                 \node at(-0.6,+2.75){$\theta$};
                 \node at(+2.3,+0.2){$\theta$};
             \end{tikzpicture}
-            \caption{场电$B$的电场强度的情况}
+            \caption{场点$B$的电场强度情况}
         \end{center}
     \end{figure}\\
     据图可知$\cos{\theta}$为：
     \begin{align}
-        \cos{\theta}=\frac{\frac{l}{2}}{\sqrt{r^2+\frac{l^2}{4}}}
+        \cos{\theta}=\frac{\dfrac{l}{2}}{\sqrt{r^2+\dfrac{l^2}{4}}}
     \end{align}\\
     由于场点$B$处$E^+$和$E^-$方向不同，故场点$B$处的场强的大小为：$E_B=\cos{\theta}\cdot\left(E^++E^-\right)$。
 
