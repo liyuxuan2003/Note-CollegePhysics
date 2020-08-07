@@ -129,3 +129,4 @@
 \contentsline {subsection}{\numberline {9.3}电场力}{116}{subsection.9.3}% 
 \contentsline {subsection}{\numberline {9.4}电场强度}{117}{subsection.9.4}% 
 \contentsline {subsubsection}{\numberline {9.4.1}电场强度的迭加原理}{118}{subsubsection.9.4.1}% 
+\contentsline {subsubsection}{\numberline {9.4.2}电偶极子的电场强度}{119}{subsubsection.9.4.2}% 
