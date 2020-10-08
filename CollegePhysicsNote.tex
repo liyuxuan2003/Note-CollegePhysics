@@ -251,63 +251,84 @@
 \newpage
 
 \subsection{直线运动}
-    质点的运动轨迹是直线的运动，称为直线运动。
+    质点的运动轨迹是直线的运动，称为直线运动。\\[3mm]
+    在直线运动中，若加速度$a$为一定值，则称为匀加速直线运动或匀减速直线运动。\\[3mm]
+    在直线运动中，若加速度$a$不为定值，则称为变加速直线运动或变减速直线运动。
 
 \subsubsection{匀变速直线运动}
     \setcounter{equation}{0}
-    在匀变速直线运动中，加速度$a$是一个常数。\\[3mm]
-    通过对加速度的积分，可以得到速度：
+    匀变速直线运动的特征是加速度$a$是一个常数。\\[3mm]
+    速度$v$由加速度的积分得到：
     \begin{align}
-        v
-        &=\int a\cdot\dif t~~~~~~~~~~~~~~~~~~~~\\[3mm]
-        &=a\cdot t+v_0
+        &v=\int a\cdot\dif t~~~~~~~~~~~~~~~~~~~~\\[3mm]
+        &v=a\cdot t+v_0
     \end{align}\\
-    通过对速度的积分，可以得到位矢：
-    \begin{align}
-        ~~r
-        &=\int v\cdot\dif t\\[3mm]
-        &=\int (a\cdot t+v_0)\cdot\dif t\\[3mm]
-        &=\frac{1}{2}\cdot a\cdot t^2+v_0\cdot t+r_0
+    位矢$s$由速度的积分得到：
+    \begin{align}        
+        &~~s=\int v\cdot\dif t\\[3mm]
+        &~~s=\int (a\cdot t+v_0)\cdot\dif t\\[3mm]
+        &~~s=\frac{1}{2}\cdot a\cdot t^2+v_0\cdot t+r_0
     \end{align}\\
-    匀变速直线运动中物体的速度：
-    \begin{large}
-        \begin{equation*}
-            v=a\cdot t+v_0            
-        \end{equation*}
-    \end{large}\\
-    匀变速直线运动中物体的位移：
-    \begin{large}
-        \begin{equation*}
-            r=\frac{1}{2}\cdot a\cdot t^2+v_0\cdot t+r_0
-        \end{equation*}
-    \end{large}\\
-    第一条公式描述了匀变速直线运动中，速度和加速度及时间的关系。\\[3mm]
-    第二条公式描述了匀变速直线运动中，位矢和加速度及时间的关系。
-
-\newpage
-
-    首先从速度公式出发：
+    由速度公式出发可以得到：
     \begin{align}
-        &v=a\cdot t+v_0\\[3mm]
         &v^2=(a\cdot t+v_0)^2\\[3mm]
         &v^2=a^2\cdot t^2+v_0^2+2\cdot a\cdot t\cdot v_0\\[3mm]
-        &v^2-v_0^2=a^2\cdot t^2+2\cdot a\cdot t\cdot v_0
+        &v^2-v_0^2=a^2\cdot t^2+2\cdot a\cdot t\cdot s_0~~~~~~
     \end{align}\\
-    然后从位矢公式出发：
+    由位矢公式出发可以得到：
     \begin{align}
-        &r=\frac{1}{2}\cdot a\cdot t^2+v_0\cdot t+r_0\\[3mm]
-        &r-r_0=\frac{1}{2}\cdot a\cdot t^2+v_0\cdot t\\[3mm]
-        &2a\cdot(r-r_0)=2a\cdot\left(\frac{1}{2}\cdot a\cdot t^2+v_0\cdot t\right)\\[3mm]
-        &2a\cdot(r-r_0)=2a\cdot\left(\frac{1}{2}\cdot a\cdot t^2\right)+2a\cdot\left(v_0\cdot t\right)\\[3mm]
-        &2a\cdot(r-r_0)=a^2\cdot t^2+2\cdot a\cdot t\cdot v_0
+        &~~~~~~s-s_0=\frac{1}{2}\cdot a\cdot t^2+v_0\cdot t\\[3mm]
+        &~~~~~~2a\cdot(s-s_0)=2a\cdot\left(\frac{1}{2}\cdot a\cdot t^2+v_0\cdot t\right)\\[3mm]
+        &~~~~~~2a\cdot(s-s_0)=a^2\cdot t^2+2\cdot a\cdot t\cdot v_0
     \end{align}\\
-    联立两式可得：
+    观察到两组等式右侧均为$a^2\cdot t^2+2\cdot a\cdot t\cdot v_0$，因此等式左侧相等既$2a\cdot(s-s_0)=v^2-v_0^2$。
+
+\newpage
+    
+    匀变速直线运动中物体的速度：
+    \begin{large}
+        \begin{align*}
+            &v=a\cdot t+v_0\\[3mm]
+            &v=a\cdot t~~~~~~[v_0=0]
+        \end{align*}
+    \end{large}\\
+    匀变速直线运动中物体的位矢：
+    \begin{large}
+        \begin{align*}
+            &s=\frac{1}{2}\cdot a\cdot t^2+v_0\cdot t+s_0\\[3mm]
+            &s=\frac{1}{2}\cdot a\cdot t^2~~~~~~[v_0=0~,~s_0=0]
+        \end{align*}
+    \end{large}\\
+    匀变速直线运动中无关时间的恒等式：
+    \begin{large}
+        \begin{align*}
+            &v^2-v_0^2=2a\cdot\left(s-s_0\right)\\[3mm]
+            &v^2=2\cdot a\cdot s~~~~~~[v_0=0~,~s_0=0]
+        \end{align*}
+    \end{large}\\
+    第一组公式描述了匀变速直线运动中，速度和时间的关系。\\[3mm]
+    第二组公式描述了匀变速直线运动中，位矢和时间的关系。\\[3mm]
+    第三组公式描述了匀变速直线运动中，位矢、速度、加速度三者间的关系。\\[3mm]
+    由第二组公式变形可以得到（初位矢和初速度为零）：\vspace{3pt}
     \begin{large}
         \begin{equation*}
-            v^2-v_0^2=2a\cdot\left(r-r_0\right)
+            \begin{cases}
+                ~a=\dfrac{2s}{t^2}\\[5mm]
+                ~t=\sqrt{\dfrac{2s}{a}}\\[1mm]
+            \end{cases}~~~~~
         \end{equation*}
     \end{large}\\
-    该公式描述了匀变速直线运动中，位矢、速度、加速度三者间的关系。
+    由第三组公式变形可以得到（初位矢和初速度为零）：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a=\dfrac{v^2}{2s}\\[5mm]
+                ~s=\dfrac{v^2}{2a}\\[5mm]
+                ~v=\sqrt{2\cdot a\cdot s}\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    需要特别注意的是，以上两组变形公式只能在初位矢$s_0=0$且初速度$v_0=0$时使用。
 
 \newpage
 
@@ -523,69 +544,67 @@
 \newpage
 
 \subsection{圆周运动}
-    质点的运动轨迹是圆周的运动，称为圆周运动。
+    质点的运动轨迹是圆周的运动，称为圆周运动。\\[3mm]
+    在圆周运动中，若角加速度$\alpha$为零，则称为匀速圆周运动。\\[3mm]
+    在圆周运动中，若角加速度$\alpha$非零，则称为变速圆周运动。
 
-\subsubsection{匀变速圆周运动}
+\subsubsection{圆周运动的参量}
+    圆周运动的参量包括：
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{p{80pt}|p{140pt}|p{60pt}|p{60pt}}
+                \hline
+                线速度&单位时间内转过的弧长&$v$&\si{m/s}\\ \hline
+                角速度&单位时间内转过的弧度&$\omega$&\si{rad/s}\\ \hline
+                周期&转动一周所需要的时间&$T$&\si{s}\\ \hline
+                频率&单位时间内转动的周数&$f$&\si{s^{-1}}\\ \hline
+            \end{tabular}
+            \caption{圆周运动的参量}
+        \end{center}
+    \end{table}\\
+    线速度根据其定义可以表示为：
+    \begin{large}
+        \begin{equation*}
+            v=\lim_{\Delta t\rightarrow 0}\frac{\Delta s}{\Delta t}=\frac{\dif s}{\dif t}
+        \end{equation*}
+    \end{large}\\
+    角速度根据其定义可以表示为：
+    \begin{large}
+        \begin{equation*}
+            \omega=\lim_{\Delta t\rightarrow 0}\frac{\Delta\theta}{\Delta t}=\frac{\dif\theta}{\dif t}
+        \end{equation*}
+    \end{large}\\
+    由于弧长和弧度相差一个半径：
+    \begin{large}
+        \begin{equation*}
+            v=\omega\cdot r
+        \end{equation*}
+    \end{large}\\
+    线速度在匀速圆周运动中可以用周期表示：
+    \begin{large}
+        \begin{equation*}
+            T=\frac{2\pi r}{v}~~~~~~v=\frac{2\pi r}{T}
+        \end{equation*}
+    \end{large}\\
+    角速度在匀速圆周运动中可以用周期表示：
+    \begin{large}
+        \begin{equation*}
+            T=\frac{2\pi}{\omega}~~~~~~\omega=\frac{2\pi}{T}
+        \end{equation*}
+    \end{large}\\
+    频率和周期互为倒数：
+    \begin{large}
+        \begin{equation*}
+            f=\frac{1}{T}
+        \end{equation*}
+    \end{large}\\
+    频率$f$在匀速圆周运动中有时也称为转速并记作$n$，两者的意义是完全一致的。
+
+\newpage
+
+\subsubsection{匀速圆周运动}
     \setcounter{equation}{0}
-    在匀变速圆周运动中，角加速度$\alpha$是一个常数。\\[3mm]
-    通过对角加速度的积分，可以得到角速度：
-    \begin{align}
-        \omega
-        &=\int \alpha\cdot\dif t~~~~~~~~~~~~~~~~~~~~\\[3mm]
-        &=\alpha\cdot t+\omega_0
-    \end{align}\\
-    通过对角速度的积分，可以得到角位矢：
-    \begin{align}
-        ~~\theta
-        &=\int \omega\cdot\dif t\\[3mm]
-        &=\int (\alpha\cdot t+\omega_0)\cdot\dif t\\[3mm]
-        &=\frac{1}{2}\cdot \alpha\cdot t^2+\omega_0\cdot t+\theta_0
-    \end{align}\\
-    匀变速圆周运动中物体的角速度：
-    \begin{large}
-        \begin{equation*}
-            \omega=\alpha\cdot t+\omega_0            
-        \end{equation*}
-    \end{large}\\
-    匀变速圆周运动中物体的角位矢：
-    \begin{large}
-        \begin{equation*}
-            \theta=\frac{1}{2}\cdot \alpha\cdot t^2+\omega_0\cdot t+\theta_0    
-        \end{equation*}
-    \end{large}\\
-    第一条公式描述了匀变速直线运动中，角速度和角加速度及时间的关系。\\[3mm]
-    第二条公式描述了匀变速直线运动中，角位矢和角加速度及时间的关系。
-
-\newpage
-
-    首先从角速度公式出发：
-    \begin{align}
-        &\omega=\alpha\cdot t+\omega_0\\[3mm]
-        &\omega^2=(\alpha\cdot t+\omega_0)^2\\[3mm]
-        &\omega^2=\alpha^2\cdot t^2+\omega_0^2+2\cdot a\cdot t\cdot \omega_0\\[3mm]
-        &\omega^2-\omega_0^2=a^2\cdot t^2+2\cdot \alpha\cdot t\cdot \omega_0
-    \end{align}\\
-    然后从角位矢公式出发：
-    \begin{align}
-        &\theta=\frac{1}{2}\cdot \alpha\cdot t^2+\omega_0\cdot t+\theta_0\\[3mm]
-        &\theta-\theta_0=\frac{1}{2}\cdot \alpha\cdot t^2+\omega_0\cdot t\\[3mm]
-        &2\alpha\cdot(\theta-\theta_0)=2\alpha\cdot\left(\frac{1}{2}\cdot \alpha\cdot t^2+\omega_0\cdot t\right)\\[3mm]
-        &2\alpha\cdot(\theta-\theta_0)=2\alpha\cdot\left(\frac{1}{2}\cdot \alpha\cdot t^2\right)+2\alpha\cdot\left(\omega_0\cdot t\right)\\[3mm]
-        &2\alpha\cdot(\theta-\theta_0)=\alpha^2\cdot t^2+2\cdot \alpha\cdot t\cdot \omega_0
-    \end{align}\\
-    联立两式可得：
-    \begin{large}
-        \begin{equation*}
-            \omega^2-\omega_0^2=2\alpha\cdot\left(\theta-\theta_0\right)
-        \end{equation*}
-    \end{large}\\
-    该公式描述了匀变速圆周运动中，角位矢、角速度、角加速度三者间的关系。
-
-\newpage
-
-\subsubsection{线量描述下的匀速圆周运动}
-    匀速圆周运动可以通过两个线量描述，线速度$v$，向心加速度$a$。\\[3mm]
-    匀速圆周运动的示意图中，速度$\veb{v_a}$是矢量$O_2A_2$，速度$\veb{v_b}$是矢量$O_2B_2$。\\[3mm]
+    匀速圆周运动中的匀速表示线速度$\veb{v}$的大小为一定值。\\[3mm]
     匀速圆周运动的示意图：\vspace{5pt}
     \setcounter{subfigure}{0}
     \begin{figure}[h]
@@ -644,7 +663,7 @@
                         \tkzLabelPoint[right](A){$A_2$}
                         \tkzLabelPoint[left](B){$B_2$}
 
-                        \tkzLabelSegment[right](O,A){$\veb{v_a}$}
+                        \tkzLabelSegment[right](O,A){$\veb{v_a}=\veb{v}$}
                         \tkzLabelSegment[below left](O,B){$\veb{v_b}$}
                         \tkzLabelSegment[above=2pt](A,B){$\veb{\Delta v}$}
 
@@ -656,44 +675,73 @@
             \caption{匀速圆周运动的示意图}
         \end{center}
     \end{figure}\\
-    显然线速度可以表示为：
-    \setcounter{equation}{0}
+    如图所示，时刻$t$处的线速度记作$\veb{v}=\veb{v_a}$，时刻$t+\Delta t$处的线速度记作$\veb{v_b}$。\\[3mm]
+    在位移示意图中，位移三角形$\triangle O_1A_1B_1$中$O_1A_1=O_1B_1$，故为等腰三角形。\\[3mm]
+    在速度示意图中，速度三角形$\triangle O_2A_2B_2$中$O_2A_2=O_2B_2$，故为等腰三角形。\\[3mm]
+    此处可以组成速度三角形的原因是存在矢量关系$\veb{v_b}=\veb{v_a}+\veb{\Delta v}$。\\[3mm]
+    然而两个等腰三角形的顶角均为$\Delta \theta$，因此两个三角形相似既$\triangle O_2A_2B_2\simeq\triangle O_1A_1B_1$。\\[3mm]
+    根据相似关系可得：
     \begin{align}
-        v=|\veb{v_a}|
-    \end{align}\\
-    由于$\triangle O_2A_2B_2\simeq\triangle O_1A_1B_1$：\vspace{5pt}
-    \begin{align}
-        &\frac{A_2B_2}{A_2O_2}=\frac{A_1B_1}{A_1O_1}\\[3mm]
         &\frac{\Delta v}{v}=\frac{\Delta r}{r}\\[3mm]
+        &\frac{\Delta v}{v\cdot\Delta t}=\frac{\Delta r}{r\cdot \Delta t}\\[3mm]
+        &\frac{\Delta v}{\Delta t}\cdot v=\frac{\Delta r}{\Delta t}\cdot r\\[3mm]
         &\frac{\Delta v}{\Delta t}=\frac{v}{r}\cdot\frac{\Delta r}{\Delta t}
     \end{align}\\
-    此步利用了速度三角形和位移三角形相似的原理。
+    这一步的关键在于利用相似关系建立等式后，在等式两侧同时除以$\Delta t$。
 
 \newpage
 
-    根据定义可以求得向心加速度$a$：
+    计算加速度的大小：
     \begin{align}
-        a
-        &=\lim_{\Delta t\rightarrow 0}\frac{\Delta v}{\Delta t}\\[3mm]
-        &=\lim_{\Delta t\rightarrow 0}\frac{v}{r}\cdot\frac{\Delta r}{\Delta t}\\[3mm]
-        &=\lim_{\Delta t\rightarrow 0}\frac{v}{r}\cdot\frac{\Delta s}{\Delta t}\\[3mm]
-        &=\frac{v}{r}\cdot\frac{\dif s}{\dif t}\\[3mm]
-        &=\frac{v^2}{r}
+        a=\lim_{\Delta t\rightarrow 0}\frac{\Delta v}{\Delta t}
     \end{align}\\
+    代入$\dfrac{\Delta v}{\Delta t}=\dfrac{v}{r}\cdot\dfrac{\Delta r}{\Delta t}$\hspace{6pt}的关系可得：
+    \begin{align}
+        a=\lim_{\Delta t\rightarrow 0}\frac{v}{r}\cdot\frac{\Delta r}{\Delta t}
+    \end{align}\\
+    由于$\Delta t\rightarrow 0$时弧长和弦长等长：
+    \begin{align}
+        a=\lim_{\Delta t\rightarrow 0}\frac{v}{r}\cdot\frac{\Delta s}{\Delta t}
+    \end{align}\\
+    利用线速度的定义$\dfrac{\dif s}{\dif t}=v$：
+    \begin{align}
+        &a=\lim_{\Delta t\rightarrow 0}\frac{v}{r}\cdot\frac{\Delta s}{\Delta t}\\[5mm]
+        &a=\frac{v}{r}\cdot\frac{\dif s}{\dif t}\\[5mm]
+        &a=\frac{v^2}{r}        
+    \end{align}\\
+    加速度的方向为$\veb{\Delta v}\rightarrow 0$时的方向，当$\Delta t\rightarrow 0$，有$\Delta\theta\rightarrow 0$，此时$\veb{\Delta v}$趋向于与$\veb{v}$垂直。\\[3mm]
+    加速度的方向始终垂直于速度并指向圆心，因此匀速圆周运动中的加速度也称为向心加速度。\\[5mm]
     向心加速度的计算公式：
     \begin{large}
         \begin{equation*}
             a=\frac{v^2}{r}    
         \end{equation*}
     \end{large}\\
-    向心加速度的方向始终指向圆心。\\[3mm]
-    向心加速度的方向为$\veb{\Delta v}\rightarrow 0$时的方向，当$\Delta t\rightarrow 0$，有$\Delta\theta\rightarrow 0$，此时$\veb{\Delta v}$趋向于与$\veb{v_a}$垂直。
+    第一次代入$v=\omega\cdot r$可得：
+    \begin{large}
+        \begin{equation*}
+            a=\omega\cdot v
+        \end{equation*}
+    \end{large}\\
+    第二次代入$v=\omega\cdot r$可得：
+    \begin{large}
+        \begin{equation*}
+            a=\omega^2\cdot r
+        \end{equation*}
+    \end{large}\\
+    根据周期公式$\omega=\dfrac{2\pi}{T}$可得：
+    \begin{large}
+        \begin{equation*}
+            a=\frac{4\pi^2\cdot r}{T}
+        \end{equation*}
+    \end{large}\\
+    由此证明了以上四条向心加速度的计算公式。
 
 \newpage
 
-\subsubsection{线量描述下的变速圆周运动}
-    变速圆周运动可以通过两个线量描述，线速度$v$，法向加速度$a_n$，切向加速度$a_t$。\\[3mm]
-    变速圆周运动的示意图中，速度$\veb{v_a}$是矢量$O_2A_2$，速度$\veb{v_b}$是矢量$O_2B_3$。\\[3mm]
+\subsubsection{变速圆周运动}
+    \setcounter{equation}{0}
+    变速圆周运动中的变速表示线速度$v$的大小不是定值。\\[3mm]
     变速圆周运动的示意图：\vspace{5pt}
     \setcounter{subfigure}{0}
     \begin{figure}[h]
@@ -723,10 +771,10 @@
                         \tkzDefLine[orthogonal=through B](O,B)
                         \tkzGetPoint{b}
                         
-                        \tkzDrawSegment[-latex,add=0 and -0.25](A,a)
+                        \tkzDrawSegment[-latex,add=0 and -0.4](A,a)
                         \tkzDrawSegment[-latex](B,b)
 
-                        \tkzDefShiftPoint[a](0,-0.7){a2}
+                        \tkzDefShiftPoint[a](0,-1.12){a2}
 
                         \tkzLabelPoint[right](a2){$\veb{v_a}$}
                         \tkzLabelPoint[above right](b){$\veb{v_b}$}
@@ -757,7 +805,7 @@
                         \tkzLabelPoint[left](B2){$B_2$}
                         \tkzLabelPoint[left](B3){$B_3$}
 
-                        \tkzLabelSegment[right=2pt](O,A){$\veb{v_a}$}
+                        \tkzLabelSegment[right=2pt](O,A){$\veb{v_a}=\veb{v}$}
                         \tkzLabelSegment[below left](O,B3){$\veb{v_b}$}
                         \tkzLabelSegment[above=2pt](A,B3){$\veb{\Delta v}$}
                         \tkzLabelSegment[below=2pt](A,B2){$\veb{\Delta v_n}$}
@@ -771,306 +819,303 @@
             \caption{变速圆周运动的示意图}
         \end{center}
     \end{figure}\\
-    显然线速度可以表示为：
-    \setcounter{equation}{0}
+    如图所示，时刻$t$处的线速度记作$\veb{v}=\veb{v_a}$，时刻$t+\Delta t$处的线速度记作$\veb{v_b}$。\\[3mm]
+    如图所示，在$O_2B_3$上取点$B_2$使得$O_2A_2=O_2B_2$。\\[3mm]
+    因此速度的变化量$\veb{\Delta v}$可以被分解为$\veb{\Delta v_n}+\veb{\Delta v_t}$。\\[3mm]
+    其中速度的变化量的分量$\veb{\Delta v_n}$仅改变速度的方向。\\[3mm]
+    其中速度的变化量的分量$\veb{\Delta v_t}\hspace{2.5pt}$仅改变速度的大小。\\[4mm]
+    类似于匀速圆周运动：
     \begin{align}
-        v=|\veb{v_a}|
-    \end{align}\\
-    由于$\triangle O_2A_2B_2\simeq\triangle O_1A_1B_1$：\vspace{5pt}
-    \begin{align}
-        &\frac{A_2B_2}{A_2O_2}=\frac{A_1B_1}{A_1O_1}\\[3mm]
         &\frac{\Delta v_n}{v}=\frac{\Delta r}{r}\\[3mm]
-        &\frac{\Delta v_n}{\Delta t}=\frac{v_n}{r}\cdot\frac{\Delta r}{\Delta t}
+        &\frac{\Delta v_n}{v\cdot\Delta t}=\frac{\Delta r}{r\cdot \Delta t}\\[3mm]
+        &\frac{\Delta v_n}{\Delta t}\cdot v=\frac{\Delta r}{\Delta t}\cdot r\\[3mm]
+        &\frac{\Delta v_n}{\Delta t}=\frac{v}{r}\cdot\frac{\Delta r}{\Delta t}
     \end{align}\\
-    此步利用了速度三角形和位移三角形相似的原理。
+    这一步的关键在于利用相似关系建立等式后，在等式两侧同时除以$\Delta t$。
 
 \newpage
 
-    根据定义可以求得法向加速度$a_n$：
+    由于加速度可以表达为：
     \begin{align}
-        a_n
-        &=\lim_{\Delta t\rightarrow 0}\frac{\Delta v_n}{\Delta t}\\[3mm]
-        &=\lim_{\Delta t\rightarrow 0}\frac{v_n}{r}\cdot\frac{\Delta r}{\Delta t}\\[3mm]
-        &=\lim_{\Delta t\rightarrow 0}\frac{v_n}{r}\cdot\frac{\Delta s}{\Delta t}\\[3mm]
-        &=\frac{v}{r}\cdot\frac{\dif s}{\dif t}\\[3mm]
-        &=\frac{v^2}{r}
+        &\veb{a}=\lim_{\Delta t\rightarrow 0}\frac{\veb{\Delta v}}{\Delta t}\\[3mm]
+        &\veb{a}=\lim_{\Delta t\rightarrow 0}\frac{\veb{\Delta v_n}+\veb{\Delta v_t}}{\Delta t}\\[3mm]
+        &\veb{a}=\lim_{\Delta t\rightarrow 0}\frac{\veb{\Delta v_n}}{\Delta t}+\lim_{\Delta t\rightarrow 0}\frac{\veb{\Delta v_t}}{\Delta t}\\[3mm]
+        &\veb{a}=\veb{a_n}+\veb{a_t}
+    \end{align}\\
+    加速度的分量$\veb{a_n}$与$\veb{\Delta v_n}\rightarrow 0$的方向相同，即垂直于线速度$v$，故$\veb{a_n}$称为法向加速度。\\[3mm]
+    加速度的分量$\veb{a_t}\hspace{2.5pt}$与$\veb{\Delta v_t}\rightarrow 0$的方向相同，即平行于线速度$v$，故$\veb{a_t}\hspace{2.5pt}$称为切向加速度。\\[3mm]
+    匀速圆周运动中的向心加速度等同于此处的法向加速度，其切向加速度为零。\\[5mm]
+    求解法向加速度的大小：
+    \begin{align}
+        &a_n=\lim_{\Delta t\rightarrow 0}\frac{\Delta v_n}{\Delta t}\\[3mm]
+        &a_n=\lim_{\Delta t\rightarrow 0}\frac{v_n}{r}\cdot\frac{\Delta r}{\Delta t}\\[3mm]
+        &a_n=\lim_{\Delta t\rightarrow 0}\frac{v_n}{r}\cdot\frac{\Delta s}{\Delta t}\\[3mm]
+        &a_n=\frac{v}{r}\cdot\frac{\dif s}{\dif t}\\[3mm]
+        &a_n=\frac{v^2}{r}
+    \end{align}\\
+    求解切向加速度的大小：
+    \begin{align}
+        &a_t=\lim_{\Delta t\rightarrow 0}\frac{\Delta v_t}{\Delta t}\\[3mm]
+        &a_t=\lim_{\Delta t\rightarrow 0}\frac{v_b-v_a}{r}~~~\\[3mm]
+        &a_t=\lim_{\Delta t\rightarrow 0}\frac{\Delta v}{r}\\[3mm]
+        &a_t=\frac{\dif v}{\dif t}
+    \end{align}\\
+    由此证明了变速圆周运动中的法向加速度和切向加速度的计算公式。
+
+
+\newpage
+
+    法向加速度也可以使用角量描述：
+    \begin{align}
+        &a_n=\frac{v^2}{r}\\[3mm]
+        &a_n=\frac{~r^2\cdot\omega^2}{r}\\[3mm]
+        &a_n=r\cdot\omega^2
+    \end{align}\\
+    切向加速度也可以使用角量描述：
+    \begin{align}
+        &a_t=\frac{\dif v}{\dif t}\\[3mm]
+        &a_t=r\cdot\frac{\dif \omega}{\dif t}\\[3mm]
+        &a_t=r\cdot\alpha
     \end{align}\\
     法向加速度的计算公式：
     \begin{large}
         \begin{equation*}
-            a_n=\frac{v^2}{r}
+            a_n=\frac{v^2}{r}~~~~~~~~a_n=r\cdot\omega^2
         \end{equation*}
     \end{large}\\
-    法向加速度的方向始终指向圆心。\\[3mm]
-    法向加速度的方向为$\veb{\Delta v_n}\rightarrow 0$时的方向，当$\Delta t\rightarrow 0$，有$\Delta\theta\rightarrow 0$，此时$\veb{\Delta v}$趋向于与$\veb{v_a}$垂直。\\[12mm]
-    根据定义可以求得切向加速度$a_t$：
-    \begin{align}
-        a_t
-        &=\lim_{\Delta t\rightarrow 0}\frac{\Delta v_t}{\Delta t}\\[3mm]
-        &=\lim_{\Delta t\rightarrow 0}\frac{v_b-v_a}{r}\\[3mm]
-        &=\lim_{\Delta t\rightarrow 0}\frac{\Delta v}{r}\\[3mm]
-        &=\frac{\dif v}{\dif t}
-    \end{align}\\
     切向加速度的计算公式：
     \begin{large}
         \begin{equation*}
-            a_t=\frac{\dif v}{\dif t}
+            a_t=\frac{\dif v}{\dif t}~~~~~~~~a_t=r\cdot\alpha
         \end{equation*}
     \end{large}\\
-    切向加速度的方向始终指向圆心。\\[3mm]
-    切向加速度的方向为$\veb{\Delta v_t}\rightarrow 0$时的方向，当$\Delta t\rightarrow 0$，有$\Delta\theta\rightarrow 0$，此时$\veb{\Delta v_t}$趋向于与$\veb{v_a}$平行。
-
-\newpage
-
-\subsubsection{线量和角量的关系}
-    \setcounter{equation}{0}
-    线速度和角量的关系：
-    \begin{large}
-        \begin{equation*}
-            v=r\cdot\omega
-        \end{equation*}
-    \end{large}\\
-    法向加速度和角量的关系：
-    \begin{large}
-        \begin{equation*}
-            a_n=r\cdot\omega^2
-        \end{equation*}
-    \end{large}\\
-    切向加速度和角量的关系：
-    \begin{large}
-        \begin{equation*}
-            a_t=r\cdot\alpha
-        \end{equation*}
-    \end{large}\\
-    即法向加速度是半径和角速度平方的乘积，而切向加速度是半径和角加速度的乘积。\\[12mm]
-    由于线速度可以表示为：
-    \begin{align}
-        v=\lim_{\Delta t\rightarrow 0}\frac{\Delta s}{\Delta t}=\frac{\dif s}{\dif t}
-    \end{align}\\
-    由于角速度可以表示为：
-    \begin{align}
-        \omega=\lim_{\Delta t\rightarrow 0}\frac{\Delta\theta}{\Delta t}=\frac{\dif \theta}{\dif t}
-    \end{align}\\
-    同时因为存在以下关系：
-    \begin{align}
-        \dif s=r\cdot\dif \theta
-    \end{align}\\
-    因此可以得到：
-    \begin{align}
-        &\frac{v}{\omega}=\frac{\dif s}{\dif \theta}\\[5mm]
-        &\frac{v}{\omega}=\frac{r\cdot \dif \theta}{\dif \theta}\\[5mm]
-        &\frac{v}{\omega}=r\\[5mm]
-        &v=r\cdot\omega
-    \end{align}\\
-    由此证明了线速度和角速度的关系。
-
-\newpage
-
-    代入法向加速度的公式：
-    \begin{align}
-        a_n
-        &=\frac{v^2}{r}\\[3mm]
-        &=\frac{~r^2\cdot\omega^2}{r}\\[3mm]
-        &=r\cdot\omega^2
-    \end{align}\\
-    代入切向加速度的公式：
-    \begin{align}
-        a_t
-        &=\frac{\dif v}{\dif t}\\[3mm]
-        &=r\cdot\frac{\dif \omega}{\dif t}\\[3mm]
-        &=r\cdot\alpha
-    \end{align}\\
-    由此证明了法向加速度和角速度的关系。\\[3mm]
-    由此证明了切向加速度和角加速度的关系。
-
-\newpage
-
-\subsection{抛体运动}
-    抛体运动指的是物体以一定初速度抛出后，仅在重力作用下所做的运动。\\[3mm]
-    抛体运动的示意图：\vspace{5pt}
+    总加速度的示意图：
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[scale=1.5]
+            \begin{tikzpicture}[scale=0.8]
                 \tkzDefPoint(0,0){O}
-                \tkzDefPoint(6,0){X}
-                \tkzDefPoint(0,4.5){Y}
+                \tkzDefPoint(180:4){v}
+                \tkzDefPoint(180:3){t}
+                \tkzDefPoint(270:4){n}
+                \tkzDefPoint(-3,-4){a}
 
-                \tkzDrawSegment[->](O,X)
-                \tkzDrawSegment[->](O,Y)
+                \tkzDrawSegments[-latex](O,v O,t O,n O,a)
+                \tkzDrawSegments[dashed](t,a n,a)
 
-                \tkzLabelPoint[left](O){$O$}
-                \tkzLabelPoint[right](X){$X$}
-                \tkzLabelPoint[left](Y){$Y$}
+                \tkzMarkAngle[size=0.443](v,O,a)
 
-                \tkzDefPoint(5.5,3.0){g1}
-                \tkzDefPoint(5.5,2.5){g2}
+                \tkzDefPoint(0,-4){O'}
+                \tkzDrawArc[R,dashed,color=MediumGray](O',4cm)(20,160)
 
-                \tkzDrawSegment[-latex](g1,g2)
-                \tkzLabelPoint[right](g2){$g$}
+                \tkzLabelPoint[right](n){$\veb{a_n}$}
+                \tkzLabelPoint[above](t){$\veb{a_t}$}
+                \tkzLabelPoint[above](v){$\veb{v}$}
+                \tkzLabelPoint[left](a){$\veb{a}$}
 
-                \draw[smooth,thick,samples=100,domain=0:5] plot(\x,{-0.4*\x*\x+2*\x});
-
-                \tkzDefPoint(1.5,3.0){V}
-                \tkzDrawSegment[-latex](O,V)
-
-                \tkzLabelPoint[above right](V){$v_0$}
-
-                \tkzMarkAngle[size=0.3](X,O,V)
-                \tkzLabelPoint(0.5,0.5){$\theta_0$}
+                \tkzDefShiftPoint[O](-0.7,-0.3){Ot}
+                \node at(Ot){$\theta$};
             \end{tikzpicture}
-            \caption{抛体运动的示意图}
+            \caption{总加速度的示意图}
         \end{center}
     \end{figure}\\
-    以水平方向为$X$轴，竖直方向为$Y$轴，建立平面直角坐标系。\\[3mm]
-    设一质点由原点$O$抛出，其初速度为$v_0$，其与水平方向的初角度为$\theta_0$。\\[6mm]
-    抛体运动可以视为两个方向上运动的叠加：\\[3mm]
-    在水平方向上，抛出物体不受力的作用，因此在水平方向上作匀速直线运动。\\[3mm]
-    在竖直方向上，抛出物体仅受重力作用，因此在竖直方向上作匀变速直线运动。\\[3mm]
+    总加速度的大小和方向可以表达为：
+    \begin{large}
+        \begin{equation*}
+            a=\sqrt{a_n^2+a_t^2}~~~~~~~~\tan{\theta}=\frac{a_n}{a_t}
+        \end{equation*}
+    \end{large}\\
+    其中$\theta$代表总加速度$\veb{a}$和线速度$\veb{v}$间的夹角，匀速圆周运动中$\theta=\dfrac{\pi}{2}$。
 
 \newpage
 
-\subsubsection{抛体运动的运动学方程}
-    \setcounter{equation}{0}
-    其初速$v$在$X$轴上的分量$v_{0x}$：
-    \begin{align}
-        v_{0x}=v_0\cdot\cos{\theta_0}
-    \end{align}\\
-    其初速$v$在$Y$轴上的分量$v_{0y}$：
-    \begin{align}
-        v_{0y}=v_0\cdot\sin{\theta_0}
-    \end{align}\\
-    故速度可以表示为：
-    \begin{align}
-        \begin{cases}
-            ~v_x=v_0\cdot\cos{\theta_0}\\[1mm]
-            ~v_y=v_0\cdot\sin{\theta_0}-g\cdot t\\[1mm]
-        \end{cases}
-    \end{align}\\
-    故位矢可以表示为：
-    \begin{align}
-        ~~~~~~~~~~
-        \begin{cases}
-            ~x=v_0\cdot\cos{\theta_0}\cdot t\\[1mm]
-            ~y=v_0\cdot\,\sin{\theta_0}\cdot t-\dfrac{1}{2}\cdot g\cdot t^2\\[1mm]
-        \end{cases}
-    \end{align}\\
-    消去参数即可得到：
-    \begin{align}
-        &t=\frac{x}{v_0\cdot\cos{\theta_0}}\\[5mm]
-        &y=v_0\cdot\sin{\theta_0}\cdot t-\frac{1}{2}\cdot g\cdot t^2\\[5mm]
-        &y=\frac{v_0\cdot\sin{\theta_0}}{v_0\cdot\cos{\theta_0}}\cdot x-\frac{g}{2\cdot v_0^2\cdot\cos^2{\theta_0}}\cdot x^2\\[5mm]
-        &y=x\cdot\tan{\theta_0}-x^2\cdot\frac{g}{2\cdot v_0^2\cdot\cos{\theta_0}}
-    \end{align}\\
-    故抛体运动的轨迹方程：
-    \begin{large}
-        \begin{equation*}
-            y=x\cdot\tan{\theta_0}-x^2\cdot\frac{g}{2\cdot v_0^2\cdot\cos{\theta_0}}
-        \end{equation*}
-    \end{large}\\
-    该方程中，$x$有一次项和二次项，$y$只有一次项，故抛体运动的轨迹为抛物线。
+% \subsection{抛体运动}
+%     抛体运动指的是物体以一定初速度抛出后，仅在重力作用下所做的运动。\\[3mm]
+%     抛体运动的示意图：\vspace{5pt}
+%     \begin{figure}[h]
+%         \begin{center}
+%             \begin{tikzpicture}[scale=1.5]
+%                 \tkzDefPoint(0,0){O}
+%                 \tkzDefPoint(6,0){X}
+%                 \tkzDefPoint(0,4.5){Y}
+
+%                 \tkzDrawSegment[->](O,X)
+%                 \tkzDrawSegment[->](O,Y)
+
+%                 \tkzLabelPoint[left](O){$O$}
+%                 \tkzLabelPoint[right](X){$X$}
+%                 \tkzLabelPoint[left](Y){$Y$}
+
+%                 \tkzDefPoint(5.5,3.0){g1}
+%                 \tkzDefPoint(5.5,2.5){g2}
+
+%                 \tkzDrawSegment[-latex](g1,g2)
+%                 \tkzLabelPoint[right](g2){$g$}
+
+%                 \draw[smooth,thick,samples=100,domain=0:5] plot(\x,{-0.4*\x*\x+2*\x});
+
+%                 \tkzDefPoint(1.5,3.0){V}
+%                 \tkzDrawSegment[-latex](O,V)
+
+%                 \tkzLabelPoint[above right](V){$v_0$}
+
+%                 \tkzMarkAngle[size=0.3](X,O,V)
+%                 \tkzLabelPoint(0.5,0.5){$\theta_0$}
+%             \end{tikzpicture}
+%             \caption{抛体运动的示意图}
+%         \end{center}
+%     \end{figure}\\
+%     以水平方向为$X$轴，竖直方向为$Y$轴，建立平面直角坐标系。\\[3mm]
+%     设一质点由原点$O$抛出，其初速度为$v_0$，其与水平方向的初角度为$\theta_0$。\\[6mm]
+%     抛体运动可以视为两个方向上运动的叠加：\\[3mm]
+%     在水平方向上，抛出物体不受力的作用，因此在水平方向上作匀速直线运动。\\[3mm]
+%     在竖直方向上，抛出物体仅受重力作用，因此在竖直方向上作匀变速直线运动。\\[3mm]
+
+% \newpage
+
+% \subsubsection{抛体运动的运动学方程}
+%     \setcounter{equation}{0}
+%     其初速$v$在$X$轴上的分量$v_{0x}$：
+%     \begin{align}
+%         v_{0x}=v_0\cdot\cos{\theta_0}
+%     \end{align}\\
+%     其初速$v$在$Y$轴上的分量$v_{0y}$：
+%     \begin{align}
+%         v_{0y}=v_0\cdot\sin{\theta_0}
+%     \end{align}\\
+%     故速度可以表示为：
+%     \begin{align}
+%         \begin{cases}
+%             ~v_x=v_0\cdot\cos{\theta_0}\\[1mm]
+%             ~v_y=v_0\cdot\sin{\theta_0}-g\cdot t\\[1mm]
+%         \end{cases}
+%     \end{align}\\
+%     故位矢可以表示为：
+%     \begin{align}
+%         ~~~~~~~~~~
+%         \begin{cases}
+%             ~x=v_0\cdot\cos{\theta_0}\cdot t\\[1mm]
+%             ~y=v_0\cdot\,\sin{\theta_0}\cdot t-\dfrac{1}{2}\cdot g\cdot t^2\\[1mm]
+%         \end{cases}
+%     \end{align}\\
+%     消去参数即可得到：
+%     \begin{align}
+%         &t=\frac{x}{v_0\cdot\cos{\theta_0}}\\[5mm]
+%         &y=v_0\cdot\sin{\theta_0}\cdot t-\frac{1}{2}\cdot g\cdot t^2\\[5mm]
+%         &y=\frac{v_0\cdot\sin{\theta_0}}{v_0\cdot\cos{\theta_0}}\cdot x-\frac{g}{2\cdot v_0^2\cdot\cos^2{\theta_0}}\cdot x^2\\[5mm]
+%         &y=x\cdot\tan{\theta_0}-x^2\cdot\frac{g}{2\cdot v_0^2\cdot\cos{\theta_0}}
+%     \end{align}\\
+%     故抛体运动的轨迹方程：
+%     \begin{large}
+%         \begin{equation*}
+%             y=x\cdot\tan{\theta_0}-x^2\cdot\frac{g}{2\cdot v_0^2\cdot\cos{\theta_0}}
+%         \end{equation*}
+%     \end{large}\\
+%     该方程中，$x$有一次项和二次项，$y$只有一次项，故抛体运动的轨迹为抛物线。
+
+% \newpage
+
+% \subsubsection{抛体运动的滞空时间}
+%     \setcounter{equation}{0}
+%     抛体运动的滞空时间：
+%     \begin{large}
+%         \begin{equation*}
+%             T=\frac{2\cdot v_0\cdot\sin{\theta_0}}{g}~~~~~
+%         \end{equation*}
+%     \end{large}\\
+%     抛体运动的最大滞空时间：
+%     \begin{large}
+%         \begin{equation*}
+%             ~~~~~~~~T_{max}=\frac{2\cdot v_0}{g}~~~~\left(\theta=\frac{\pi}{2}\right)
+%         \end{equation*}
+%     \end{large}\\
+%     根据$y$轴上的运动学方程：
+%     \begin{align}
+%         &y=v_0\cdot\sin{\theta_0}\cdot t-\frac{1}{2}\cdot g\cdot t^2\\[4mm]
+%         &0=v_0\cdot\sin{\theta_0}\cdot t-\frac{1}{2}\cdot g\cdot t^2\\[4mm]
+%         &0=-\frac{1}{2}\cdot g\cdot t^2+v_0\cdot\sin{\theta_0}\cdot t
+%     \end{align}\\
+%     解方程可得：
+%     \begin{align}
+%         &t=\frac{-v_0\cdot\sin{\theta_0}\pm\sqrt{v_0^2\cdot\sin^2{\theta_0}}}{-g}\\[4mm]
+%         &t_1=\frac{-v_0\cdot\sin{\theta_0}+v_0\cdot\sin{\theta_0}}{-g}=0\\[4mm]
+%         &t_2=\frac{-v_0\cdot\sin{\theta_0}-v_0\cdot\sin{\theta_0}}{-g}=T
+%     \end{align}\\
+%     化简整理可得：
+%     \begin{align}
+%         &T=\frac{-v_0\cdot\sin{\theta_0}-v_0\cdot\sin{\theta_0}}{-g}\\[3mm]
+%         &T=\frac{-2\cdot v_0\cdot\sin{\theta_0}}{-g}\\[3mm]
+%         &T=\frac{2\cdot v_0\cdot\sin{\theta_0}}{g}
+%     \end{align}\\
+%     故当$v_0$一定时，当$\theta=\dfrac{\pi}{2}$时有最大滞空时间。
+
+% \newpage
+
+% \newpage
+
+% \subsubsection{抛体运动的高度}
+%     \setcounter{equation}{0}
+%     抛体运动的高度：
+%     \begin{large}
+%         \begin{equation*}
+%             H=\frac{v_0^2\cdot\sin^2{\theta_0}}{2g}~~~~~
+%         \end{equation*}
+%     \end{large}\\
+%     抛体运动的最大高度：
+%     \begin{large}
+%         \begin{equation*}
+%             ~~~~~~~~H_{max}=\frac{v_0^2}{2g}~~~~\left(\theta_0=\frac{\pi}{2}\right)
+%         \end{equation*}
+%     \end{large}\\
+%     代入滞空时间可得：
+%     \begin{align}
+%         &H=v_0\cdot\cos{\theta_0}\cdot\frac{T}{2}-\frac{1}{2}\cdot g\cdot \frac{T^2}{4}\\[4mm]
+%         &H=\frac{1}{2}\cdot v_0\cdot\cos{\theta_0}\cdot T-\frac{1}{8}\cdot g\cdot T^2\\[4mm]
+%         &H=\frac{v_0^2\cdot\sin^2{\theta_0}}{g}-\frac{v_0^2\cdot\sin^2{\theta_0}}{2g}\\[4mm]
+%         &H=\frac{2\cdot v_0^2\cdot\sin^2{\theta_0}}{2g}-\frac{v_0^2\cdot\sin^2{\theta_0}}{2g}\\[4mm]
+%         &H=\frac{v_0^2\cdot\sin^2{\theta_0}}{2g}
+%     \end{align}\\
+%     故当$v_0$一定时，当$\theta=\dfrac{\pi}{2}$时有最大射程。
+
+% \newpage
+
+% \subsubsection{抛体运动的射程}
+%     \setcounter{equation}{0}
+%     抛体运动的射程：
+%     \begin{large}
+%         \begin{equation*}
+%             R=\frac{v_0^2\cdot\sin{2\theta_0}}{g}~~~~~
+%         \end{equation*}
+%     \end{large}\\
+%     抛体运动的最大射程：
+%     \begin{large}
+%         \begin{equation*}
+%             ~~~~~~~~R_{max}=\frac{v_0^2}{g}~~~~\left(\theta_0=\frac{\pi}{4}\right)
+%         \end{equation*}
+%     \end{large}\\
+%     代入滞空时间可得：
+%     \begin{align}
+%         &R=v_0\cdot\cos{\theta_0}\cdot T\\[4mm]
+%         &R=\frac{2\cdot v_0^2\cdot\cos{\theta_0}\cdot\sin{\theta_0}}{g}\\[4mm]
+%         &R=\frac{v_0^2\cdot\sin{2\theta_0}}{g}
+%     \end{align}\\
+%     故当$v_0$一定时，当$\theta=\dfrac{\pi}{4}$时有最大射程。
 
 \newpage
 
-\subsubsection{抛体运动的滞空时间}
-    \setcounter{equation}{0}
-    抛体运动的滞空时间：
-    \begin{large}
-        \begin{equation*}
-            T=\frac{2\cdot v_0\cdot\sin{\theta_0}}{g}~~~~~
-        \end{equation*}
-    \end{large}\\
-    抛体运动的最大滞空时间：
-    \begin{large}
-        \begin{equation*}
-            ~~~~~~~~T_{max}=\frac{2\cdot v_0}{g}~~~~\left(\theta=\frac{\pi}{2}\right)
-        \end{equation*}
-    \end{large}\\
-    根据$y$轴上的运动学方程：
-    \begin{align}
-        &y=v_0\cdot\sin{\theta_0}\cdot t-\frac{1}{2}\cdot g\cdot t^2\\[4mm]
-        &0=v_0\cdot\sin{\theta_0}\cdot t-\frac{1}{2}\cdot g\cdot t^2\\[4mm]
-        &0=-\frac{1}{2}\cdot g\cdot t^2+v_0\cdot\sin{\theta_0}\cdot t
-    \end{align}\\
-    解方程可得：
-    \begin{align}
-        &t=\frac{-v_0\cdot\sin{\theta_0}\pm\sqrt{v_0^2\cdot\sin^2{\theta_0}}}{-g}\\[4mm]
-        &t_1=\frac{-v_0\cdot\sin{\theta_0}+v_0\cdot\sin{\theta_0}}{-g}=0\\[4mm]
-        &t_2=\frac{-v_0\cdot\sin{\theta_0}-v_0\cdot\sin{\theta_0}}{-g}=T
-    \end{align}\\
-    化简整理可得：
-    \begin{align}
-        &T=\frac{-v_0\cdot\sin{\theta_0}-v_0\cdot\sin{\theta_0}}{-g}\\[3mm]
-        &T=\frac{-2\cdot v_0\cdot\sin{\theta_0}}{-g}\\[3mm]
-        &T=\frac{2\cdot v_0\cdot\sin{\theta_0}}{g}
-    \end{align}\\
-    故当$v_0$一定时，当$\theta=\dfrac{\pi}{2}$时有最大滞空时间。
-
-\newpage
-
-\newpage
-
-\subsubsection{抛体运动的高度}
-    \setcounter{equation}{0}
-    抛体运动的高度：
-    \begin{large}
-        \begin{equation*}
-            H=\frac{v_0^2\cdot\sin^2{\theta_0}}{2g}~~~~~
-        \end{equation*}
-    \end{large}\\
-    抛体运动的最大高度：
-    \begin{large}
-        \begin{equation*}
-            ~~~~~~~~H_{max}=\frac{v_0^2}{2g}~~~~\left(\theta_0=\frac{\pi}{2}\right)
-        \end{equation*}
-    \end{large}\\
-    代入滞空时间可得：
-    \begin{align}
-        &H=v_0\cdot\cos{\theta_0}\cdot\frac{T}{2}-\frac{1}{2}\cdot g\cdot \frac{T^2}{4}\\[4mm]
-        &H=\frac{1}{2}\cdot v_0\cdot\cos{\theta_0}\cdot T-\frac{1}{8}\cdot g\cdot T^2\\[4mm]
-        &H=\frac{v_0^2\cdot\sin^2{\theta_0}}{g}-\frac{v_0^2\cdot\sin^2{\theta_0}}{2g}\\[4mm]
-        &H=\frac{2\cdot v_0^2\cdot\sin^2{\theta_0}}{2g}-\frac{v_0^2\cdot\sin^2{\theta_0}}{2g}\\[4mm]
-        &H=\frac{v_0^2\cdot\sin^2{\theta_0}}{2g}
-    \end{align}\\
-    故当$v_0$一定时，当$\theta=\dfrac{\pi}{2}$时有最大射程。
-
-\newpage
-
-\subsubsection{抛体运动的射程}
-    \setcounter{equation}{0}
-    抛体运动的射程：
-    \begin{large}
-        \begin{equation*}
-            R=\frac{v_0^2\cdot\sin{2\theta_0}}{g}~~~~~
-        \end{equation*}
-    \end{large}\\
-    抛体运动的最大射程：
-    \begin{large}
-        \begin{equation*}
-            ~~~~~~~~R_{max}=\frac{v_0^2}{g}~~~~\left(\theta_0=\frac{\pi}{4}\right)
-        \end{equation*}
-    \end{large}\\
-    代入滞空时间可得：
-    \begin{align}
-        &R=v_0\cdot\cos{\theta_0}\cdot T\\[4mm]
-        &R=\frac{2\cdot v_0^2\cdot\cos{\theta_0}\cdot\sin{\theta_0}}{g}\\[4mm]
-        &R=\frac{v_0^2\cdot\sin{2\theta_0}}{g}
-    \end{align}\\
-    故当$v_0$一定时，当$\theta=\dfrac{\pi}{4}$时有最大射程。
-
-\newpage
-
-\section{运动定律}
+\section{牛顿运动定律}
     根据观察和实验，有两个因素影响着物体的机械运动：\\[3mm]
     1.物体本身的固有属性，称其为质量。\\[3mm]
     2.物体之间的相互作用，称其为力。
 
 \subsection{质量}
-    质量衡量了物体的引力特性和惯性特性的强弱，是一个标量，通常用符号$m$表示，单位是\si{kg}。\\[3mm]
-    质量反应了两个不同性质：\\[3mm]
-    1.质量反应了物体引力特性的强弱，质量越大引力越大，这种质量称为引力质量。\\[3mm]
-    2.质量反应了物体惯性特性的强弱，质量越大惯性越大，这种质量称为惯性质量。\\[3mm]
-    其中惯性指的是改变物体运动状态的难易程度。\\[3mm]
-    虽然引力质量和惯性质量的含义不同，但是物理研究表明两种质量可不予区分。
+    质量衡量了物体具有的惯性强弱，是一个标量，通常用符号$m$表示，单位是\si{kg}。\\[3mm]
+    质量定义中的惯性即为改变物体运动状态的难易程度，质量是惯性的定理描述。\\[5mm]
+    较为严格的说，质量应当分为两类：\\[3mm]
+    1.反映物体惯性特性强弱的称为惯性质量，即惯性质量大的物体具有的惯性较大。\\[3mm]
+    2.反映物体引力特性强弱的称为引力质量，即引力质量大的物体受到的引力较大。\\[3mm]
+    惯性质量出现于牛顿第二定律：$F=m\cdot a$\\[3mm]
+    引力质量出现于万有引力定律：$F=G\cdot \dfrac{M\cdot m}{r^2}$\\[3mm]
+    现代物理研究表明两种质量可以不予区分，故可以用质量统一表示。
 
 \subsection{力}
     力衡量了物体间相互作用的强弱，是一个矢量，通常用符号$\veb{F}$表示，单位是\si{N}。\\[3mm]
@@ -1080,14 +1125,212 @@
             \si{N=kg\cdot m/s^2}\\[6mm]
         \end{center}
     \end{large}
-    力的作用效果有两种：使受力物体的运动状态发生改变，使受体物体发生形变。\\
+    力的作用效果有两种：使受力物体的运动状态发生改变，使受体物体发生形变。\\[3mm]
+    力可以用力的示意图表示：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \draw (-0.5,-0.3) rectangle (0.5,0.3);
+
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(30:2){F1}
+                \tkzDefPoint(-30:2){F2}
+                \tkzDefPoint(180:2){F3}
+                
+                \tkzDrawSegments[-latex](O,F1 O,F2 O,F3)
+
+                \tkzDrawPoint[fill=black](O)
+
+                \tkzLabelPoint[right](F1){$F_1$}
+                \tkzLabelPoint[right](F2){$F_2$}
+                \tkzLabelPoint[left](F3){$F_3$}
+            \end{tikzpicture}
+            \caption{力的示意图}
+        \end{center}
+    \end{figure}\\
+    力的三要素包括：力的作用点，力的方向，力的大小。
+
+\newpage
+
+\subsubsection{共点力的合成}
+    \setcounter{equation}{0}
+    已知两个力$\veb{F_1},\veb{F_2}$的大小，已知两者的夹角为$\theta$，现研究其合力的大小和方向。\\[3mm]
+    考虑以下示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-1.0,xmax=6.5,ymin=-0.5,ymax=4.5]
+                \tkzClip
+
+                \tkzDefPoint(0,0){O}
+                \tkzDefShiftPoint[O](0:4){A1}
+                \tkzDefShiftPoint[O](60:3){A2}
+                \tkzDefShiftPoint[A1](60:3){B}
+
+                \tkzDefLine[orthogonal=through B](O,A1)
+                \tkzGetPoint{b1}
+
+                \tkzInterLL(O,A1)(b1,B)
+                \tkzGetPoint{B1}
+
+                \tkzDefLine[orthogonal=through B](O,A2)
+                \tkzGetPoint{b2}
+
+                \tkzInterLL(O,A2)(B,b2)
+                \tkzGetPoint{B2}
+
+                \tkzDrawSegments[-latex](O,A1 O,A2 O,B)
+
+                \tkzDrawSegments[dashed](A1,B1 A2,B2 B,B1 B,B2 B,A1 B,A2)
+
+                \tkzMarkRightAngles[size=0.15](B,B2,A2 B,B1,A1)
+
+                \tkzMarkAngle[size=0.3](A1,O,A2)
+                \tkzMarkAngle[size=0.742](A1,O,B)
+                \tkzMarkAngle[size=0.672](B,O,A2)
+
+                \tkzMarkAngle[size=0.26](B,A1,O)
+
+                \tkzLabelPoint[below left](O){$O$}
+                \tkzLabelPoint[below](A1){$A_1$}
+                \tkzLabelPoint[below](B1){$B_1$}
+                \tkzLabelPoint[left](A2){$A_2$}
+                \tkzLabelPoint[left](B2){$B_2$}
+                \tkzLabelPoint[above right](B){$B$}
+                \tkzLabelSegment[below](O,A1){$\veb{F_1}$}
+                \tkzLabelSegment[left](O,A2){$\veb{F_2}$}
+                \tkzLabelSegment[above](O,B){$\veb{F}$}
+
+                \tkzDefShiftPoint[O](0.35,0.32){theta}
+
+                \tkzDefShiftPoint[O](1.0,0.2){phi1}
+                \tkzDefShiftPoint[O](0.7,0.6){phi2}
+
+                \tkzDefShiftPoint[A1](-0.75,0.25){theta2}
+
+                \node at(theta){$\theta$};
+                \node at(phi1){$\varphi_1$};
+                \node at(phi2){$\varphi_2$};
+
+                \node at(theta2){$\pi-\theta$};
+            \end{tikzpicture}
+            \caption{共点力的合成}
+        \end{center}
+    \end{figure}\\
+    根据余弦定理：
+    \begin{align}
+        &F^2=F_1^2+F_2^2-2\cdot F_1\cdot F_2\cdot\cos{(\pi-\theta)}\\[3mm]
+        &F^2=F_1^2+F_2^2-2\cdot F_1\cdot F_2\cdot\cos{\theta}
+    \end{align}\\
+    根据正弦定理：
+    \begin{align}
+        &\hspace{0.5pt}\frac{A_1B}{\sin{\varphi_1}}=\frac{OB}{\sin{(\pi-\theta)}}\\[3mm]
+        &\frac{A_1B}{\sin{\varphi_1}}=\frac{OB}{\sin{\theta}}\\[3mm]
+        &\frac{F_2}{\sin{\varphi_1}}=\frac{F}{\sin{\theta}}\\[3mm]
+        &\sin{\varphi_1}=\frac{F_2}{F}\cdot\sin{\theta}
+    \end{align}\\
+    共点力的大小和方向可以表示为：\vspace{5pt}
+    \begin{large}
+        \begin{align*}
+            &F=\sqrt{F_1^2+F_2^2-2\cdot F_1\cdot F_2\cdot\cos{\theta}}\\[3mm]
+            &\varphi_1=\arcsin{\left(\frac{F_2}{F}\cdot\sin{\theta}\right)}~~~~~~
+            \varphi_2=\arcsin{\left(\frac{F_1}{F}\cdot\sin{\theta}\right)}
+        \end{align*}
+    \end{large}\\
+    其中$\varphi_1$表示$\veb{F}$与$\veb{F_1}$的夹角，其中$\varphi_2$表示$\veb{F}$与$\veb{F_2}$的夹角，后者的结论可以类似的证明。
+
+\newpage
 
 \subsubsection{牛顿第一定律}
     \textbf{牛顿第一定律：}任何物体都将保持静止或匀速直线运动，直到外力迫使它改变这种状态为止。\\[3mm]
-    牛顿第一定律揭示了两个重要事实：\\[3mm]
-    1.物体具有保持其运动状态不变的性质。\\[3mm]
-    2.物体运动状态改变的原因是力。\\[3mm]
-    力是改变物体运动状态的原因，力不是维持物体运动状态的原因。
+    牛顿第一定律的数学表达：
+    \begin{large}
+        \begin{equation*}
+            \veb{F}=0
+        \end{equation*}
+    \end{large}\\
+    牛顿第一定律指出：力是改变物体运动状态的原因，力不是维持物体运动状态的原因。
+
+\subsubsection{拉密定理}
+    \setcounter{equation}{0}
+    \textbf{拉密定理：}当三个共点力平衡时，任意一个力与另外两个力夹角正弦的比值相同。\\[3mm]
+    拉密定理的数学表达：
+    \begin{large}
+        \begin{equation*}
+            \frac{F_1}{\sin{\theta_1}}=\frac{F_2}{\sin{\theta_2}}=\frac{F_3}{\sin{\theta_3}}
+        \end{equation*}
+    \end{large}\\
+    拉密定理的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \quad
+            \subfigure[力的示意图]
+            {
+                \begin{tikzpicture}[scale=0.7]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefShiftPoint[O](37:3){F1}
+                    \tkzDefShiftPoint[O](127:4){F2}
+                    \tkzDefShiftPoint[O](-90:5){F3}
+    
+                    \tkzDrawSegments[-latex](O,F1 O,F2 O,F3)
+                    \tkzMarkAngle[size=0.42](F1,O,F2)
+                    \tkzMarkAngle[size=0.42](F2,O,F3)
+                    \tkzMarkAngle[size=0.42](F3,O,F1)
+
+                    \tkzDefShiftPoint[O](-0.6,-0.3){theta1}
+                    \tkzDefShiftPoint[O](+0.7,-0.3){theta2}
+                    \tkzDefShiftPoint[O](0,+0.7){theta3}
+
+                    \node at(theta1){$\theta_1$};
+                    \node at(theta2){$\theta_2$};
+                    \node at(theta3){$\theta_3$};
+
+                    \tkzLabelPoint[right](F1){$\veb{F_1}$}
+                    \tkzLabelPoint[left](F2){$\veb{F_2}$}
+                    \tkzLabelPoint[right](F3){$\veb{F_3}$}
+
+                    \tkzDrawPoints[fill=white](O)
+                \end{tikzpicture}
+            }\qquad\qquad
+            \subfigure[力的三角形]
+            {
+                \begin{tikzpicture}[scale=0.7]
+                    \tkzInit[xmin=-3,xmax=+5,ymin=-2.7,ymax=6.1]
+                    \tkzClip
+
+                    \tkzDefPoint(0,0){A}
+                    \tkzDefShiftPoint[A](37:3){B}
+                    \tkzDefShiftPoint[A](37:3.1){B1}
+                    \tkzDefShiftPoint[B](127:4){C}
+                    \tkzDefShiftPoint[B](127:4.1){C1}
+                    \tkzDefShiftPoint[O](-90:5.1){A1}
+    
+                    \tkzDrawSegments[-latex](A,B B,C C,A)
+                    \tkzDrawSegments[dashed,add=-1.0 and 0.5](A,B B,C C,A)
+
+                    \tkzMarkAngle[size=0.42](B1,B,C)
+                    \tkzMarkAngle[size=0.42](C1,C,A)
+                    \tkzMarkAngle[size=0.42](A1,A,B)
+
+                    \tkzLabelSegment[below right](A,B){$\veb{F_1}$}
+                    \tkzLabelSegment[above right](B,C){$\veb{F_2}$}
+                    \tkzLabelSegment[left](C,A){$\veb{F_3}$}
+
+                    \tkzLabelPoint[below right=6pt](A){$\theta_1$}
+                    \tkzLabelPoint[above=7pt](B){$\theta_2$}
+                    \tkzLabelPoint[left=7pt](C){$\theta_3$}
+                \end{tikzpicture}
+            }
+            \caption{拉密定理的示意图}
+        \end{center}
+    \end{figure}\\
+    如图所示，由于三个共点力平衡即矢量和为零，故三者的矢量可以首尾相接构成封闭三角形。\\[3mm]
+    根据正弦定理和诱导公式：
+    \begin{align}
+        &\frac{F_1}{\sin{(\pi-\theta_1)}}=\frac{F_2}{\sin{(\pi-\theta_2)}}=\frac{F_3}{\sin{(\pi-\theta_3)}}\\[2mm]
+        &\frac{F_1}{\sin{\theta_1}}=\frac{F_2}{\sin{\theta_2}}=\frac{F_3}{\sin{\theta_3}}
+    \end{align}\\
+    由此可见，拉密定理本质为正弦定理在三力平衡中的实际应用。
 
 \newpage
 
@@ -1119,21 +1362,109 @@
             \end{cases}
         \end{equation*}
     \end{large}\\
-    牛顿第二定律定量的说明了：\\[3mm]
-    1.质量和力对物体加速度的影响。\\[3mm]
-    2.质量是物体惯性的量度。\\
+    牛顿第二定律定理指出：质量是物体惯性的量度，质量大的物体具有较大的惯性。
 
 \subsubsection{牛顿第三定律}
     \textbf{牛顿第三定律：}相互作用的两个物体之间的作用力和反作用力，大小相等，方向相反。\\[3mm]
     牛顿第三定律的数学表达：
     \begin{large}
         \begin{equation*}
-            \veb{F_{AB}}+\veb{F_{BA}}=0
+            \veb{F_{AB}}+\veb{F_{BA}}=\veb{0}
         \end{equation*}
     \end{large}\\
-    牛顿第三定律说明了物体间力的性质：\\[3mm]
-    1.作用力和反作用力总是同时出现同时消失。\\[3mm]
-    2.作用力和反作用力总是同一类型的力。
+    牛顿第三定理的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \draw (-3.4,+0.35) rectangle (-2.6,-0.35);
+                \draw (+2.6,-0.35) rectangle (+3.4,+0.35);
+
+                \tkzDefPoint(-3,0){A}
+                \tkzDefPoint(-2,0){FA}
+                \tkzDefPoint(+2,0){FB}
+                \tkzDefPoint(+3,0){B}
+
+                \tkzDrawSegments[-latex](A,FA B,FB)
+
+                \tkzLabelPoint[right](FA){$\veb{F_{AB}}$}
+                \tkzLabelPoint[left](FB){$\veb{F_{BA}}$}
+
+                \tkzLabelPoint[below=10pt](A){$A$}
+                \tkzLabelPoint[below=10pt](B){$B$}
+
+                \tkzDrawPoints[fill=white](A,B)
+            \end{tikzpicture}
+            \caption{牛顿第三定律的示意图}
+        \end{center}
+    \end{figure}\\
+    在示意图中，力$\veb{F_{AB}}$表示物体$A$受到的来自$B$的力，力$\veb{F_{BA}}$表示物体$B$受到的来自$A$的力。\\[3mm]
+    牛顿第三定律指出：物体间作用力具有相互作用力的本质，作用力和反作用力总是成对出现的。\\[3mm]
+    牛顿第三定律在使用时应当注意作用力和反作用力必然为同一性质的力。
+
+\newpage
+
+\subsubsection{系统的牛顿第二定律}
+    \setcounter{equation}{0}
+    \textbf{系统的牛顿第二定律：}系统所受的合外力等于系统内各个物体的质量与加速度的乘积之和。\\[3mm]
+    系统的牛顿第二定律的数学表达：
+    \begin{large}
+        \begin{equation*}
+            \veb{F}=\sum_{i=1}^n m_i\cdot \veb{a_i}
+        \end{equation*}
+    \end{large}\\
+    我们首先考虑一个只有两个物体的系统。\\[3mm]
+    设第一个物体的质量为$m_1$，其所受的内力记作$\veb{f_1}$，其所受的外力记作$\veb{F_1}$。\\[3mm]
+    设第二个物体的质量为$m_2$，其所受的内力记作$\veb{f_2}$，其所受的外力记作$\veb{F_2}$。\\[3mm]
+    该系统可以用以下示意图表达：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \draw (-3.4,+0.35) rectangle (-2.6,-0.35);
+                \draw (+2.6,-0.35) rectangle (+3.4,+0.35);
+
+                \tkzDefPoint(-3,0){A}
+                \tkzDefPoint(-2,0){f1}
+                \tkzDefPoint(+2,0){f2}
+                \tkzDefPoint(-4,1){F1}
+                \tkzDefPoint(+4,1){F2}
+                \tkzDefPoint(+3,0){B}
+
+                \tkzDrawSegments[-latex](A,f1 B,f2 A,F1 B,F2)
+
+                \tkzLabelPoint[right](f1){$\veb{f_1}$}
+                \tkzLabelPoint[left](f2){$\veb{f_2}$}
+                \tkzLabelPoint[left](F1){$\veb{F_1}$}
+                \tkzLabelPoint[right](F2){$\veb{F_2}$}
+
+                \tkzLabelPoint[below=10pt](A){$m_1$}
+                \tkzLabelPoint[below=10pt](B){$m_2$}
+
+                \tkzDrawPoints[fill=white](A,B)
+            \end{tikzpicture}
+            \caption{系统的牛顿第二定律的示意图}
+        \end{center}
+    \end{figure}\\
+    系统所受的合外力$\veb{F}$可以表达为：
+    \begin{equation}
+        \veb{F_1}+\veb{F_2}=\veb{F}
+    \end{equation}\\
+    对第一个物体使用牛顿第二定律：
+    \begin{equation}
+        \veb{F_1}+\veb{f_1}=m_1\cdot\veb{a_1}
+    \end{equation}\\
+    对第二个物体使用牛顿第二定律：
+    \begin{equation}
+        \veb{F_2}+\veb{f_2}=m_2\cdot\veb{a_2}
+    \end{equation}\\
+    将两组结论相加可以得到：
+    \begin{align}
+        &\veb{F_1}+\veb{F_2}+\veb{f_1}+\veb{f_2}=m_1\cdot\veb{a_1}+m_2\cdot\veb{a_2}\\[3mm]
+        &\veb{F}+\veb{f_1}+\veb{f_2}=m_1\cdot\veb{a_1}+m_2\cdot\veb{a_2}\\[3mm]
+        &\veb{F}=m_1\cdot\veb{a_1}+m_2\cdot\veb{a_2}
+    \end{align}\\
+    此处推导的关键在于运用了牛顿第三定律$\veb{f_1}+\veb{f_2}=\veb{0}$，即合内力为零。\\[3mm]
+    由此证明了系统的牛顿第二定律在两个物体时是成立的，类似的也可以证明更多物体的情况。
+    
 
 \newpage
 
@@ -1247,9 +1578,6 @@
 
 \newpage
 
-\subsection{力学中常见的力}
-    力学中常见的力包含三种：重力，弹力，摩擦力。
-
 \subsubsection{重力}
     重力指的是物体由于受到地球吸引而受到的，通常用字母$G$表示。\\[3mm]
     重力的方向总是竖直向下垂直于当地的水平面。\\[3mm]
@@ -1259,30 +1587,182 @@
             G=-m\cdot g
         \end{equation*}
     \end{large}\\
-    其中$g$为当地的重力加速度，物体所受重力的大小和质量成正比。\\[3mm]
-    如果以竖直向上为正方向，则重力方向始终为负，这就是公式中负号的含义。\\
+    重力的计算公式中的$g$代表当地的重力加速度，物体所受重力的大小和质量成正比。\\[3mm]
+    重力的计算公式中的负号代表如果以竖直向上为正方向，则重力方向始终为负指向地面。
+
+\subsubsection{万有引力}
+    \setcounter{equation}{0}
+    万有引力指的是任何两个物体由于质量而产生的吸引力。\\[3mm]
+    万有引力定律：
+    \begin{large}
+        \begin{equation*}
+            F=G_0\cdot\frac{M\cdot m}{r^2}
+        \end{equation*}
+    \end{large}\\
+    其中符号$G_0$表示万有引力常量，其取值为$G_0=6.67\times 10^{-11}$\si{(N\cdot m^2)/kg^2}。\\[3mm]
+    万有引力常量由卡文迪许通过扭秤实验测定，在不与重力$G$产生的误解的情况下也可记作$G$。\\[3mm]
+    万有引力产生的加速度称为引力加速度，通常可以用符号$g$表示。\\[3mm]
+    引力加速度可以推导如下：
+    \begin{align}
+        &\begin{cases}
+            ~F=m\cdot g\\[1mm]
+            ~F=G_0\cdot\dfrac{M\cdot m}{r^2}
+        \end{cases}\\[2mm]
+        &~~G_0\cdot\frac{M\cdot m}{r^2}=m\cdot g\\[2mm]
+        &~~G_0\cdot\frac{M}{r^2}=g
+    \end{align}\\
+    引力加速度的计算公式：
+    \begin{large}
+        \begin{align*}
+            &g=G_0\cdot\frac{M}{r^2}~~~~~~~~g=\frac{F}{m}
+        \end{align*}
+    \end{large}\\
+    引力加速度的单位是\si{N/m}或\si{m/s^2}，两种单位是完全等效的。\\[3mm]
+    引力在地球表面的近似即为重力，这是因为地球表面的物体至地心的距离基本等于地球半径。\\[3mm]
+    引力加速度代入地球半径和地球质量，即可得到重力加速度$g=9.8$\si{m/s^2}的结论。
+    
+\newpage
 
 \subsubsection{弹力}
     弹力指的是物体由于发生弹性形变而产生的力，通常用字母$F$表示。\\[3mm]
     弹力的方向总是与物体发生形变的方向相反。\\[3mm]
-    弹力的计算公式（胡克定律）：
+    弹力的计算公式：
     \begin{large}
         \begin{equation*}
             F=-k\cdot x
         \end{equation*}
     \end{large}\\
-    其中$k$为弹簧的劲度系数，物体所受弹力的大小和形变程度成正比。\\[3mm]
-    如果以位移方向为正方向，则弹力方向始终为负，这就是公式中负号的含义。\\[6mm]
-    除了弹簧产生的弹力，一般的物体发生形变也可以产生弹力：\\[3mm]
-    1.压力指的是物体间由于相互挤压发生形变而产生的力，通常用字母$N$表示。\\[3mm]
-    2.张力指的是线绳内由于发生了伸长的形变而产生的力，通常用字母$T$表示。\\[3mm]
+    弹力的计算公式中的$k$代表弹簧的劲度系数，物体所受弹力的大小和形变程度成正比。\\[3mm]
+    弹力的计算公式中的负号代表以位移方向为正方向，弹力方向始终为负指向平衡位置。\\[6mm]
+    弹力的计算公式也称为胡克定律，其只能用于计算弹簧产生的弹性力。\\[3mm]
+    弹力也存在于一般物体中，两个物体在接触时会由于发生微小的形变而产生弹力。\\[3mm]
+    弹力总是垂直于两个物体接触面，若点和面接触则垂直于接触面，若与曲面接触则垂于与切面。\\[3mm]
+    若弹力使得物体发生微小的压缩，则称这种弹力为压力，通常倾向于记作$N$。\\[3mm]
+    若弹力使得物体发生微小的压缩，则称这种弹力为拉力，通常倾向于记作$T$。\\[6mm]
+    轻杆和轻绳是两种重要的物理模型：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[轻杆可以提供拉力]
+            {
+                \begin{tikzpicture}[scale=0.75]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefShiftPoint[O](0,+1.7){N}
+                    \tkzDefShiftPoint[O](0,-1.7){G}
+    
+                    \tkzDefShiftPoint[O](0,+0.3){H1}
+                    \tkzDefShiftPoint[H1](0,+4.0){H2}
+
+                    \tkzDrawCircle(O,H1)
+    
+                    \tkzDefShiftPoint[H1](-0.1,0){H1L}
+                    \tkzDefShiftPoint[H1](+0.1,0){H1R}
+                    \tkzDefShiftPoint[H2](-0.1,0){H2L}
+                    \tkzDefShiftPoint[H2](+0.1,0){H2R}
+    
+                    \tkzDrawPolygon(H1L,H1R,H2R,H2L)
+    
+                    \tkzDefShiftPoint[H2](-1.6,0){L}
+                    \tkzDefShiftPoint[H2](+1.6,0){R}
+    
+                    \tkzDrawSegment[ultra thick](L,R)
+                    
+                    \tkzDrawSegments[-latex](O,G O,N)
+                    \tkzLabelPoint[right](G){$G$}
+                    \tkzLabelPoint[right](N){$T$}
+                    \tkzDrawPoints[fill=white](O)
+                \end{tikzpicture}
+            }\qquad
+            \subfigure[轻绳可以提供拉力]
+            {
+                \begin{tikzpicture}[scale=0.75]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefShiftPoint[O](0,+1.7){N}
+                    \tkzDefShiftPoint[O](0,-1.7){G}
+    
+                    \tkzDefShiftPoint[O](0,+0.3){H1}
+                    \tkzDefShiftPoint[H1](0,+4.0){H2}
+
+                    \tkzDrawCircle(O,H1)
+    
+                    \tkzDrawSegments[thick,color=MediumGray](H1,H2)
+    
+                    \tkzDefShiftPoint[H2](-1.6,0){L}
+                    \tkzDefShiftPoint[H2](+1.6,0){R}
+    
+                    \tkzDrawSegment[ultra thick](L,R)
+                    
+                    \tkzDrawSegments[-latex](O,G O,N)
+                    \tkzLabelPoint[right](G){$G$}
+                    \tkzLabelPoint[right](N){$T$}
+                    \tkzDrawPoints[fill=white](O)
+                \end{tikzpicture}
+            }\qquad
+            \subfigure[轻杆可以提供压力]
+            {
+                \begin{tikzpicture}[scale=0.75]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefShiftPoint[O](0,+1.7){N}
+                    \tkzDefShiftPoint[O](0,-1.7){G}
+    
+                    \tkzDefShiftPoint[O](0,-0.3){H1}
+                    \tkzDefShiftPoint[H1](0,-4.0){H2}
+
+                    \tkzDrawCircle(O,H1)
+    
+                    \tkzDefShiftPoint[H1](-0.1,0){H1L}
+                    \tkzDefShiftPoint[H1](+0.1,0){H1R}
+                    \tkzDefShiftPoint[H2](-0.1,0){H2L}
+                    \tkzDefShiftPoint[H2](+0.1,0){H2R}
+    
+                    \tkzDrawPolygon(H1L,H1R,H2R,H2L)
+    
+                    \tkzDefShiftPoint[H2](-1.6,0){L}
+                    \tkzDefShiftPoint[H2](+1.6,0){R}
+    
+                    \tkzDrawSegment[ultra thick](L,R)
+                    
+                    \tkzDrawSegments[-latex](O,G O,N)
+                    \tkzLabelPoint[right](G){$G$}
+                    \tkzLabelPoint[right](N){$N$}
+                    \tkzDrawPoints[fill=white](O)
+                \end{tikzpicture}
+            }\qquad
+            \subfigure[轻绳不能提供压力]
+            {
+                \begin{tikzpicture}[scale=0.75]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefShiftPoint[O](0,+1.7){N}
+                    \tkzDefShiftPoint[O](0,-1.7){G}
+    
+                    \tkzDefShiftPoint[O](0,-0.3){H1}
+                    \tkzDefShiftPoint[H1](0,-4.0){H2}
+
+                    \tkzDrawCircle(O,H1)
+    
+                    \tkzDrawSegments[thick,color=MediumGray](H1,H2)
+    
+                    \tkzDefShiftPoint[H2](-1.6,0){L}
+                    \tkzDefShiftPoint[H2](+1.6,0){R}
+    
+                    \tkzDrawSegment[ultra thick](L,R)
+                    
+                    \tkzDrawSegments[-latex](O,G)
+                    \tkzLabelPoint[right](G){$G$}
+                    \tkzDrawPoints[fill=white](O)
+                \end{tikzpicture}
+            }\quad
+            \caption{轻绳和轻杆的特点}
+        \end{center}
+    \end{figure}\\
+    轻杆是一种没有质量的细长状物体，既可以提供拉力，也可以提供压力。\\[3mm]
+    轻绳是一种没有质量的细长状物体，只可以提供拉力，不可以提供压力。\\[3mm]
+    由于轻绳和轻杆均被假设为没有质量，若其受力不平衡，则牛顿第二定律指出其加速度无限大，从而导致不合理的结果，因此轻绳和轻杆的受力一定是平衡的。
 
 \newpage
 
 \subsubsection{摩擦力}
     摩擦力指的是两个粗糙物体由于相互摩擦而产生的力，通常用字母$f$表示。\\[3mm]
-    摩擦力具体可以分为两种：滑动摩擦力和静摩擦力。\\[3mm]
-    \textbf{1.动摩擦力}\\[2mm]
+    \textbf{1.动摩擦力}\\[3mm]
     滑动摩擦力指的是两个粗糙物体由于相对滑动而产生的力，通常用$f_k$表示。\\[3mm]
     滑动摩擦力的方向总是沿着接触面的切线方向，且与物体相对运动方向相反。\\[3mm]
     滑动摩擦力的计算公式：
@@ -1291,7 +1771,7 @@
             f_{k}=\mu_k\cdot N
         \end{equation*}
     \end{large}\\
-    其中$\mu_k$为动摩擦系数，物体所受动摩擦力的大小和物体间的弹力成正比。\\[8mm]
+    其中$\mu_k$为动摩擦系数，物体所受动摩擦力的大小和物体间的弹力成正比。\\[6mm]
     \textbf{2.静摩擦力}\\[2mm]
     静摩擦力指的是两个粗糙物体由于相对滑动趋势而产生的力，通常用$f_s$表示。\\[3mm]
     静摩擦力的方向总是沿着接触面的切线方向，且与物体的相对运动趋势方向相反。\\[3mm]
@@ -1305,10 +1785,802 @@
         \end{equation*}
     \end{large}\\
     其中$\mu_s$为静摩擦系数，物体所受最大静摩擦力的大小和物体间的弹力成正比。\\[6mm]
-    通常来说，静摩擦因数和动摩擦因数小于一，即$\mu_s<1$且$\mu_k<1$。\\[3mm]
-    实验表明，静摩擦因数总是大于动摩擦因数，即$\mu_s>\mu_k$。\\[3mm]
-    这一特点意味着，使物体开始运动所需的力大于维持物体匀速直线运动所需的力。
+    通常来说静摩擦因数和动摩擦因数小于一：
+    \begin{large}
+        \begin{equation*}
+            \mu_s<1~~~~\mu_k<1
+        \end{equation*}
+    \end{large}\\
+    实验表明静摩擦因数总是大于动摩擦因数：
+    \begin{large}
+        \begin{equation*}
+            \mu_s>\mu_k  
+        \end{equation*}
+    \end{large}\\
+    这意味着使物体开始运动所需的力大于维持物体匀速直线运动所需的力。\\[3mm]
+    一般情况下可以近似的认为静摩擦因数和动摩擦因数相等，即$\mu=\mu_s=\mu_k$。
 
+\newpage
+
+\subsection{受力分析的实例}
+    本章将分析一些常见情况下的物体受力和运动情况。
+
+\subsubsection{斜面上的静止物体}
+    \setcounter{equation}{0}
+    现研究一个倾斜角为$\theta$的斜面上的静止物体的受力情况。\\[3mm]
+    定义平行斜面向上的方向作为$x$轴的正方向，定义垂直斜面向上的方向作为$y$轴的正方向。\\[3mm]
+    物体受力分析如图所示：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.15]
+                \tkzDefPoint(0,0){T1}
+                \tkzDefPoint(6,0){T2}
+                \tkzDefPoint(6,3){T3}
+                \tkzDrawPolygon[color=DarkGray](T1,T2,T3)
+
+                \tkzDefPoint(2.94,1.62){O}
+                \tkzDefPoint(2.8,1.4){O1}
+                \tkzDefPoint(3.2,1.6){O2}
+                \tkzDefPoint(3.08,1.84){O3}
+                \tkzDefPoint(2.68,1.64){O4}
+                \tkzDrawPolygon[fill=LightGray](O1,O2,O3,O4)
+
+                \tkzDefShiftPoint[O](26.57:1.5){X}
+                \tkzDefShiftPoint[O](116.57:1.8){Y}
+                \tkzDefShiftPoint[O](26.57:-1.5){X-}
+                \tkzDefShiftPoint[O](116.57:-1.8){Y-}
+
+                \tkzDrawSegments[color=MediumGray,dashed,add=1.0 and 0,-latex](O,X)
+                \tkzDrawSegments[color=MediumGray,dashed,add=0.8 and 0,-latex](O,Y)
+
+                \tkzDefShiftPoint[O](116.57:1.212){N}
+                \tkzDefShiftPoint[O](-90:1.400){G}
+                \tkzDefShiftPoint[O](26.57:0.700){f}
+
+                \tkzDrawSegments[-latex](O,N O,G O,f)
+                \tkzDrawPoint[fill=white](O)
+
+                \tkzLabelPoint[left](N){$\veb{N}$}
+                \tkzLabelPoint[right](G){$\veb{G}$}
+                \tkzLabelPoint[above](f){$\veb{f}$}
+
+                \tkzLabelPoint[above,color=MediumGray](X){$x$}
+                \tkzLabelPoint[right,color=MediumGray](Y){$y$}
+
+                \tkzMarkAngle[size=0.5](T2,T1,T3)
+                \tkzMarkAngle[size=0.40](G,O,Y-)
+
+                \tkzMarkRightAngle[size=0.15](T3,T2,T1)
+
+                \tkzDefShiftPoint[T1](0.7,0.15){th1}
+                \tkzDefShiftPoint[O](0.13,-0.55){th2}
+
+                \node at(th1){$\theta$};
+                \node at(th2){$\theta$};
+            \end{tikzpicture}
+            \caption{斜面上的静止物体的受力分析}
+        \end{center}
+    \end{figure}\\
+    物体所受的力的矢量：
+    \begin{align}
+        &\veb{G}\hspace{2.0pt}=(-mg\cdot\sin{\theta},-mg\cdot\cos{\theta})\\[2mm]
+        &\veb{N}=(0,N)\\[2mm]
+        &\veb{f}\hspace{4.0pt}=(f,0)
+    \end{align}\\
+    根据牛顿第二定律：
+    \begin{align}
+        &\begin{cases}
+            ~f\hspace{4.0pt}-mg\cdot\sin{\theta}=0\\[1mm]
+            ~N-mg\cdot\cos{\theta}=0
+        \end{cases}~~~~
+        \begin{cases}
+            ~f\hspace{4.0pt}=mg\cdot\sin{\theta}\\[1mm]
+            ~N=mg\cdot\cos{\theta}
+        \end{cases}
+    \end{align}\\[1mm]
+    物体静止时，所受摩擦力为重力和倾斜角正弦的乘积：
+    \begin{large}
+        \begin{equation*}
+            f=mg\cdot \sin{\theta}
+        \end{equation*}
+    \end{large}\\
+    物体静止时，所受支持力为重力和倾斜角余弦的乘积：
+    \begin{large}
+        \begin{equation*}
+            N=mg\cdot \cos{\theta}
+        \end{equation*}
+    \end{large}\\
+    需要十分注意的是，以上关于摩擦力的结论只有在物体静止时才可以适用。
+
+\newpage
+
+\subsubsection{斜面上的下滑物体}
+    \setcounter{equation}{0}
+    现研究一个倾斜角为$\theta$的斜面上的下滑物体的受力情况和运动情况。\\[3mm]
+    定义平行斜面向上的方向作为$x$轴的正方向，定义垂直斜面向上的方向作为$y$轴的正方向。\\[3mm]
+    物体受力分析如图所示：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.15]
+                \tkzDefPoint(0,0){T1}
+                \tkzDefPoint(6,0){T2}
+                \tkzDefPoint(6,3){T3}
+                \tkzDrawPolygon[color=DarkGray](T1,T2,T3)
+
+                \tkzDefPoint(2.94,1.62){O}
+                \tkzDefPoint(2.8,1.4){O1}
+                \tkzDefPoint(3.2,1.6){O2}
+                \tkzDefPoint(3.08,1.84){O3}
+                \tkzDefPoint(2.68,1.64){O4}
+                \tkzDrawPolygon[fill=LightGray](O1,O2,O3,O4)
+
+                \tkzDefShiftPoint[O](26.57:1.5){X}
+                \tkzDefShiftPoint[O](116.57:1.8){Y}
+                \tkzDefShiftPoint[O](26.57:-1.5){X-}
+                \tkzDefShiftPoint[O](116.57:-1.8){Y-}
+
+                \tkzDrawSegments[color=MediumGray,dashed,add=1.0 and 0,-latex](O,X)
+                \tkzDrawSegments[color=MediumGray,dashed,add=0.8 and 0,-latex](O,Y)
+
+                \tkzDefShiftPoint[O](116.57:1.212){N}
+                \tkzDefShiftPoint[O](-90:1.400){G}
+                \tkzDefShiftPoint[O](26.57:0.500){f}
+
+                \tkzDrawSegments[-latex](O,N O,G O,f)
+                \tkzDrawPoint[fill=white](O)
+
+                \tkzLabelPoint[left](N){$\veb{N}$}
+                \tkzLabelPoint[right](G){$\veb{G}$}
+                \tkzLabelPoint[above](f){$\veb{f}$}
+
+                \tkzLabelPoint[above,color=MediumGray](X){$x$}
+                \tkzLabelPoint[right,color=MediumGray](Y){$y$}
+
+                \tkzMarkAngle[size=0.5](T2,T1,T3)
+                \tkzMarkAngle[size=0.40](G,O,Y-)
+
+                \tkzMarkRightAngle[size=0.15](T3,T2,T1)
+
+                \tkzDefShiftPoint[T1](0.7,0.15){th1}
+                \tkzDefShiftPoint[O](0.13,-0.55){th2}
+
+                \node at(th1){$\theta$};
+                \node at(th2){$\theta$};
+
+                \tkzDefPoint(5.5,3.50){a1}
+                \tkzDefPoint(5.5,3.00){v1}
+
+                \tkzDefPoint(5,3.25){a2}
+                \tkzDefPoint(5,2.75){v2}
+
+                \tkzDrawSegments[-latex](a1,a2 v1,v2)
+
+                \tkzLabelPoint[left](a2){$\veb{a}$}
+                \tkzLabelPoint[left](v2){$\veb{v}$}
+            \end{tikzpicture}
+            \caption{斜面上的下滑物体的受力分析}
+        \end{center}
+    \end{figure}\\
+    物体所受的力的矢量：
+    \begin{align}
+        &\veb{G}\hspace{2.0pt}=(-mg\cdot\sin{\theta},-mg\cdot\cos{\theta})\\[2mm]
+        &\veb{N}=(0,N)\\[2mm]
+        &\veb{f}\hspace{4.0pt}=(f,0)=(\mu N,0)
+    \end{align}\\
+    根据牛顿第二定律：
+    \begin{align}
+        &\begin{cases}
+            ~\mu N-mg\cdot\sin{\theta}=-ma\\[1mm]
+            ~N-mg\cdot\cos{\theta}=0
+        \end{cases}\\[2mm]
+        &N=mg\cdot\cos{\theta}\\[2mm]
+        &ma=mg\cdot\sin{\theta}-\mu N\\[2mm]
+        &ma=mg\cdot\sin{\theta}-\mu mg\cdot\cos{\theta}\\[2mm]
+        &a=g\cdot\sin{\theta}-\mu g\cdot\cos{\theta}
+    \end{align}\\
+    物体向下滑动时的加速度大小：
+    \begin{large}
+        \begin{equation*}
+            a=g\cdot\sin{\theta}-\mu\cdot g\cdot \cos{\theta}
+        \end{equation*}
+    \end{large}\\
+    由此可见，物体在向下滑动时具有较小的加速度（摩擦力与加速度方向相反）。
+
+\newpage
+
+\subsubsection{斜面上的上滑物体}
+    \setcounter{equation}{0}
+    现研究一个倾斜角为$\theta$的斜面上的上滑物体的受力情况和运动情况。\\[3mm]
+    定义平行斜面向上的方向作为$x$轴的正方向，定义垂直斜面向上的方向作为$y$轴的正方向。\\[3mm]
+    物体受力分析如图所示：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.15]
+                \tkzDefPoint(0,0){T1}
+                \tkzDefPoint(6,0){T2}
+                \tkzDefPoint(6,3){T3}
+                \tkzDrawPolygon[color=DarkGray](T1,T2,T3)
+
+                \tkzDefPoint(2.94,1.62){O}
+                \tkzDefPoint(2.8,1.4){O1}
+                \tkzDefPoint(3.2,1.6){O2}
+                \tkzDefPoint(3.08,1.84){O3}
+                \tkzDefPoint(2.68,1.64){O4}
+                \tkzDrawPolygon[fill=LightGray](O1,O2,O3,O4)
+
+                \tkzDefShiftPoint[O](26.57:1.5){X}
+                \tkzDefShiftPoint[O](116.57:1.8){Y}
+                \tkzDefShiftPoint[O](26.57:-1.5){X-}
+                \tkzDefShiftPoint[O](116.57:-1.8){Y-}
+
+                \tkzDrawSegments[color=MediumGray,dashed,add=1.0 and 0,-latex](O,X)
+                \tkzDrawSegments[color=MediumGray,dashed,add=0.8 and 0,-latex](O,Y)
+
+                \tkzDefShiftPoint[O](116.57:1.212){N}
+                \tkzDefShiftPoint[O](-90:1.400){G}
+                \tkzDefShiftPoint[O](26.57:-0.500){f}
+
+                \tkzDrawSegments[-latex](O,N O,G O,f)
+                \tkzDrawPoint[fill=white](O)
+
+                \tkzLabelPoint[left](N){$\veb{N}$}
+                \tkzLabelPoint[right](G){$\veb{G}$}
+                \tkzLabelPoint[above](f){$\veb{f}$}
+
+                \tkzLabelPoint[above,color=MediumGray](X){$x$}
+                \tkzLabelPoint[right,color=MediumGray](Y){$y$}
+
+                \tkzMarkAngle[size=0.5](T2,T1,T3)
+                \tkzMarkAngle[size=0.40](G,O,Y-)
+
+                \tkzMarkRightAngle[size=0.15](T3,T2,T1)
+
+                \tkzDefShiftPoint[T1](0.7,0.15){th1}
+                \tkzDefShiftPoint[O](0.13,-0.55){th2}
+
+                \node at(th1){$\theta$};
+                \node at(th2){$\theta$};
+
+                \tkzDefPoint(5.5,3.50){a1}
+                \tkzDefPoint(5.5,3.00){v1}
+
+                \tkzDefPoint(5,3.25){a2}
+                \tkzDefPoint(5,2.75){v2}
+
+                \tkzDrawSegments[-latex](a1,a2)
+                \tkzDrawSegments[-latex](v2,v1)
+
+                \tkzLabelPoint[left](a2){$\veb{a}$}
+                \tkzLabelPoint[right](v1){$\veb{v}$}
+            \end{tikzpicture}
+            \caption{斜面上的上滑物体的受力分析}
+        \end{center}
+    \end{figure}\\
+    物体所受的力的矢量：
+    \begin{align}
+        &\veb{G}\hspace{2.0pt}=(-mg\cdot\sin{\theta},-mg\cdot\cos{\theta})\\[2mm]
+        &\veb{N}=(0,N)\\[2mm]
+        &\veb{f}\hspace{4.0pt}=(-f,0)=(-\mu N,0)
+    \end{align}\\
+    根据牛顿第二定律：
+    \begin{align}
+        &\begin{cases}
+            ~-\mu N-mg\cdot\sin{\theta}=-ma\\[1mm]
+            ~N-mg\cdot\cos{\theta}=0
+        \end{cases}\\[2mm]
+        &N=mg\cdot\cos{\theta}\\[2mm]
+        &ma=mg\cdot\sin{\theta}+\mu N\\[2mm]
+        &ma=mg\cdot\sin{\theta}+\mu mg\cdot\cos{\theta}\\[2mm]
+        &a=g\cdot\sin{\theta}+\mu g\cdot\cos{\theta}
+    \end{align}\\
+    物体向上滑动时的加速度大小：
+    \begin{large}
+        \begin{equation*}
+            a=g\cdot\sin{\theta}+\mu\cdot g\cdot\cos{\theta}
+        \end{equation*}
+    \end{large}\\
+    由此可见，物体在向下滑动时具有较大的加速度（摩擦力与加速度方向相同）。
+
+\newpage
+
+\subsubsection{伽利略等时圆原理}
+    \setcounter{equation}{0}
+    考虑一个竖直平面上的圆，设圆上最高点为点$P$，设圆上最低点为点$Q$，记圆上任意一点为$A$。\\[3mm]
+    我们记一个质点由最高点$P$沿着轨道下滑至任意点$A$所需的时间为$t_1$。\\[3mm]
+    我们记一个质点由任意点$A$沿着轨道下滑至任意点$Q$所需的时间为$t_2$。\\[3mm]
+    伽利略等时圆原理指出，若记最高点$P$自由落体至最低点$Q$所需的时间为$t$，则必有$t=t_1=t_2$。\\[3mm]
+    伽利略等时圆的示意图：\vspace{-10pt}
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[最高点为起点的情况]
+            {
+                \begin{tikzpicture}[scale=0.65]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(0,+3){P}
+                    \tkzDefPoint(0,-3){Q}
+
+                    \tkzDrawCircle[thick](O,P)
+
+                    \tkzDefPoint(-2.4,-1.8){A}
+                    \tkzDrawSegments(P,A P,Q)
+                    \tkzDrawSegment[dashed](A,Q)
+
+                    \tkzLabelPoint[above](P){$P$}
+                    \tkzLabelPoint[below](Q){$Q$}
+                    \tkzLabelPoint[below left](A){$A$}
+
+                    \tkzMarkRightAngle[size=0.15](P,A,Q)
+                    \tkzMarkAngle[size=0.65](A,P,Q)
+
+                    \tkzDefShiftPoint[P](-0.2,-0.9){theta}
+                    \node at(theta){$\theta$};
+
+                    \tkzLabelSegment[left](P,A){$s$}
+                    \tkzLabelSegment[right](P,Q){$h$}
+                \end{tikzpicture}
+            }\qquad\qquad
+            \subfigure[最低点为终点的情况]
+            {
+                \begin{tikzpicture}[scale=0.65]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(0,+3){P}
+                    \tkzDefPoint(0,-3){Q}
+
+                    \tkzDrawCircle[thick](O,P)
+
+                    \tkzDefPoint(-2.4,+1.8){A}
+                    \tkzDrawSegments(A,Q P,Q)
+                    \tkzDrawSegment[dashed](P,A)
+
+                    \tkzLabelPoint[above](P){$P$}
+                    \tkzLabelPoint[below](Q){$Q$}
+                    \tkzLabelPoint[above left](A){$A$}
+
+                    \tkzMarkRightAngle[size=0.15](P,A,Q)
+                    \tkzMarkAngle[size=0.65](P,Q,A)
+
+                    \tkzDefShiftPoint[Q](-0.2,+0.9){theta}
+                    \node at(theta){$\theta$};
+
+                    \tkzLabelSegment[left](A,Q){$s$}
+                    \tkzLabelSegment[right](P,Q){$h$}
+                \end{tikzpicture}
+            }
+        \end{center}
+    \end{figure}\\
+    由图可知，两处轨道的倾斜角均为$\pi-\theta$。\\[3mm]
+    设$PQ$的高度为$h$，设下滑的加速度为$a$，设轨道的长度为$s$，设下滑时间为$T$。\\[3mm]
+    根据斜面下滑的结论可知：
+    \begin{align}
+        &a=g\cdot\sin{(\pi-\theta)}\\[2mm]
+        &a=g\cdot\cos{\theta}
+    \end{align}\\
+    显然轨道长度可以表达为：
+    \begin{align}
+        s=h\cdot\cos{\theta}~~~~~~~~~~~
+    \end{align}\\
+    代入匀加速直线运动的计算公式：
+    \begin{align}
+        &T=\sqrt{\frac{2s}{a}}=\sqrt{\frac{2\cdot h\cdot \cos{\theta}}{g\cdot\cos{\theta}}}=\sqrt{\frac{2h}{g}}
+    \end{align}\\
+    以上证明对两类轨道均是适用的。\\[3mm]
+    以上证明指出，下滑的时间与角度$\theta$无关，因此伽利略等时圆原理成立。
+
+\newpage
+
+\subsubsection{降落伞问题}
+    \setcounter{equation}{0}
+    假设一个质量为$m$的物体，其所受重力恒定$G=mg$，其所受空气阻力和速度成正比$f=kv$。\\[3mm]
+    假设该物体从足够高处静止下落，求解该物体的速度和时间的函数关系。\\[3mm]
+    由于该问题常以降落伞的形式出现，因此称为降落伞问题。\\[3mm]
+    物体受力分析如图所示：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(0,-2){G}
+                \tkzDefPoint(0,+1){f}
+
+                \tkzDrawSegments[-latex](O,G O,f)
+
+                \tkzLabelPoint[right](G){$\veb{G}~~~~G=mg$}
+                \tkzLabelPoint[right](f){$\veb{f}~~~~f=kv$}
+
+                \tkzDrawPoint[fill=white](O)
+            \end{tikzpicture}
+            \caption{降落伞问题的示意图}
+        \end{center}
+    \end{figure}\\
+    根据牛顿第二定律：
+    \begin{align}
+        &m\cdot a=G-f\\[3mm]
+        &m\cdot a=mg-kv
+    \end{align}\\
+    由此可以微分方程：
+    \begin{align}
+        &m\cdot\frac{\dif v}{\dif t}=mg-kv
+    \end{align}\\
+    将变量分离至两侧：
+    \begin{align}
+        &\frac{\dif v}{mg-kv}=\frac{\dif t}{m}
+    \end{align}\\
+    对等式两侧积分得：
+    \begin{align}
+        &\int\frac{\dif v}{mg-kv}=\int\frac{\dif t}{m}\\[3mm]
+        &\int\frac{\dif v}{-kv+mg}=\int\frac{\dif t}{m}\\[3mm]
+        &-\frac{1}{k}\cdot\ln\big(|mg-kv|\big)=\frac{t}{m}+C
+    \end{align}\\
+    由于空气阻力应当小于重力即$mg>kv$，因此此处的$|mg-kv|=mg-kv$。
+
+\newpage
+
+    对积分结论进行化简：
+    \begin{align}
+        &\ln(mg-kv)=-\frac{kt}{m}+C~\\[3mm]
+        &mg-kv=e^{-\frac{kt}{m}+C}\\[3mm]
+        &mg-kv=e^{-\frac{kt}{m}}\cdot e^C\\[3mm]
+        &v=\frac{1}{k}\cdot\left(mg-e^{-\frac{kt}{m}}\cdot e^C\right)~
+    \end{align}\\
+    此处的$C$为一由初值确定的常数，我们已知当$t=0$时有$v=0$即初速度为零。\\[3mm]
+    由此可以求解得出该常数：
+    \begin{align}
+        &v=\frac{1}{k}\cdot\left(mg-e^{-\frac{kt}{m}}\cdot e^C\right)~\\[3mm]
+        &0=\frac{1}{k}\cdot\left(mg-e^C\right)\\[3mm]
+        &0=\frac{mg}{k}-\frac{e^C}{k}\\[3mm]
+        &e^C=mg\\[3mm]
+        &C=\ln{mg}
+    \end{align}\\
+    将求得的常数重新代入得：
+    \begin{align}
+        &~v=\frac{1}{k}\cdot\left(mg-e^{-\frac{kt}{m}}\cdot e^C\right)\\[3mm]
+        &~v=\frac{1}{k}\cdot\left(mg-e^{-\frac{kt}{m}}\cdot e^{\ln{mg}}\right)\\[3mm]
+        &~v=\frac{1}{k}\cdot\left(mg-mg\cdot e^{-\frac{kt}{m}}\right)\\[3mm]
+        &~v=\frac{mg}{k}\cdot\left(1-e^{-\frac{kt}{m}}\right)
+    \end{align}\\
+    降落伞问题的速度：
+    \begin{large}
+        \begin{equation*}
+            v=\frac{mg}{k}\cdot\left(1-e^{-\frac{kt}{m}}\right)
+        \end{equation*}
+    \end{large}\\
+    降落伞问题中，当$t\rightarrow \infty$时有$v\rightarrow \dfrac{mg}{k}$，即当时间趋近于无穷时速度趋近于定值。\\[3mm]
+    降落伞问题的物体在向下运动的过程中，加速度逐渐减小趋近于零，速度逐渐增大趋近于定值。
+
+\newpage
+
+\subsection{万有引力的应用}
+    本章将主要研究将万有引力应用于圆周运动时的一些重要结论。
+
+\subsubsection{开普勒第一定律}
+    \textbf{开普勒第一定律：}所有行星绕太阳的轨道均是椭圆，太阳处于椭圆的一个焦点上。\\[3mm]
+    开普勒第一定律的主要价值在于，其驳斥了自哥白尼时代起将行星轨道视为完美的圆形的错误认知，
+    但是实际上太阳系行星的轨道偏心率均很小，因此一般可以近似的视作圆。\\[3mm]
+    开普勒第一定律仅考虑了行星的轨道情况，对于一般的绕太阳运动的物体，如彗星或人造卫星，
+    速度较小的为圆或椭圆，速度较大的为抛物线或双曲线，且太阳总是处于圆锥曲线的焦点处。
+
+\subsubsection{开普勒第二定律}
+    \textbf{开普勒第二定律：}在任何相等的时间内，行星和太阳的连线扫过的面积是相等的。\\[3mm]
+    开普勒第二定律的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.85]
+                \tkzInit[xmin=-3.2,xmax=+3.2,ymin=-2.2,ymax=+2.2]
+                \tkzClip
+
+                \draw[thick] (0,0) ellipse (3 and 2);
+
+                \tkzDefPoint(-2.236,0){S}
+
+                \tkzDefPoint(-2.432,-1.171){A1}
+                \tkzDefPoint(-2.432,+1.171){A2}
+
+                \tkzDefPoint(2.935,-0.414){B1}
+                \tkzDefPoint(2.935,+0.414){B2}
+
+                \tkzDrawSegments(S,A1 S,A2 S,B1 S,B2)
+
+                \tkzDefPoint(-3,-1){L1}
+                \tkzDefPoint(-3,+1){L2}
+
+                \tkzDefPoint(+3,-1){R1}
+                \tkzDefPoint(+3,+1){R2}
+
+                \tkzInterLL(S,A1)(L1,L2)
+                \tkzGetPoint{a1}
+
+                \tkzInterLL(S,A2)(L1,L2)
+                \tkzGetPoint{a2}
+
+                \tkzInterLL(S,B1)(R1,R2)
+                \tkzGetPoint{b1}
+
+                \tkzInterLL(S,B2)(R1,R2)
+                \tkzGetPoint{b2}
+
+                \clip (0,0) ellipse (2.98 and 1.98);
+
+                \tkzDrawPolygon[fill=LightGray](S,a1,a2)
+                \tkzDrawPolygon[fill=LightGray](S,b1,b2)
+
+                \tkzDrawPoint[fill=white](S)
+
+                \tkzLabelPoint[left](S){$S_2$}
+                \tkzLabelPoint[right=95pt](S){$S_1$}
+            \end{tikzpicture}
+            \caption{开普勒第二定律的示意图}
+        \end{center}
+    \end{figure}\\
+    开普勒第二定律实际是行星绕太阳公转过程中角动量守恒的具体表现。\\[3mm]
+    开普勒第二定律对于一般的圆锥曲线轨道，例如抛物线轨道和双曲线轨道也是普遍适用的。
+
+\subsubsection{开普勒第三定律}
+    \textbf{开普勒第三定律：}绕太阳运行的各行星，轨道半长轴的立方和公转周期的平方成正比。\\[3mm]
+    开普勒第三定律的数学表达：
+    \begin{large}
+        \begin{equation*}
+            k=\frac{R^3}{T^2}
+        \end{equation*}
+    \end{large}\\
+    开普勒第三定律是发现万有引力定律过程中的一个重要基础。\\[3mm]
+    开普勒第三定律中，符号$R$表示椭圆轨道的半长轴，符号$T$表示轨道周期。\\[3mm]
+    开普勒第三定律中，符号$k$称为开普勒衡量，其关于每一个中心天体为一常量。
+
+\newpage
+
+\subsubsection{环绕物体的线速度}
+    \setcounter{equation}{0}
+    现研究以圆形轨道环绕质量为$M$的中心天体的物体的线速度$v$的大小。\\[3mm]
+    环绕物体线速度的计算公式：
+    \begin{large}
+        \begin{equation*}
+            v=\sqrt{\frac{G\cdot M}{r}}
+        \end{equation*}
+    \end{large}\\
+    环绕物体线速度的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(0,0){O}
+                \tkzDefShiftPoint[O](15:1.75){V1}
+                \tkzDefShiftPoint[O](105:2.5){V2}
+
+                \tkzDrawCircle[color=MediumGray,dashed](O,V1)
+                \tkzDrawCircle[color=MediumGray,dashed](O,V2)
+
+                \tkzDrawSegments(O,V1 O,V2)
+
+                \tkzDrawPoints[fill=white](O,V1,V2)
+
+                \tkzLabelPoint[right](V1){$v_1$}
+                \tkzLabelPoint[above](V2){$v_2$}
+                
+                \tkzLabelPoint[below](O){$M$}
+
+                \tkzLabelPoint[below=25pt](O){$v_1>v_2$}
+            \end{tikzpicture}
+            \caption{轨道半径和线速度的关系}
+        \end{center}
+    \end{figure}\\
+    根据引力加速度的计算公式：
+    \begin{align}
+        a=G\cdot\frac{M}{r^2}
+    \end{align}\\
+    根据向心加速度的计算公式：
+    \begin{align}
+        a=\frac{v^2}{r}
+    \end{align}\\
+    将两者联立可得：
+    \begin{align}
+        &G\cdot\frac{M}{r^2}=\frac{v^2}{r}\\[3mm]
+        &G\cdot\frac{M}{r}=v^2\\[3mm]
+        &v=\sqrt{\frac{G\cdot M}{r}}
+    \end{align}\\
+    线速度的计算公式指出，在半径一定的轨道上运行的物体具有相同的线速度。\\[3mm]
+    线速度的计算公式指出，轨道上物体的线速度随着轨道半径的增大而减小。
+
+\newpage
+
+\subsubsection{环绕物体的角速度}
+    \setcounter{equation}{0}
+    现研究以圆形轨道环绕质量为$M$的中心天体的物体角速度$\omega$的大小。\\[3mm]
+    环绕物体角速度的计算公式：
+    \begin{large}
+        \begin{equation*}
+            \omega=\sqrt{\frac{G\cdot M}{r^3}}
+        \end{equation*}
+    \end{large}\\
+    环绕物体角速度的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(0,0){O}
+                \tkzDefShiftPoint[O](15:1.75){V1}
+                \tkzDefShiftPoint[O](105:2.5){V2}
+
+                \tkzDrawCircle[color=MediumGray,dashed](O,V1)
+                \tkzDrawCircle[color=MediumGray,dashed](O,V2)
+
+                \tkzDrawSegments(O,V1 O,V2)
+
+                \tkzDrawPoints[fill=white](O,V1,V2)
+
+                \tkzLabelPoint[right](V1){$\omega_1$}
+                \tkzLabelPoint[above](V2){$\omega_2$}
+                
+                \tkzLabelPoint[below](O){$M$}
+
+                \tkzLabelPoint[below=25pt](O){$\omega_1>\omega_2$}
+            \end{tikzpicture}
+            \caption{轨道半径和角速度的关系}
+        \end{center}
+    \end{figure}\\
+    根据引力加速度的计算公式：
+    \begin{align}
+        a=G\cdot\frac{M}{r^2}
+    \end{align}\\
+    根据向心加速度的计算公式：
+    \begin{align}
+        a=\omega^2\cdot r
+    \end{align}\\
+    将两者联立可得：
+    \begin{align}
+        &G\cdot\frac{M}{r^2}=\omega^2\cdot r\\[3mm]
+        &G\cdot\frac{M}{r^3}=\omega^2\\[3mm]
+        &\omega=\sqrt{\frac{G\cdot M}{r^3}}
+    \end{align}\\
+    角速度的计算公式指出，在半径一定的轨道上运行的物体具有相同的角速度。\\[3mm]
+    角速度的计算公式指出，轨道上物体的角速度随着轨道半径的增大而减小。
+
+\newpage
+
+\subsubsection{轨道周期的计算}
+    \setcounter{equation}{0}
+    现研究以圆形轨道绕质量为$M$的中心天体的物体的轨道周期$T$的大小。\\[3mm]
+    轨道周期的计算公式：
+    \begin{large}
+        \begin{equation*}
+            T=\sqrt{\frac{4\cdot \pi^2\cdot r^3}{G\cdot M}}
+        \end{equation*}
+    \end{large}\\
+    轨道周期的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(0,0){O}
+                \tkzDefShiftPoint[O](15:1.75){V1}
+                \tkzDefShiftPoint[O](105:2.5){V2}
+
+                \tkzDrawCircle[color=MediumGray,dashed](O,V1)
+                \tkzDrawCircle[color=MediumGray,dashed](O,V2)
+
+                \tkzDrawSegments(O,V1 O,V2)
+
+                \tkzDrawPoints[fill=white](O,V1,V2)
+
+                \tkzLabelPoint[right](V1){$T_1$}
+                \tkzLabelPoint[above](V2){$T_2$}
+                
+                \tkzLabelPoint[below](O){$M$}
+
+                \tkzLabelPoint[below=25pt](O){$T_1<T_2$}
+            \end{tikzpicture}
+            \caption{轨道半径和周期的关系}
+        \end{center}
+    \end{figure}\\
+    根据引力加速度的计算公式：
+    \begin{align}
+        a=G\cdot\frac{M}{r^2}
+    \end{align}\\
+    根据向心加速度的计算公式：
+    \begin{align}
+        a=\frac{4\pi^2}{T^2}\cdot r
+    \end{align}\\
+    将两者联立可得：
+    \begin{align}
+        &G\cdot\frac{M}{r^2}=\frac{4\cdot \pi^2\cdot r}{T^2}\\[3mm]
+        &T^2=\frac{4\cdot\pi^2\cdot r^3}{G\cdot M}\\[3mm]
+        &T=\sqrt{\frac{4\cdot\pi^2\cdot r^3}{G\cdot M}}
+    \end{align}\\
+    轨道周期的计算公式指出，在半径一定的轨道上运行的物体具有相同的周期。\\[3mm]
+    轨道周期的计算公式指出，轨道上物体的周期随着轨道半径的增大而增大。
+
+\newpage
+
+\subsubsection{天体质量的测量}
+    \setcounter{equation}{0}
+    现研究如何通过环绕中心天体的物体的轨道参数求出中心天体的质量$M$。\\[3mm]
+    天体质量的计算公式：
+    \begin{large}
+        \begin{align*}
+            &M=\frac{v^2\cdot r}{G}\\[6mm]
+            &M=\frac{\omega^2\cdot r^3}{G}\\[6mm]
+            &M=\frac{4\cdot\pi^2\cdot r^3}{G\cdot T^2}
+        \end{align*}
+    \end{large}\\
+    天体质量的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(0,0){O}
+                \tkzDefShiftPoint[O](180:0.7){M}
+                \tkzDefShiftPoint[O](0:2.5){R}
+
+                \tkzDrawCircle[thick,fill=LightGray](O,M)
+                \tkzDrawCircle[color=MediumGray,dashed](O,R)
+                
+                \tkzDrawSegments(O,R)
+
+                \tkzLabelSegment[above](O,R){$r$}
+
+                \tkzDrawPoints[fill=white,size=3pt](O,R)
+                \tkzLabelPoint[below](O){$M$}
+            \end{tikzpicture}
+            \caption{天体质量测量的示意图}
+        \end{center}
+    \end{figure}\\
+    关于线速度的天体质量计算公式可以推导如下：
+    \begin{align}
+        v=\sqrt{\frac{G\cdot M}{r}}~~~~~~\Longrightarrow~~~~~~M=\frac{v^2\cdot r}{G}
+    \end{align}\\
+    关于角速度的天体质量计算公式可以推导如下：
+    \begin{align}
+        \omega=\sqrt{\frac{G\cdot M}{r^3}}~~~~~~\Longrightarrow~~~~~~M=\frac{\omega^2\cdot r^3}{G}
+    \end{align}\\
+    关于轨道周期的天体质量计算公式可以推导如下：
+    \begin{align}
+        T=\sqrt{\frac{4\cdot \pi^2\cdot r^3}{G\cdot M}}~~~~~~\Longrightarrow~~~~~~M=\frac{4\cdot\pi^2\cdot r^3}{G\cdot T^2}~
+    \end{align}\\
+    故已知轨道半径的情况下，只需要确定轨道周期就可以确定中心天体的质量。
+
+\newpage
+
+\subsubsection{天体密度的测量}
+    \setcounter{equation}{0}
+    现研究如何通过环绕中心天体的物体的轨道参数求出中心天体的密度$\rho$。\\[3mm]
+    天体密度的计算公式：
+    \begin{large}
+        \begin{align*}
+            &\rho=\frac{3}{4}\cdot\frac{v^2\cdot r}{G\cdot\pi}\cdot r_0^3\\[6mm]
+            &\rho=\frac{3}{4}\cdot\frac{\omega^2\cdot r^3}{G\cdot\pi}\cdot r_0^3\\[6mm]
+            &\rho=\frac{3\cdot \pi}{G\cdot T^2}\cdot\frac{r^3}{r_0^3}
+        \end{align*}
+    \end{large}\\
+    天体密度的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \tkzDefPoint(0,0){O}
+                \tkzDefShiftPoint[O](180:0.7){M}
+                \tkzDefShiftPoint[O](0:2.5){R}
+
+                \tkzDrawCircle[thick,fill=LightGray](O,M)
+                \tkzDrawCircle[color=MediumGray,dashed](O,R)
+                
+                \tkzDrawSegments(O,M)
+                \tkzDrawSegments(O,R)
+
+                \tkzLabelSegment[above,pos=0.45](O,M){$r_0$}
+                \tkzLabelSegment[above](O,R){$r$}
+
+                \tkzDrawPoints[fill=white,size=3pt](O,R,M)
+                \tkzLabelPoint[below](O){$\rho$}
+            \end{tikzpicture}
+            \caption{天体密度测量的示意图}
+        \end{center}
+    \end{figure}\\
+    利用球的体积公式：
+    \begin{align}
+        &M=\frac{4}{3}\cdot\pi\cdot r_0^3\cdot \rho\\[3mm]
+        &\rho=\frac{3}{4}\cdot\frac{M}{\pi}\cdot r_0^3\\[3mm]
+        &\rho=\frac{3}{4}\cdot\frac{v^2\cdot r}{G\cdot\pi}\cdot r_0^3
+        \hspace{30pt}\left(M=\frac{v^2\cdot r}{G}\right)\\[3mm]
+        &\rho=\frac{3}{4}\cdot\frac{\omega^2\cdot r^3}{G\cdot\pi}\cdot r_0^3
+        \hspace{24pt}\left(M=\frac{\omega^2\cdot r^3}{G}\right)\\[3mm]
+        &\rho=\frac{3\cdot \pi}{G\cdot T^2}\cdot\frac{r^3}{r_0^3}
+        \hspace{38pt}\left(M=\frac{4\cdot\pi^2\cdot r^3}{G\cdot T^2}\right)
+    \end{align}\\
+    故已知轨道半径和天体半径的情况下，只需要确定轨道周期就可以确定中心天体的质量。
+    
 \newpage
 
 \section{能量守恒定律}
